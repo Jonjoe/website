@@ -1,22 +1,26 @@
 import * as React from "react"
 import styled from 'styled-components'
 
+import { HeroButton } from "../"
+
 const Panel = styled.section`
   background: green;
-  margin: 10px;
-  width: 100px;
-  padding: 20px;
+  width: 100%;
+  flex: 1;
 `
 
 const Container = styled.div`
   background: black;
-  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 `
 
 const Hatch: React.FC = () => {
   return (
     <Container>
       <Panel />
+      <HeroButton onClick={() => null} label="Hello im a button"/>
       <Panel />
     </Container>
   )

@@ -9,6 +9,7 @@
     "preserveConstEnums": true,
     "removeComments": true,
     "sourceMap": true,
+    "allowAny": true,
     "target": "es5"
   },
   "include": [
