@@ -1,8 +1,11 @@
 import * as React from "react"
+import { Hatch } from '../../components'
 
 const HomePage: React.FC = () => {
   return (
-    <p>Im the home page</p>
+    <main>
+      <Hatch />
+    </main>
   )
 }
 
