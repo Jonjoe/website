@@ -9,7 +9,7 @@ export interface HeroButtonProps {
 const HeroButton: React.FC<HeroButtonProps> = props => {
   const { onClick, label } = props
 
-  return <Styled.Button onClick={() => onClick()}><p>{label}</p></Styled.Button>
+  return <Styled.Button onClick={() => onClick()}><span>{label}</span></Styled.Button>
 }
 
 export default HeroButton
