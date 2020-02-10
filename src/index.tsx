@@ -3,4 +3,4 @@ import * as ReactDOM from 'react-dom'
 
 const APP_ROOT = document.querySelector('#root')
 
-ReactDOM.render(<p>Hi</p>, APP_ROOT)
+ReactDOM.render(<p>Hiiiiiii</p>, APP_ROOT)
