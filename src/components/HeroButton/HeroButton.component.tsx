@@ -1,5 +1,5 @@
-import * as React from "react";
-import * as Styled from "./HeroButton.styles"
+import * as React from 'react';
+import * as Styled from './HeroButton.styles';
 
 export interface HeroButtonProps {
   label: string;
@@ -7,9 +7,13 @@ export interface HeroButtonProps {
 }
 
 const HeroButton: React.FC<HeroButtonProps> = props => {
-  const { onClick, label } = props
+  const { onClick, label } = props;
 
-  return <Styled.Button onClick={() => onClick()}><span>{label}</span></Styled.Button>
-}
+  return (
+    <Styled.Button onClick={(): void => onClick()}>
+      <span>{label}</span>
+    </Styled.Button>
+  );
+};
 
-export default HeroButton
+export default HeroButton;

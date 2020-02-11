@@ -1,8 +1,7 @@
-import styled from 'styled-components'
-
+import styled from 'styled-components';
 
 export interface StyledButtonProps {
-  onClick: any
+  onClick: any;
 }
 
 export const Button = styled.button<StyledButtonProps>`
@@ -17,4 +16,4 @@ export const Button = styled.button<StyledButtonProps>`
     font-weight: 700;
     text-transform: uppercase;
   }
-`
+`;

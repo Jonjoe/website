@@ -1,8 +1,8 @@
-import styled from "styled-components"
+import styled from 'styled-components';
 
 interface PanelProps {
   open: boolean;
-  position: 'top' | 'bottom'
+  position: 'top' | 'bottom';
 }
 
 export const Panel = styled.section<PanelProps>`
@@ -11,13 +11,15 @@ export const Panel = styled.section<PanelProps>`
   flex: 1;
   transition: all 0.318s;
   opacity: 1;
-  ${(props: PanelProps) => `${props.position}: 0px;`}
-  
-  ${(props: PanelProps) => props.open && `
+  ${(props: PanelProps): string => `${props.position}: 0px;`}
+
+  ${(props: PanelProps): string =>
+    props.open &&
+    `
     opacity: 0;
     ${props.position}: -300px;
   `}
-`
+`;
 
 export const Container = styled.div`
   background: black;
@@ -25,7 +27,7 @@ export const Container = styled.div`
   flex-direction: column;
   height: 100vh;
   overflow: hidden;
-  
+
   ${Panel}:first-child {
     background: #4a95d4;
   }
@@ -33,11 +35,10 @@ export const Container = styled.div`
   ${Panel}:last-child {
     background: #3b79aa;
   }
-`
-
+`;
 
 interface ButtonWrapperProps {
-  hidden: boolean
+  hidden: boolean;
 }
 
 export const ButtonWrapper = styled.div<ButtonWrapperProps>`
@@ -51,5 +52,5 @@ export const ButtonWrapper = styled.div<ButtonWrapperProps>`
   transition: all 0.318s;
   opacity: 1;
 
-  ${(props: ButtonWrapperProps) => props.hidden && `opacity: 0`}
-`
+  ${(props: ButtonWrapperProps): string => props.hidden && `opacity: 0`}
+`;

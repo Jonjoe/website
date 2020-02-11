@@ -3,6 +3,6 @@ import * as ReactDOM from 'react-dom';
 
 import * as Pages from './pages';
 
-const APP_ROOT = document.querySelector('#root')
+const APP_ROOT = document.querySelector('#root');
 
-ReactDOM.render(<Pages.Home />, APP_ROOT)
+ReactDOM.render(<Pages.Home />, APP_ROOT);
