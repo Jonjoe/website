@@ -11,18 +11,42 @@ export const Panel = styled.section<PanelProps>`
   flex: 1;
   transition: all 0.318s;
   opacity: 1;
-  ${(props: PanelProps): string => `${props.position}: 0px;`}
+  display: flex;
+  z-index: 500
 
-  ${(props: PanelProps): string =>
-    props.open &&
-    `
-    opacity: 0;
-    ${props.position}: -300px;
+  ${(props: PanelProps): string => `
+    ${props.position}: 0;
+  
+    @keyframes slideOut${props.position} {
+      0% { 
+        ${props.position}: 0;
+        opacity: 1;
+      }
+
+      50% {
+        opacity: 1;
+      }
+
+      90% {
+        opacity: 0;
+      }
+  
+      100% {
+        ${props.position}: -1500px;
+        display: none!important;
+        opacity: 0;
+      }
+    }
+
+    ${props.open && `
+      animation-name: slideOut${props.position};
+      animation-fill-mode: forwards;
+      animation-duration: 3s;
+    `}
   `}
 `;
 
 export const Container = styled.div`
-  background: black;
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -43,14 +67,15 @@ interface ButtonWrapperProps {
 
 export const ButtonWrapper = styled.div<ButtonWrapperProps>`
   position: fixed;
-  top: calc(50% - 40px);
-  left: 0;
+  bottom: calc(50% - 40px);
+  z-index: 999;
   width: 100%;
   display: flex;
-  z-index: 999;
   justify-content: center;
-  transition: all 0.318s;
   opacity: 1;
 
-  ${(props: ButtonWrapperProps): string => props.hidden && `opacity: 0`}
+  ${(props: ButtonWrapperProps): string => props.hidden && `
+    bottom: 1500px;
+    opacity: 0;
+  `}
 `;

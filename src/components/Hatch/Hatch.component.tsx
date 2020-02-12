@@ -10,9 +10,9 @@ const Hatch: React.FC = () => {
     <Styled.Container>
       <Styled.Panel position="top" open={hatchOpen} />
 
-      <Styled.ButtonWrapper hidden={hatchOpen}>
-        <HeroButton onClick={(): void => setHatchOpen(true)} label="Dive In" />
-      </Styled.ButtonWrapper>
+        <Styled.ButtonWrapper hidden={hatchOpen}>
+          <HeroButton onClick={(): void => setHatchOpen(true)} label="Dive In" />
+        </Styled.ButtonWrapper>
 
       <Styled.Panel position="bottom" open={hatchOpen} />
     </Styled.Container>
