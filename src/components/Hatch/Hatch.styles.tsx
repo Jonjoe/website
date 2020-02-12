@@ -69,7 +69,7 @@ interface ButtonWrapperProps {
 
 export const ButtonWrapper = styled.div<ButtonWrapperProps>`
   position: fixed;
-  bottom: calc(50% - 40px);
+  bottom: calc(50% - 30px);
   z-index: 999;
   width: 100%;
   display: flex;
