@@ -12,7 +12,9 @@ export const Panel = styled.section<PanelProps>`
   transition: all 0.318s;
   opacity: 1;
   display: flex;
-  z-index: 500
+  z-index: 500;
+  justify-content: center;
+  align-items: center;
 
   ${(props: PanelProps): string => `
     ${props.position}: 0;
