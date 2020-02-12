@@ -7,7 +7,6 @@ export interface StyledButtonProps {
 export const Button = styled.button<StyledButtonProps>`
   background: #e0795f;
   border: none;
-  border-bottom: 8px solid #dd532c;
   padding: 20px 0px;
   width: 200px;
   transition: all 0.318s;
@@ -20,7 +19,6 @@ export const Button = styled.button<StyledButtonProps>`
 
   &:hover {
     cursor: pointer;
-    border-bottom: 0px solid #dd532c;
   }
 
   span {

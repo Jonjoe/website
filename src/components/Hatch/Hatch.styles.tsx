@@ -75,9 +75,27 @@ export const ButtonWrapper = styled.div<ButtonWrapperProps>`
   display: flex;
   justify-content: center;
   opacity: 1;
+  transition: opacity 0.318s;
+  transition: bottom 5s;
+
+  @keyframes slideButton {
+    0% { 
+      opacity: 1;
+    }
+
+    50% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 0;
+      top: 9999px;
+    }
+  }
 
   ${(props: ButtonWrapperProps): string => props.hidden && `
-    bottom: 1500px;
-    opacity: 0;
+    animation-name: slideButton;
+    animation-fill-mode: forwards;
+    animation-duration: 3s;
   `}
 `;
