@@ -9,18 +9,15 @@
     }
   },
   "extends": [
-    "prettier",
     'eslint:recommended',
     "plugin:react/recommended",
     'plugin:@typescript-eslint/eslint-recommended',
     'plugin:@typescript-eslint/recommended',
   ],
   "plugins": [
-    "prettier",
     '@typescript-eslint',
   ],
   "rules": {
-    "prettier/prettier": "error",
     "@typescript-eslint/no-explicit-any": 0,
     "react/prop-types": 0
   },
