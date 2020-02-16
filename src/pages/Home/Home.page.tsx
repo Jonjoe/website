@@ -9,6 +9,7 @@ import {
   SocialLinks,
   Text,
   HomeContentColumn,
+  Struct
 } from '../../components';
 
 const HomePage: React.FC = () => {
@@ -17,17 +18,49 @@ const HomePage: React.FC = () => {
       <Hatch />
       <HomeContentColumn>
         <LandingSection>
-          <Caption subtitle="Web / Mobile / Maker / Hacker" title="Software Engineer"/>
+          <Caption
+            subtitle="Web / Mobile / Maker / Hacker"
+            title="Software Engineer"
+          />
 
-          <Button>
-            <Text.Body>Contact Me</Text.Body>
-          </Button>
+          <div style={{marginBottom: 30}}>
+            <Button>
+              <Text.HeroBody>Contact Me</Text.HeroBody>
+            </Button>
+          </div>
 
           <SocialLinks />
         </LandingSection>
 
         <Section title="About Jonjoe">
+          <Struct>
+            <Struct>
+              <Text.Heading4>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </Text.Heading4>
+            </Struct>
+            <Struct>
+              <Text.Body>
+                Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                cupidatat non proident, sunt in culpa qui officia deserunt
+                mollit anim id est laborum.
+              </Text.Body>
+            </Struct>
+          </Struct>
+        </Section>
+
+        <Section title="Experience" background="#4a95d4">
           <p>Content</p>
+        </Section>
+
+        <Section title="Projects" background="#e0795f">
+          <p>Content</p>
+        </Section>
+
+        <Section title="Say Hi!">
+          <SocialLinks />
         </Section>
       </HomeContentColumn>
     </Page>
