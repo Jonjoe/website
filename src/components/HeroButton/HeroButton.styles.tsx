@@ -5,7 +5,9 @@ export interface StyledButtonProps {
 }
 
 export const Button = styled.button<StyledButtonProps>`
+  font-family: Gilroy;
   background: #e0795f;
+  color: white;
   border: none;
   padding: 20px 0px;
   width: 200px;

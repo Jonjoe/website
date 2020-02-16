@@ -1,7 +1,10 @@
 import styled from 'styled-components'
 
-export const Heading1 = styled.h1``
+export const Heading1 = styled.h1`
+  font-family: Gilroy;
+`
 export const Heading2 = styled.h2`
+  font-family: Gilroy;
   font-size: 5rem;
   color: white;
   text-transform: uppercase;
@@ -11,6 +14,7 @@ export const Heading2 = styled.h2`
   padding: 0;
 `
 export const Heading3 = styled.h3`
+  font-family: Gilroy;
   font-size: 4rem;
   color: white;
   text-transform: uppercase;
@@ -27,11 +31,13 @@ export const Heading3 = styled.h3`
 `
 
 export const HeroBody = styled.p`
+  font-family: Gilroy;
   margin: 0;
   padding: 0;
   font-size: 1.5rem;
 `
 export const Body = styled.p`
+  font-family: Gilroy;
   margin: 0;
   padding: 0;
 `
