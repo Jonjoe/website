@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as Styled from './Hatch.styles';
 
-import { HeroButton, Logo, SocialLinks } from '../';
+import { HeroButton, Logo, Caption, SocialLinks } from '../';
 
 const Hatch: React.FC = () => {
   const [hatchOpen, setHatchOpen] = React.useState(false);
@@ -9,7 +9,7 @@ const Hatch: React.FC = () => {
   return (
     <Styled.Container hidden={hatchOpen}>
       <Styled.Panel position="top" open={hatchOpen}>
-        <Logo />
+        <Caption title="Jonjoe Whitfield" subtitle="Software Engineer" />
       </Styled.Panel>
 
       <Styled.ButtonWrapper hidden={hatchOpen}>

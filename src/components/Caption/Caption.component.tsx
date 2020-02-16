@@ -4,11 +4,19 @@ import * as Styled from './Caption.styles';
 
 import {Text} from '../';
 
-const Caption: React.FC = () => {
+interface CaptionProps {
+  title: string;
+  subtitle: string;
+}
+
+const Caption: React.FC<CaptionProps> = props => {
+  const {title, subtitle } = props
+
   return (
     <Styled.Caption>
-      <Text.Heading3>Web / Mobile / Maker / Hacker</Text.Heading3>
-      <Text.Heading2>Software Engineer</Text.Heading2>
+      <Text.Heading3>{subtitle}</Text.Heading3>
+      
+      <Text.Heading2>{title}</Text.Heading2>
     </Styled.Caption>
   );
 };

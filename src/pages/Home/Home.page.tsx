@@ -17,7 +17,7 @@ const HomePage: React.FC = () => {
       <Hatch />
       <HomeContentColumn>
         <LandingSection>
-          <Caption />
+          <Caption subtitle="Web / Mobile / Maker / Hacker" title="Software Engineer"/>
 
           <Button>
             <Text.Body>Contact Me</Text.Body>
