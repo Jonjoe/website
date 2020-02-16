@@ -4,17 +4,20 @@ export const Container = styled.section`
   position: relative;
   height: 80vh;
   width: 100%;
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
 `;
 
 export const Content = styled.div`
-  height: 100%;
-  width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   flex-direction: column;
   position: relative;
   z-index: 800;
+  //background-color: green;
 `;
 
 export const Background = styled.div`

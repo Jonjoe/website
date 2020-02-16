@@ -2,25 +2,28 @@ import * as React from 'react';
 
 import * as Styled from './Section.styles';
 
-import {Text} from '../';
+import {Text, Container} from '../';
 
 interface SectionProps {
   children: JSX.Element;
   title: string;
+  background?: string;
 }
 
 const Section: React.FC<SectionProps> = props => {
-  const {children, title} = props;
+  const {children, title, background} = props;
 
   return (
-    <Styled.Container>
-      <Styled.Title>
-        <Styled.TitleContent>
-          <Text.SectionTitle>{title}</Text.SectionTitle>
-        </Styled.TitleContent>
-      </Styled.Title>
+    <Styled.Container background={background}>
+      <Container>
+        <Styled.Title>
+          <Styled.TitleContent background={background}>
+            <Text.SectionTitle>{title}</Text.SectionTitle>
+          </Styled.TitleContent>
+        </Styled.Title>
 
-      <section>{children}</section>
+        <section>{children}</section>
+      </Container>
     </Styled.Container>
   );
 };
