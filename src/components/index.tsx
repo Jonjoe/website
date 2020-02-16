@@ -6,3 +6,4 @@ export { default as Button } from './Button/Button.component';
 export { default as LandingSection } from './LandingSection/LandingSection.component';
 export { default as Section } from './Section/Section.component';
 export { default as SocialLinks } from './SocialLinks/SocialLinks.component';
+export { default as Text } from './Text/Text.component';
