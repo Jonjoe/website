@@ -1,16 +1,30 @@
 import * as React from 'react';
-import { Hatch, LandingSection, SocialLinks } from '../../components';
+import {
+  Button,
+  Page,
+  Hatch,
+  LandingSection,
+  SocialLinks,
+  Text
+} from '../../components';
 
 const HomePage: React.FC = () => {
-    return (
-    <main>
+  return (
+    <Page>
       <Hatch />
       <LandingSection>
-        <h4>Product </h4>
-        <h3>Software Engineer</h3>
+        <div>
+          <Text.Heading3>Holistic / Maker</Text.Heading3>
+          <Text.Heading2>Software Engineer</Text.Heading2>
+        </div>
+
+        <Button>
+          <Text.Body>Contact Me</Text.Body>
+        </Button>
+
         <SocialLinks />
       </LandingSection>
-    </main>
+    </Page>
   );
 };
 
