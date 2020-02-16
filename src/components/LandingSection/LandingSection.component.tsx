@@ -6,9 +6,14 @@ interface LandingSectionProps {
 }
 
 const LandingSection: React.FC<LandingSectionProps> = props => {
-  const { children } = props;
+  const {children} = props;
 
-  return <Styled.Section>{children}</Styled.Section>;
+  return (
+    <Styled.Container>
+      <Styled.Background />
+      <Styled.Content>{children}</Styled.Content>
+    </Styled.Container>
+  );
 };
 
 export default LandingSection;

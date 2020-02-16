@@ -4,6 +4,7 @@ import {
   Page,
   Hatch,
   LandingSection,
+  Caption,
   SocialLinks,
   Text
 } from '../../components';
@@ -13,11 +14,7 @@ const HomePage: React.FC = () => {
     <Page>
       <Hatch />
       <LandingSection>
-        <div>
-          <Text.Heading3>Holistic / Maker</Text.Heading3>
-          <Text.Heading2>Software Engineer</Text.Heading2>
-        </div>
-
+        <Caption /> 
         <Button>
           <Text.Body>Contact Me</Text.Body>
         </Button>

@@ -12,7 +12,7 @@ export const Panel = styled.section<PanelProps>`
   transition: all 0.318s;
   opacity: 1;
   display: flex;
-  z-index: 500;
+  z-index: 900;
   justify-content: center;
   align-items: center;
 
@@ -62,6 +62,7 @@ export const Container = styled.div<ContainerProps>`
   position: fixed;
   top: 0;
   left: 0;
+  z-index:900;
 
   ${Panel}:first-child {
     background: #4a95d4;
