@@ -7,7 +7,7 @@ const Hatch: React.FC = () => {
   const [hatchOpen, setHatchOpen] = React.useState(false);
 
   return (
-    <Styled.Container>
+    <Styled.Container hidden={hatchOpen}>
       <Styled.Panel position="top" open={hatchOpen}>
         <Logo />
       </Styled.Panel>

@@ -1,16 +1,19 @@
-import * as React from "react"
+import * as React from 'react';
+
+import * as Styled from './SocialLinks.styles'
+
+import Icon from '../Icon/Icon.component';
 
 const SocialLinks: React.FC = () => {
   return (
-    <nav>
-      <a href="google.com">Link</a>
-      <a href="google.com">Link</a>
-      <a href="google.com">Link</a>
-      <a href="google.com">Link</a>
-      <a href="google.com">Link</a>
-      <a href="google.com">Link</a>
-    </nav>
-  )
-}
+    <Styled.Container>
+      <Icon name="question-circle" />
+      <Icon name="question-circle" />
+      <Icon name="question-circle" />
+      <Icon name="question-circle" />
+      <Icon name="question-circle" />
+    </Styled.Container>
+  );
+};
 
-export default SocialLinks
+export default SocialLinks;

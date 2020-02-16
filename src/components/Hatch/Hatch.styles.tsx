@@ -40,7 +40,8 @@ export const Panel = styled.section<PanelProps>`
       }
     }
 
-    ${props.open && `
+    ${props.open &&
+      `
       animation-name: slideOut${props.position};
       animation-fill-mode: forwards;
       animation-duration: 3s;
@@ -48,7 +49,11 @@ export const Panel = styled.section<PanelProps>`
   `}
 `;
 
-export const Container = styled.div`
+interface ContainerProps {
+  hidden: boolean;
+}
+
+export const Container = styled.div<ContainerProps>`
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -57,6 +62,7 @@ export const Container = styled.div`
   position: fixed;
   top: 0;
   left: 0;
+
   ${Panel}:first-child {
     background: #4a95d4;
   }
@@ -80,7 +86,7 @@ export const ButtonWrapper = styled.div<ButtonWrapperProps>`
   opacity: 1;
 
   @keyframes slideButton {
-    0% { 
+    0% {
       opacity: 1;
     }
 
@@ -94,7 +100,9 @@ export const ButtonWrapper = styled.div<ButtonWrapperProps>`
     }
   }
 
-  ${(props: ButtonWrapperProps): string | false  => props.hidden && `
+  ${(props: ButtonWrapperProps): string | false =>
+    props.hidden &&
+    `
     animation-name: slideButton;
     animation-fill-mode: forwards;
     animation-duration: 1s;
