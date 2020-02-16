@@ -3,12 +3,12 @@ import * as React from "react"
 const SocialLinks: React.FC = () => {
   return (
     <nav>
-      <a href="">Link</a>
-      <a href="">Link</a>
-      <a href="">Link</a>
-      <a href="">Link</a>
-      <a href="">Link</a>
-      <a href="">Link</a>
+      <a href="google.com">Link</a>
+      <a href="google.com">Link</a>
+      <a href="google.com">Link</a>
+      <a href="google.com">Link</a>
+      <a href="google.com">Link</a>
+      <a href="google.com">Link</a>
     </nav>
   )
 }

@@ -52,8 +52,11 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   height: 100vh;
+  width: 100%;
   overflow: hidden;
-
+  position: fixed;
+  top: 0;
+  left: 0;
   ${Panel}:first-child {
     background: #4a95d4;
   }
@@ -75,8 +78,6 @@ export const ButtonWrapper = styled.div<ButtonWrapperProps>`
   display: flex;
   justify-content: center;
   opacity: 1;
-  transition: opacity 0.318s;
-  transition: bottom 5s;
 
   @keyframes slideButton {
     0% { 
@@ -93,9 +94,9 @@ export const ButtonWrapper = styled.div<ButtonWrapperProps>`
     }
   }
 
-  ${(props: ButtonWrapperProps): string => props.hidden && `
+  ${(props: ButtonWrapperProps): string | false  => props.hidden && `
     animation-name: slideButton;
     animation-fill-mode: forwards;
-    animation-duration: 3s;
+    animation-duration: 1s;
   `}
 `;

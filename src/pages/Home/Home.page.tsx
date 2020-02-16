@@ -1,10 +1,15 @@
 import * as React from 'react';
-import { Hatch } from '../../components';
+import { Hatch, LandingSection, SocialLinks } from '../../components';
 
 const HomePage: React.FC = () => {
-  return (
+    return (
     <main>
       <Hatch />
+      <LandingSection>
+        <h4>Product foced</h4>
+        <h3>Software Engineer</h3>
+        <SocialLinks />
+      </LandingSection>
     </main>
   );
 };

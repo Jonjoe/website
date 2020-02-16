@@ -1,8 +1,13 @@
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-import * as Pages from './pages';
+import * as Pages from './pages'
 
-const APP_ROOT = document.querySelector('#root');
+import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<Pages.Home />, APP_ROOT);
+ReactDOM.render(<Pages.Home />, document.getElementById('root'));
+
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: https://bit.ly/CRA-PWA
+serviceWorker.unregister();
