@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const Heading1 = styled.h1`
   font-family: Gilroy;
+  color: white;
 `;
 
 export const Heading2 = styled.h2`
@@ -36,6 +37,17 @@ export const Heading3 = styled.h3`
   padding: 0;
 `;
 
+export const Heading4 = styled.h4`
+  font-family: Gilroy;
+  font-size: 1.2rem;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 900;
+  text-align: right;
+  margin: 0;
+  padding: 0;
+`
+
 export const SectionTitle = styled.h3`
   font-family: Gilroy;
   font-size: 2rem;
@@ -45,18 +57,19 @@ export const SectionTitle = styled.h3`
   text-align: center;
   margin: 0;
   padding: 0;
-
 `
 
 export const HeroBody = styled.p`
   font-family: Gilroy;
   margin: 0;
   padding: 0;
+  color: white;
   font-size: 1.5rem;
 `;
 
 export const Body = styled.p`
   font-family: Gilroy;
   margin: 0;
+  color: white;
   padding: 0;
 `;
