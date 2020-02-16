@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.section`
   position: relative;
   height: 80vh;
+  width: 100%;
 `;
 
 export const Content = styled.div`

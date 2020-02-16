@@ -1,15 +1,28 @@
-import * as React from "react"
+import * as React from 'react';
+
+import * as Styled from './Section.styles';
+
+import {Text} from '../';
 
 interface SectionProps {
   children: JSX.Element;
+  title: string;
 }
 
 const Section: React.FC<SectionProps> = props => {
-  const {children} = props
+  const {children, title} = props;
 
   return (
-    <section>{children}</section>
-  )
-}
+    <Styled.Container>
+      <Styled.Title>
+        <Styled.TitleContent>
+          <Text.SectionTitle>{title}</Text.SectionTitle>
+        </Styled.TitleContent>
+      </Styled.Title>
 
-export default Section
+      <section>{children}</section>
+    </Styled.Container>
+  );
+};
+
+export default Section;

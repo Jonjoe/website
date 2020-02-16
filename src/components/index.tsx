@@ -9,3 +9,5 @@ export { default as Section } from './Section/Section.component';
 export { default as Caption } from './Caption/Caption.component';
 export { default as SocialLinks } from './SocialLinks/SocialLinks.component';
 export { default as Text } from './Text/Text.component';
+export { default as Column } from './Column/Column.component';
+export { default as HomeContentColumn } from './HomeContentColumn/HomeContentColumn.component';

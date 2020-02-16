@@ -62,7 +62,8 @@ export const Container = styled.div<ContainerProps>`
   position: fixed;
   top: 0;
   left: 0;
-  z-index:900;
+
+  ${(props: ContainerProps) => props.hidden? 'z-index: 900;': 'z-index:900;'}
 
   ${Panel}:first-child {
     background: #4a95d4;

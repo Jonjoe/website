@@ -3,24 +3,33 @@ import {
   Button,
   Page,
   Hatch,
+  Section,
   LandingSection,
   Caption,
   SocialLinks,
-  Text
+  Text,
+  HomeContentColumn,
 } from '../../components';
 
 const HomePage: React.FC = () => {
   return (
     <Page>
       <Hatch />
-      <LandingSection>
-        <Caption /> 
-        <Button>
-          <Text.Body>Contact Me</Text.Body>
-        </Button>
+      <HomeContentColumn>
+        <LandingSection>
+          <Caption />
 
-        <SocialLinks />
-      </LandingSection>
+          <Button>
+            <Text.Body>Contact Me</Text.Body>
+          </Button>
+
+          <SocialLinks />
+        </LandingSection>
+
+        <Section title="About Jonjoe">
+          <p>Content</p>
+        </Section>
+      </HomeContentColumn>
     </Page>
   );
 };
