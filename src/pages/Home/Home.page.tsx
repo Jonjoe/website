@@ -9,7 +9,8 @@ import {
   SocialLinks,
   Text,
   HomeContentColumn,
-  Struct
+  Struct,
+  SkillPoints
 } from '../../components';
 
 const HomePage: React.FC = () => {
@@ -33,6 +34,9 @@ const HomePage: React.FC = () => {
         </LandingSection>
 
         <Section title="About Jonjoe">
+          <Struct>
+            <SkillPoints />
+          </Struct>
           <Struct>
             <Struct>
               <Text.Heading4>

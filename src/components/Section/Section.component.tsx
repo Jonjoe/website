@@ -5,7 +5,7 @@ import * as Styled from './Section.styles';
 import {Text, Container} from '../';
 
 interface SectionProps {
-  children: JSX.Element;
+  children: JSX.Element | JSX.Element[];
   title: string;
   background?: string;
 }

@@ -18,6 +18,10 @@ export type IconName =
   | 'dribbble'
   | 'twitter'
   | 'github'
+  | 'code'
+  | 'rocket'
+  | 'bullseye'
+  | 'glasses'
   | 'linkedin'
   | 'email';
 
@@ -37,9 +41,21 @@ function mapNamePropToFaNames(iconName: IconName): string | string[] {
 
     case 'twitter':
       return ['fab', 'twitter'];
+    
+    case 'glasses':
+      return ['fad', 'glasses'];
+    
+    case 'bullseye':
+      return ['fad', 'bullseye-arrow'];
+    
+    case 'code':
+      return ['fad', 'code'];
 
     case 'github':
       return ['fab', 'github'];
+    
+    case 'rocket':
+      return ['fad', 'rocket-launch'];
 
     case 'linkedin':
       return ['fab', 'linkedin-in'];
