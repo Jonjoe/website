@@ -6,7 +6,7 @@ const HomePage: React.FC = () => {
     <main>
       <Hatch />
       <LandingSection>
-        <h4>Product foced</h4>
+        <h4>Product </h4>
         <h3>Software Engineer</h3>
         <SocialLinks />
       </LandingSection>

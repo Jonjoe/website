@@ -1,11 +1,5 @@
-import React from 'react';
+import { hot } from 'react-hot-loader/root'
 
-const App: React.FC = () => {
-  return (
-    <div>
-      <p>Hi From React</p>
-    </div>
-  );
-};
+import * as Pages from "./pages"
 
-export default App;
+export default process.env.NODE_ENV === "development" ? hot(Pages.Home) : Pages.Home

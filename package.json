@@ -9,7 +9,10 @@
     "@fortawesome/pro-solid-svg-icons": "^5.12.0",
     "@fortawesome/react-fontawesome": "^0.1.8",
     "react": "^16.12.0",
+    "react-app-rewire-hot-loader": "^2.0.1",
+    "react-app-rewired": "^2.1.5",
     "react-dom": "^16.12.0",
+    "react-hot-loader": "^4.12.19",
     "react-scripts": "3.4.0",
     "styled-components": "^5.0.1"
   },
