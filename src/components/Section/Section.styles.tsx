@@ -93,15 +93,16 @@ export const Title = styled.header`
   width: 100%;
   display: flex;
   justify-content: center;
+  margin-bottom: 50px;
 
   &:after {
     content: '';
     position: absolute;
     z-index: 700;
-    left: 10%;
+    left: 0;
     top: calc(50% - 2px);
-    width: 80%;
-    border-bottom: 5px solid white;
+    width: 100%;
+    border-bottom: 2px solid white;
   }
 `;
 

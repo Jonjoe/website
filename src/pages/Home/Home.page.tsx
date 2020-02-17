@@ -15,6 +15,7 @@ import {
   HomeContentColumn,
   Struct,
   SkillPoints,
+  WorkHistory,
 } from '../../components';
 
 import strings from '../../strings';
@@ -63,7 +64,7 @@ const HomePage: React.FC = () => {
         </Section>
 
         <Section title="What Ive Done" background="#4a95d4">
-          <Text.Body>Content</Text.Body>
+          <WorkHistory />
         </Section>
 
         <Section title="Projects" background="#e0795f">

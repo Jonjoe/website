@@ -2,7 +2,7 @@ import * as React from 'react';
 import * as Styled from './Text.styles';
 
 interface TypeProps {
-  children: string;
+  children: string | JSX.Element;
 }
 
 export const Heading1: React.FC<TypeProps> = props => {
