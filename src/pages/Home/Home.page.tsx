@@ -20,9 +20,11 @@ import {
 import strings from '../../strings';
 
 const HomePage: React.FC = () => {
+  const [ locked, setLocked ] = React.useState(true)
+
   return (
-    <Page>
-      <Hatch />
+    <Page locked={locked}>
+      <Hatch onOpen={() => setLocked(false)}/>
       <HomeContentColumn>
         <LandingSection>
           <ScrollAnimation animateIn="fadeIn">
@@ -60,12 +62,12 @@ const HomePage: React.FC = () => {
           </ScrollAnimation>
         </Section>
 
-        <Section title="Experience" background="#4a95d4">
-          <p>Content</p>
+        <Section title="What Ive Done" background="#4a95d4">
+          <Text.Body>Content</Text.Body>
         </Section>
 
         <Section title="Projects" background="#e0795f">
-          <p>Content</p>
+          <Text.Body>Content</Text.Body>
         </Section>
 
         <Section title="Say Hi!">

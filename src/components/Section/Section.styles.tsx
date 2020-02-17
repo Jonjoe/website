@@ -9,8 +9,8 @@ export const Container = styled.section<ContainerProps>`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 150px 0;
   width: 100%;
+  padding: 150px 0;
   position: relative;
 
   ${(props: ContainerProps) =>
@@ -18,22 +18,71 @@ export const Container = styled.section<ContainerProps>`
       ? `background-color: ${props.background};`
       : `background-color: transparant;`}
 
-  &:nth-last-child(2) {
-    margin-bottom: 40px;
-    padding-bottom: 50px;
-    &:after {
-      content: '';
-      width: 0;
-      height: 0;
-      border-left: 50vw solid transparent;
-      border-right: 50vw solid transparent;
-      position: absolute;
-      bottom: -60px;
+  &:before, &:after {
+    content: '';
+    position: absolute;
+    height: 100px;
+    width: 100%;
+    display: block;
+  }
 
-      ${(props: ContainerProps) =>
-        props.background
-          ? `border-top: 60px solid ${props.background};`
-          : `border-top: 60px solid transparant;`}
+  &:before {
+    top: -98px !important;
+    ${(props: ContainerProps) =>
+      props.background
+        ? `background-color: ${props.background};`
+        : `background-color: transparant;`}
+  }
+
+  &:after {
+    bottom: -100px;
+    z-index: 900;
+
+    ${(props: ContainerProps) =>
+      props.background
+        ? `background-color: ${props.background};`
+        : `background-color: transparant;`}
+  }
+
+  &:nth-child(2) {
+    padding-top: 150px!important;
+    padding-bottom: 250px!important;
+    
+    &:before,
+    &:after {
+      display: none;
+    }
+  }
+
+  &:last-child {
+    &:before,
+    &:after {
+      display: none;
+    }
+  }
+
+  &:nth-child(odd) {
+    padding-top: 150px;
+    
+    &:before {
+      clip-path: polygon(0% 75%, 100% 0%, 100% 100%, 0% 100%);
+      top: -100px;
+    }
+
+    &:after {
+      clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 25%);
+    }
+  }
+
+  &:nth-child(even) {
+    padding-top: 250px;
+
+    &:before {
+      display: none;
+    }
+
+    &:after {
+      clip-path: polygon(0% 0%, 100% 0%, 100% 25%, 0% 100%);
     }
   }
 `;
@@ -42,8 +91,8 @@ export const Title = styled.header`
   position: relative;
   width: 100%;
   display: flex;
-
   justify-content: center;
+
   &:after {
     content: '';
     position: absolute;

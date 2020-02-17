@@ -3,17 +3,17 @@ import * as Styled from './Hatch.styles';
 
 import {HeroButton, Caption, SocialLinks} from '../';
 
-const Hatch: React.FC = () => {
+interface HatchProps {
+  onOpen: any;
+}
+
+const Hatch: React.FC<HatchProps> = props => {
+  const { onOpen } = props
   const [hatchOpen, setHatchOpen] = React.useState(false);
 
   function handleHatchOpen() {
-    const hatchDOM = document.getElementById('hatch');
-
     setHatchOpen(true);
-
-    if (hatchDOM) {
-      setTimeout(() => hatchDOM.remove(), 2000);
-    }
+    onOpen()
   }
 
   return (
