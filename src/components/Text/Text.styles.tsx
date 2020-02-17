@@ -7,6 +7,7 @@ export const Heading1 = styled.h1`
 
 export const Heading2 = styled.h2`
   font-family: Gilroy;
+
   font-size: 4rem;
   color: white;
   text-transform: uppercase;
@@ -24,6 +25,11 @@ export const Heading2 = styled.h2`
     left: 25%;
     border: 2px solid white;
   }
+
+  @media only screen and (max-width: 600px) {
+    //margin: 0 0 20px 0;
+    font-size: 2.2rem;
+  }
 `;
 
 export const Heading3 = styled.h3`
@@ -35,6 +41,10 @@ export const Heading3 = styled.h3`
   text-align: center;
   margin: 0;
   padding: 0;
+  
+  @media only screen and (max-width: 600px) {
+    font-size: 1.4rem;
+  }
 `;
 
 export const Heading4 = styled.h4`
@@ -48,6 +58,11 @@ export const Heading4 = styled.h4`
   > strong {
     color: #4a95d4;
   }
+
+  @media only screen and (max-width: 600px) {
+    text-align: center;
+    margin-bottom: 50px;
+  };
 `
 
 export const SectionTitle = styled.h3`
@@ -59,6 +74,10 @@ export const SectionTitle = styled.h3`
   text-align: center;
   margin: 0;
   padding: 0;
+  
+  @media only screen and (max-width: 600px) {
+    margin-bottom: 50px;
+  };
 `
 
 export const HeroBody = styled.p`
@@ -66,8 +85,12 @@ export const HeroBody = styled.p`
   margin: 0;
   padding: 0;
   color: white;
-  font-size: 1.5rem;
   font-weight: 900;
+  font-size: 1.5rem;
+  
+  @media only screen and (max-width: 600px) {
+    text-align: center;
+  };
 `;
 
 export const Body = styled.p`
@@ -75,4 +98,8 @@ export const Body = styled.p`
   margin: 0;
   color: white;
   padding: 0;
+
+  @media only screen and (max-width: 600px) {
+    text-align: center;
+  };
 `;
