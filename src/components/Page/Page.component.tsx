@@ -12,6 +12,7 @@ const Page: React.FC<PageProps> = props => {
   return (
     <Styled.Container>
       {children}
+      {locked && <Styled.lockedPage />}
     </Styled.Container>
   )
 };

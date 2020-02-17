@@ -55,6 +55,7 @@ export const Container = styled.section<ContainerProps>`
   }
 
   &:last-child {
+    padding-top: 250px!important;
     &:before,
     &:after {
       display: none;
