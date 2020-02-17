@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as Styled from './Hatch.styles';
 
-import { HeroButton, Logo, Caption, SocialLinks } from '../';
+import { HeroButton, Caption, SocialLinks } from '../';
 
 const Hatch: React.FC = () => {
   const [hatchOpen, setHatchOpen] = React.useState(false);

@@ -2,7 +2,7 @@ import * as React from 'react';
 import * as Styled from './Struct.styles';
 
 interface StructProps {
-  children: any;
+  children?: any;
   column?: boolean;
   size?: number;
   fixedWidth?: number;

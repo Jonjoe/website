@@ -39,7 +39,7 @@ export const Heading3 = styled.h3`
 
 export const Heading4 = styled.h4`
   font-family: Gilroy;
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   color: white;
   text-transform: uppercase;
   font-weight: 900;
@@ -65,6 +65,7 @@ export const HeroBody = styled.p`
   padding: 0;
   color: white;
   font-size: 1.5rem;
+  font-weight: 900;
 `;
 
 export const Body = styled.p`

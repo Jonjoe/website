@@ -9,7 +9,7 @@ export const Container = styled.section<ContainerProps>`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 100px 0;
+  padding: 150px 0;
   width: 100%;
   position: relative;
 

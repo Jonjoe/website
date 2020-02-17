@@ -10,8 +10,10 @@ import {
   Text,
   HomeContentColumn,
   Struct,
-  SkillPoints
+  SkillPoints,
 } from '../../components';
+
+import strings from '../../strings';
 
 const HomePage: React.FC = () => {
   return (
@@ -39,18 +41,11 @@ const HomePage: React.FC = () => {
           </Struct>
           <Struct>
             <Struct>
-              <Text.Heading4>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              </Text.Heading4>
+              <Text.Heading4>{strings.INTRO_TITLE}</Text.Heading4>
             </Struct>
+            <Struct fixedWidth={30} />
             <Struct>
-              <Text.Body>
-                Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                cupidatat non proident, sunt in culpa qui officia deserunt
-                mollit anim id est laborum.
-              </Text.Body>
+              <Text.Body>{strings.INTRO_CONTENT}</Text.Body>
             </Struct>
           </Struct>
         </Section>
