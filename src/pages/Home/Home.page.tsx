@@ -1,5 +1,7 @@
 import * as React from 'react';
 import ScrollAnimation from 'react-animate-on-scroll';
+import parse from 'html-react-parser';
+
 import {
   Button,
   Page,
@@ -48,11 +50,11 @@ const HomePage: React.FC = () => {
             </Struct>
             <Struct>
               <Struct>
-                <Text.Heading4>{strings.INTRO_TITLE}</Text.Heading4>
+                <Text.Heading4>{parse(strings.INTRO_TITLE) as any}</Text.Heading4>
               </Struct>
               <Struct fixedWidth={30} />
               <Struct>
-                <Text.Body>{strings.INTRO_CONTENT}</Text.Body>
+                <Text.Body>{parse(strings.INTRO_CONTENT) as any}</Text.Body>
               </Struct>
             </Struct>
           </ScrollAnimation>

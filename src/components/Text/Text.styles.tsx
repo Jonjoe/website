@@ -39,13 +39,15 @@ export const Heading3 = styled.h3`
 
 export const Heading4 = styled.h4`
   font-family: Gilroy;
-  font-size: 1.6rem;
+  font-size: 2rem;
   color: white;
-  text-transform: uppercase;
   font-weight: 900;
   text-align: right;
   margin: 0;
   padding: 0;
+  > strong {
+    color: #4a95d4;
+  }
 `
 
 export const SectionTitle = styled.h3`
