@@ -49,11 +49,8 @@ export const Panel = styled.section<PanelProps>`
   `}
 `;
 
-interface ContainerProps {
-  hidden: boolean;
-}
 
-export const Container = styled.div<ContainerProps>`
+export const Container = styled.div`
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -62,8 +59,7 @@ export const Container = styled.div<ContainerProps>`
   position: fixed;
   top: 0;
   left: 0;
-
-  ${(props: ContainerProps) => props.hidden? 'z-index: 900;': 'z-index:900;'}
+  z-index: 900;
 
   ${Panel}:first-child {
     background: #4a95d4;
