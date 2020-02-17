@@ -1,4 +1,5 @@
 import * as React from 'react';
+import ScrollAnimation from 'react-animate-on-scroll';
 import {
   Button,
   Page,
@@ -6,6 +7,7 @@ import {
   Section,
   LandingSection,
   Caption,
+  Column,
   SocialLinks,
   Text,
   HomeContentColumn,
@@ -21,33 +23,39 @@ const HomePage: React.FC = () => {
       <Hatch />
       <HomeContentColumn>
         <LandingSection>
-          <Caption
-            subtitle="Web / Mobile / Maker / Hacker"
-            title="Software Engineer"
-          />
+          <ScrollAnimation animateIn="fadeIn">
+            <Column>
+              <Caption
+                subtitle="Web / Mobile / Maker / Hacker"
+                title="Software Engineer"
+              />
 
-          <div style={{marginBottom: 30}}>
-            <Button>
-              <Text.HeroBody>Contact Me</Text.HeroBody>
-            </Button>
-          </div>
+              <div style={{marginBottom: 30}}>
+                <Button>
+                  <Text.HeroBody>Contact Me</Text.HeroBody>
+                </Button>
+              </div>
 
-          <SocialLinks />
+              <SocialLinks />
+            </Column>
+          </ScrollAnimation>
         </LandingSection>
 
         <Section title="About Jonjoe">
-          <Struct>
-            <SkillPoints />
-          </Struct>
-          <Struct>
+          <ScrollAnimation animateIn="fadeIn">
             <Struct>
-              <Text.Heading4>{strings.INTRO_TITLE}</Text.Heading4>
+              <SkillPoints />
             </Struct>
-            <Struct fixedWidth={30} />
             <Struct>
-              <Text.Body>{strings.INTRO_CONTENT}</Text.Body>
+              <Struct>
+                <Text.Heading4>{strings.INTRO_TITLE}</Text.Heading4>
+              </Struct>
+              <Struct fixedWidth={30} />
+              <Struct>
+                <Text.Body>{strings.INTRO_CONTENT}</Text.Body>
+              </Struct>
             </Struct>
-          </Struct>
+          </ScrollAnimation>
         </Section>
 
         <Section title="Experience" background="#4a95d4">

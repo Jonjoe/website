@@ -3,6 +3,8 @@ import {hot} from 'react-hot-loader/root';
 
 import * as Pages from './pages';
 
+import "animate.css/animate.min.css";
+
 const App: React.FC = () => {
   return <Pages.Home />;
 };
