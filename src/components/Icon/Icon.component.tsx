@@ -9,7 +9,7 @@ import {fab} from '@fortawesome/free-brands-svg-icons';
 
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 
-import * as Styled from './Icon.styles'
+import * as Styled from './Icon.styles';
 
 library.add(fal, fab, fad, fas, far);
 
@@ -19,10 +19,16 @@ export type IconName =
   | 'twitter'
   | 'github'
   | 'code'
+  | 'code2'
   | 'rocket'
   | 'bullseye'
+  | 'bulletpoint'
   | 'glasses'
   | 'linkedin'
+  | 'react'
+  | 'javascript'
+  | 'nodejs'
+  | 'aws'
   | 'email';
 
 export interface IconProps {
@@ -41,19 +47,37 @@ function mapNamePropToFaNames(iconName: IconName): string | string[] {
 
     case 'twitter':
       return ['fab', 'twitter'];
-    
+
     case 'glasses':
       return ['fad', 'glasses'];
-    
+
     case 'bullseye':
       return ['fad', 'bullseye-arrow'];
     
+    case 'bulletpoint':
+      return ['fad', 'chevron-double-right'];
+
     case 'code':
       return ['fad', 'code'];
 
+    case 'code2':
+      return ['fad', 'brackets'];
+
+    case 'aws':
+      return ['fab', 'aws'];
+
+    case 'javascript':
+      return ['fab', 'js'];
+
+    case 'nodejs':
+      return ['fab', 'node'];
+
+    case 'react':
+      return ['fab', 'react'];
+
     case 'github':
       return ['fab', 'github'];
-    
+
     case 'rocket':
       return ['fad', 'rocket-launch'];
 
