@@ -12,11 +12,12 @@ const List: React.FC<ListProps> = props => {
 
   return (
     <Styled.List>
-      {data.map((item: any) => (
-        <Styled.ListItem>
+      {data.map((item: any, index: number) => (
+        <Styled.ListItem key={index}>
           <Styled.IconWrapper>
-          <Icon name="bulletpoint" size="0.8rem"/>
+            <Icon name="bulletpoint" size="0.8rem" />
           </Styled.IconWrapper>
+
           <Text.Body>{item}</Text.Body>
         </Styled.ListItem>
       ))}
