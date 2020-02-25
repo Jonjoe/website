@@ -7,7 +7,7 @@ import {Text, Container} from '../';
 
 interface SectionProps {
   children: JSX.Element | JSX.Element[];
-  title: string;
+  title?: string;
   background?: string;
 }
 
@@ -17,13 +17,11 @@ const Section: React.FC<SectionProps> = props => {
   return (
     <Styled.Container background={background}>
       <Container>
-        <ScrollAnimation animateIn="fadeIn">
-          <Styled.Title>
-            <Styled.TitleContent background={background}>
-              <Text.SectionTitle>{title}</Text.SectionTitle>
-            </Styled.TitleContent>
-          </Styled.Title>
-        </ScrollAnimation>
+        {title && (
+          <ScrollAnimation animateIn="fadeIn">
+            <Text.SectionTitle>{title}</Text.SectionTitle>
+          </ScrollAnimation>
+        )}
 
         <section>{children}</section>
       </Container>

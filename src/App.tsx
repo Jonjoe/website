@@ -10,7 +10,7 @@ import routes from './routes'
 const App: React.FC = () => {
   return (
     <BrowserRouter>
-      {renderRoutes(routes)};
+      {renderRoutes(routes)}
     </BrowserRouter>
   )
 };

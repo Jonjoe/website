@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as Styled from './WorkHistory.styles';
 
-import {Struct, Text, Icon, TechCard, List} from '../';
+import {Struct, Text, TechCard, List} from '../';
 
 import workExperience from '../../data/work-data';
 

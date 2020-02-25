@@ -18,14 +18,11 @@ import {
   WorkHistory,
 } from '../../components';
 
-import strings from '../../strings';
+import { strings } from '../../config';
 
 const HomePage: React.FC = () => {
-  const [ locked, setLocked ] = React.useState(true)
-
   return (
-    <Page locked={locked}>
-      <Hatch onOpen={() => setLocked(false)}/>
+    <Page locked={false}>
       <HomeContentColumn>
         <LandingSection>
           <ScrollAnimation animateIn="fadeIn">
@@ -46,7 +43,7 @@ const HomePage: React.FC = () => {
           </ScrollAnimation>
         </LandingSection>
 
-        <Section title="About Jonjoe">
+        <Section>
           <ScrollAnimation animateIn="fadeIn">
             <Struct>
               <SkillPoints />
@@ -63,12 +60,12 @@ const HomePage: React.FC = () => {
           </ScrollAnimation>
         </Section>
 
-        <Section title="What Ive Done" background="#4a95d4">
-          <WorkHistory />
-        </Section>
-
         <Section title="Projects" background="#e0795f">
           <Text.Body>Content</Text.Body>
+        </Section>
+        
+          <Section title="History" background="#4a95d4">
+          <WorkHistory />
         </Section>
 
         <Section title="Say Hi!">

@@ -10,7 +10,6 @@ export const Container = styled.section<ContainerProps>`
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 150px 0;
   position: relative;
 
   ${(props: ContainerProps) =>
@@ -35,7 +34,7 @@ export const Container = styled.section<ContainerProps>`
   }
 
   &:after {
-    bottom: -100px;
+    bottom: -99px;
     z-index: 900;
 
     ${(props: ContainerProps) =>
@@ -45,17 +44,21 @@ export const Container = styled.section<ContainerProps>`
   }
 
   &:nth-child(2) {
-    padding-top: 150px!important;
-    padding-bottom: 250px!important;
-    
+    padding-top: 50px!important;
     &:before,
     &:after {
       display: none;
     }
   }
 
+  &:first-child {
+    background: green!important;
+  }
+
   &:last-child {
-    padding-top: 250px!important;
+    padding-top: 200px!important;
+    padding-bottom: 50px!important;
+
     &:before,
     &:after {
       display: none;
@@ -63,7 +66,8 @@ export const Container = styled.section<ContainerProps>`
   }
 
   &:nth-child(odd) {
-    padding-top: 150px;
+    padding-top: 50px;
+    padding-bottom: 200px;
     
     &:before {
       clip-path: polygon(0% 75%, 100% 0%, 100% 100%, 0% 100%);
@@ -76,7 +80,8 @@ export const Container = styled.section<ContainerProps>`
   }
 
   &:nth-child(even) {
-    padding-top: 250px;
+    padding-top: 150px;
+    padding-bottom: 150px;
 
     &:before {
       display: none;
@@ -88,31 +93,5 @@ export const Container = styled.section<ContainerProps>`
   }
 `;
 
-export const Title = styled.header`
-  position: relative;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
 
-  &:after {
-    content: '';
-    position: absolute;
-    z-index: 700;
-    left: 0;
-    top: calc(50% - 2px);
-    width: 100%;
-    border-bottom: 2px solid white;
-  }
-`;
 
-interface TitleContentProps {
-  background?: string;
-}
-
-export const TitleContent = styled.div<TitleContentProps>`
-  z-index: 800;
-  padding: 0 50px;
-  background-color: ${(props: TitleContentProps) =>
-    props.background ? props.background : '#39373a'};
-`;

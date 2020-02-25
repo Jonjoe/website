@@ -67,16 +67,22 @@ export const Heading4 = styled.h4`
 
 export const SectionTitle = styled.h3`
   font-family: Gilroy;
-  font-size: 2rem;
+  font-size: 5rem;
   color: white;
   text-transform: uppercase;
   font-weight: 900;
-  text-align: center;
+  width: 215px;
   margin: 0;
   padding: 0;
+  word-wrap: break-word;
+  margin-bottom: 50px;
+
+  &:after {
+    content: '.'
+  }
   
   @media only screen and (max-width: 600px) {
-    margin-bottom: 50px;
+    //margin-bottom: 50px;
   };
 `
 
