@@ -9,7 +9,7 @@ interface TopbarLinkProps {
 
 const TopbarLink: React.FC<TopbarLinkProps> = props => (
   <Styled.Link>
-    <Text.Body strong>{props.label}</Text.Body>
+    <Text.Body>{props.label}</Text.Body>
   </Styled.Link>
 );
 
@@ -18,8 +18,13 @@ const Topbar: React.FC = () => {
     <Styled.Header>
       <TopbarLink label="Home" />
       <TopbarLink label="CV" />
+      
+      <Styled.CenterPiece>
+        <Icon name="alien" size="2rem" />
+      </Styled.CenterPiece>
+      
       <TopbarLink label="Labs" />
-      <TopbarLink label="Contact Me" />
+      <TopbarLink label="Contact" />
     </Styled.Header>
   );
 };
