@@ -6,9 +6,6 @@ interface ContainerProps {
 
 export const Container = styled.section<ContainerProps>`
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   width: 100%;
   position: relative;
 

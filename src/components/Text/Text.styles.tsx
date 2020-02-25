@@ -41,7 +41,7 @@ export const Heading3 = styled.h3`
   text-align: center;
   margin: 0;
   padding: 0;
-  
+
   @media only screen and (max-width: 600px) {
     font-size: 1.4rem;
   }
@@ -62,8 +62,8 @@ export const Heading4 = styled.h4`
   @media only screen and (max-width: 600px) {
     text-align: center;
     margin-bottom: 50px;
-  };
-`
+  }
+`;
 
 export const SectionTitle = styled.h3`
   font-family: Gilroy;
@@ -71,20 +71,17 @@ export const SectionTitle = styled.h3`
   color: white;
   text-transform: uppercase;
   font-weight: 900;
-  width: 215px;
   margin: 0;
   padding: 0;
-  word-wrap: break-word;
-  margin-bottom: 50px;
-
-  &:after {
-    content: '.'
-  }
   
+  &:after {
+    content: '.';
+  }
+
   @media only screen and (max-width: 600px) {
     //margin-bottom: 50px;
-  };
-`
+  }
+`;
 
 export const HeroBody = styled.p`
   font-family: Gilroy;
@@ -93,19 +90,26 @@ export const HeroBody = styled.p`
   color: white;
   font-weight: 900;
   font-size: 1.5rem;
-  
+
   @media only screen and (max-width: 600px) {
     text-align: center;
-  };
+  }
 `;
 
-export const Body = styled.p`
+interface StyledBodyProps {
+  strong?: boolean;
+}
+
+export const Body = styled.p<StyledBodyProps>`
   font-family: Gilroy;
   margin: 0;
   color: white;
   padding: 0;
+  font-size: 1.2rem;
+
+  ${(props: StyledBodyProps) => props.strong && `font-weight: 900;`}
 
   @media only screen and (max-width: 600px) {
     text-align: center;
-  };
+  }
 `;

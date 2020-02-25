@@ -41,10 +41,22 @@ export const HeroBody: React.FC<TypeProps> = props => {
   return <Styled.HeroBody>{children}</Styled.HeroBody>;
 };
 
-export const Body: React.FC<TypeProps> = props => {
-  const {children} = props;
+interface BodyProps extends TypeProps {
+  strong?: boolean;
+}
 
-  return <Styled.Body>{children}</Styled.Body>;
+export const Body: React.FC<BodyProps> = props => {
+  const {children, strong} = props;
+
+  return <Styled.Body strong={strong}>{children}</Styled.Body>;
 };
 
-export default {Heading1, Heading2, Heading3, Heading4, SectionTitle, HeroBody, Body};
+export default {
+  Heading1,
+  Heading2,
+  Heading3,
+  Heading4,
+  SectionTitle,
+  HeroBody,
+  Body,
+};

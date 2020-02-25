@@ -18,7 +18,7 @@ import {
   WorkHistory,
 } from '../../components';
 
-import { strings } from '../../config';
+import {strings} from '../../config';
 
 const HomePage: React.FC = () => {
   return (
@@ -43,19 +43,21 @@ const HomePage: React.FC = () => {
           </ScrollAnimation>
         </LandingSection>
 
-        <Section>
+        <Section title="Hello">
           <ScrollAnimation animateIn="fadeIn">
             <Struct>
-              <SkillPoints />
-            </Struct>
-            <Struct>
               <Struct>
-                <Text.Heading4>{parse(strings.INTRO_TITLE) as any}</Text.Heading4>
+                <Text.Heading4>
+                  {parse(strings.INTRO_TITLE) as any}
+                </Text.Heading4>
               </Struct>
               <Struct fixedWidth={30} />
               <Struct>
                 <Text.Body>{parse(strings.INTRO_CONTENT) as any}</Text.Body>
               </Struct>
+            </Struct>
+            <Struct>
+              <SkillPoints />
             </Struct>
           </ScrollAnimation>
         </Section>
@@ -63,8 +65,8 @@ const HomePage: React.FC = () => {
         <Section title="Projects" background="#e0795f">
           <Text.Body>Content</Text.Body>
         </Section>
-        
-          <Section title="History" background="#4a95d4">
+
+        <Section title="History" background="#4a95d4">
           <WorkHistory />
         </Section>
 
