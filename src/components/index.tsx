@@ -11,6 +11,7 @@ export { default as WorkHistory } from './WorkHistory/WorkHistory.component';
 export { default as TechCard } from './TechCard/TechCard.component';
 export { default as Caption } from './Caption/Caption.component';
 export { default as FeaturedProject } from './FeaturedProject/FeaturedProject.component';
+export { default as FeaturedProjects } from './FeaturedProjects/FeaturedProjects.component';
 export { default as SocialLinks } from './SocialLinks/SocialLinks.component';
 export { default as Text } from './Text/Text.component';
 export { default as List } from './List/List.component';

@@ -16,7 +16,7 @@ import {
   Struct,
   SkillPoints,
   WorkHistory,
-  FeaturedProject,
+  FeaturedProjects,
 } from '../../components';
 
 import {strings} from '../../config';
@@ -64,11 +64,7 @@ const HomePage: React.FC = () => {
         </Section>
 
         <Section title="Showcase" background="#e0795f">
-          <FeaturedProject />
-          <FeaturedProject />
-          <FeaturedProject />
-          <FeaturedProject />
-          <FeaturedProject />
+          <FeaturedProjects />
 
           <Button>
             <Text.HeroBody>Other Projects</Text.HeroBody>
@@ -79,7 +75,7 @@ const HomePage: React.FC = () => {
           <WorkHistory />
         </Section>
 
-        <Section title="Say Hi!">
+        <Section title="Say Hi">
           <SocialLinks />
         </Section>
       </HomeContentColumn>
