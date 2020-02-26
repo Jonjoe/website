@@ -29,6 +29,12 @@ export const Heading4: React.FC<TypeProps> = props => {
   return <Styled.Heading4>{children}</Styled.Heading4>;
 };
 
+export const Heading5: React.FC<TypeProps> = props => {
+  const {children} = props;
+
+  return <Styled.Heading5>{children}</Styled.Heading5>;
+};
+
 export const SectionTitle: React.FC<TypeProps> = props => {
   const {children} = props;
 
@@ -56,6 +62,7 @@ export default {
   Heading2,
   Heading3,
   Heading4,
+  Heading5,
   SectionTitle,
   HeroBody,
   Body,

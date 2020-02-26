@@ -16,6 +16,7 @@ import {
   Struct,
   SkillPoints,
   WorkHistory,
+  FeaturedProject,
 } from '../../components';
 
 import {strings} from '../../config';
@@ -62,8 +63,16 @@ const HomePage: React.FC = () => {
           </ScrollAnimation>
         </Section>
 
-        <Section title="Projects" background="#e0795f">
-          <Text.Body>Content</Text.Body>
+        <Section title="Showcase" background="#e0795f">
+          <FeaturedProject />
+          <FeaturedProject />
+          <FeaturedProject />
+          <FeaturedProject />
+          <FeaturedProject />
+
+          <Button>
+            <Text.HeroBody>Other Projects</Text.HeroBody>
+          </Button>
         </Section>
 
         <Section title="History" background="#4a95d4">

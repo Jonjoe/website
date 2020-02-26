@@ -1,20 +1,26 @@
 import styled from 'styled-components';
 
-export const Heading1 = styled.h1`
+const headingBaseStyles = `
   font-family: Gilroy;
+  font-weight: 900;
+  font-size: 2rem;
   color: white;
+  margin: 0;
+  padding: 0;
+;
+`
+
+export const Heading1 = styled.h1`
+  ${headingBaseStyles}  
 `;
 
 export const Heading2 = styled.h2`
-  font-family: Gilroy;
-
+  ${headingBaseStyles}  
+  
   font-size: 4rem;
-  color: white;
   text-transform: uppercase;
-  font-weight: 900;
   text-align: center;
   margin: 0 0 50px 0;
-  padding: 0;
   position: relative;
 
   &:after {
@@ -33,14 +39,11 @@ export const Heading2 = styled.h2`
 `;
 
 export const Heading3 = styled.h3`
-  font-family: Gilroy;
-  font-size: 2rem;
-  color: white;
+  ${headingBaseStyles}  
+  
   text-transform: uppercase;
   font-weight: 300;
   text-align: center;
-  margin: 0;
-  padding: 0;
 
   @media only screen and (max-width: 600px) {
     font-size: 1.4rem;
@@ -48,13 +51,10 @@ export const Heading3 = styled.h3`
 `;
 
 export const Heading4 = styled.h4`
-  font-family: Gilroy;
-  font-size: 2rem;
-  color: white;
-  font-weight: 900;
+  ${headingBaseStyles}  
+  
   text-align: right;
-  margin: 0;
-  padding: 0;
+  
   > strong {
     color: #4a95d4;
   }
@@ -65,14 +65,16 @@ export const Heading4 = styled.h4`
   }
 `;
 
+export const Heading5 = styled.h5`
+  ${headingBaseStyles}  
+`
+
 export const SectionTitle = styled.h3`
-  font-family: Gilroy;
+  ${headingBaseStyles}  
+  
   font-size: 5rem;
   color: white;
   text-transform: uppercase;
-  font-weight: 900;
-  margin: 0;
-  padding: 0;
   
   &:after {
     content: '.';

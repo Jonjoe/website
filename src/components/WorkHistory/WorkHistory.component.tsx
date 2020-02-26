@@ -3,7 +3,7 @@ import * as Styled from './WorkHistory.styles';
 
 import {Struct, Text, TechCard, List} from '../';
 
-import workExperience from '../../data/work-data';
+import workExperience from '../../data/work.data';
 
 const WorkHistory: React.FC = () => {
   return (
