@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import * as Styled from './Caption.styles';
 
-import {Text} from '../';
+import {Text} from 'components';
 
 interface CaptionProps {
   title: string;

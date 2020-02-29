@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import {Text} from '../';
+import styled from "styled-components";
+import { Text } from "components";
 
 export const Image = styled.div`
   height: 300px;

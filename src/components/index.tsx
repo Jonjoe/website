@@ -1,21 +1,43 @@
-export { default as Hatch } from './Hatch/Hatch.component';
-export { default as HeroButton } from './HeroButton/HeroButton.component';
-export { default as Logo } from './Logo/Logo.component';
-export { default as Page } from './Page/Page.component';
-export { default as Topbar } from './Topbar/Topbar.component';
-export { default as Icon } from './Icon/Icon.component';
-export { default as Button } from './Button/Button.component';
-export { default as LandingSection } from './LandingSection/LandingSection.component';
-export { default as Section } from './Section/Section.component';
-export { default as WorkHistory } from './WorkHistory/WorkHistory.component';
-export { default as TechCard } from './TechCard/TechCard.component';
-export { default as Caption } from './Caption/Caption.component';
-export { default as FeaturedProject } from './FeaturedProject/FeaturedProject.component';
-export { default as FeaturedProjects } from './FeaturedProjects/FeaturedProjects.component';
-export { default as SocialLinks } from './SocialLinks/SocialLinks.component';
-export { default as Text } from './Text/Text.component';
-export { default as List } from './List/List.component';
-export { default as Column } from './Column/Column.component';
-export { default as Struct } from './Struct/Struct.component';
-export { default as SkillPoints } from './SkillPoints/SkillPoints.component';
-export { default as Container } from './Container/Container.component';
+/*
+ * Atoms
+*/
+export { default as Logo } from './atoms/Logo/Logo.component';
+export { default as Icon } from './atoms/Icon/Icon.component';
+export { default as HeroButton } from './atoms/HeroButton/HeroButton.component';
+export { default as Caption } from './atoms/Caption/Caption.component';
+export { default as Text } from './atoms/Text/Text.component';
+export { default as Button } from './atoms/Button/Button.component';
+
+/*
+ * Molecules
+*/
+export { default as TechCard } from './molecules/TechCard/TechCard.component';
+export { default as SocialLinks } from './molecules/SocialLinks/SocialLinks.component';
+
+/*
+ * Organisms
+*/
+export { default as FeaturedProject } from './organisms/FeaturedProject/FeaturedProject.component';
+export { default as List } from './organisms/List/List.component';
+export { default as Topbar } from './organisms/Topbar/Topbar.component';
+
+/*
+ * Layouts
+*/
+export { default as Section } from './layouts/Section/Section.component';
+export { default as Container } from './layouts/Container/Container.component';
+export { default as Struct } from './layouts/Struct/Struct.component';
+export { default as Column } from './layouts/Column/Column.component';
+
+/*
+ * Templates
+*/
+export { default as Page } from './templates/Page/Page.component';
+
+/*
+ * Implementation
+*/
+export { default as LandingSection } from './implementations/LandingSection/LandingSection.component';
+export { default as WorkHistory } from './implementations/WorkHistory/WorkHistory.component';
+export { default as FeaturedProjects } from './implementations/FeaturedProjects/FeaturedProjects.component';
+export { default as SkillPoints } from './implementations/SkillPoints/SkillPoints.component';

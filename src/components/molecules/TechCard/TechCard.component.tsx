@@ -1,7 +1,8 @@
 import * as React from 'react';
 import * as Styled from './TechCard.styles';
-import {Icon, Text} from '..';
-import {IconName} from '../Icon/Icon.component';
+
+import {Icon, Text} from 'components';
+import {IconName} from '../../atoms/Icon/Icon.component';
 
 interface TechCardProps {
   label: string;

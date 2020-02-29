@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as Styled from './List.styles';
 
-import {Text, Icon} from '../';
+import {Text, Icon} from 'components';
 
 interface ListProps {
   data: any[];

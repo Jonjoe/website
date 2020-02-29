@@ -5,11 +5,7 @@ import parse from "html-react-parser";
 import {
   Button,
   Page,
-  Hatch,
   Section,
-  LandingSection,
-  Caption,
-  Column,
   SocialLinks,
   Text,
   Struct,
@@ -22,8 +18,7 @@ import { strings } from "../../config";
 
 const HomePage: React.FC = () => {
   return (
-    <Page locked={false}>
-
+    <Page>
       <Section title="Hello">
         <ScrollAnimation animateIn="fadeIn">
           <Struct>

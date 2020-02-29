@@ -1,8 +1,8 @@
 import React from "react";
 import * as Styled from "./FeaturedProject.styles";
 
-import { Text, TechCard } from "..";
-import { IconName } from "../Icon/Icon.component";
+import { Text, TechCard } from "components";
+import { IconName } from "components/atoms/Icon/Icon.component";
 
 export interface FProject {
   name: string;

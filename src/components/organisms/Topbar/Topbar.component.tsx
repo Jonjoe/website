@@ -1,7 +1,7 @@
 import * as React from "react";
 import * as Styled from "./Topbar.styles";
 
-import { Icon, Text } from "../";
+import { Icon, Text } from "components";
 
 interface TopbarLinkProps {
   label: string;

@@ -1,15 +1,14 @@
 import * as React from "react";
 import * as Styled from "./Page.styles";
 
-import { Topbar } from "../";
+import { Topbar } from "components";
 
 interface PageProps {
-  locked: boolean;
   children: JSX.Element[] | JSX.Element;
 }
 
 const Page: React.FC<PageProps> = props => {
-  const { children, locked } = props;
+  const { children } = props;
 
   return (
     <Styled.Container>

@@ -1,8 +1,8 @@
 import * as React from 'react';
 import * as Styled from './SkillPoints.styles'
 
-import { Icon, Text } from '../'
-import {IconName} from '../Icon/Icon.component';
+import { Icon, Text } from 'components'
+import {IconName} from 'components/atoms/Icon/Icon.component';
 
 interface PointProps {
   label: string;

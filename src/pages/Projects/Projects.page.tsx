@@ -4,7 +4,7 @@ import { Page, Section, FeaturedProjects } from "components";
 
 const ProjectsPage: React.FC = () => {
   return (
-    <Page locked={false}>
+    <Page>
       <Section>
         <p>hi</p>
       </Section>

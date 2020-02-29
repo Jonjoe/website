@@ -3,7 +3,7 @@ import ScrollAnimation from "react-animate-on-scroll";
 
 import * as Styled from "./Section.styles";
 
-import { Text, Container } from "../";
+import { Text, Container } from "components";
 
 interface SectionProps {
   children: JSX.Element | JSX.Element[];

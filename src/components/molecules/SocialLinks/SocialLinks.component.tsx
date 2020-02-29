@@ -1,11 +1,10 @@
-import * as React from 'react';
+import * as React from "react";
+import * as Styled from "./SocialLinks.styles";
 
-import * as Styled from './SocialLinks.styles';
-
-import Icon from '../Icon/Icon.component';
+import { Icon } from "components";
 
 const SocialLinks: React.FC = () => {
-  const iconSize = '2rem';
+  const iconSize = "2rem";
 
   return (
     <Styled.Container>
@@ -23,7 +22,7 @@ const SocialLinks: React.FC = () => {
       </Styled.Link>
       <Styled.Link>
         <Icon name="linkedin" size={iconSize} />
-      </Styled.Link>{' '}
+      </Styled.Link>{" "}
     </Styled.Container>
   );
 };

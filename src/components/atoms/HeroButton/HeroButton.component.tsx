@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as Styled from './HeroButton.styles';
 
-import {Text} from '../';
+import {Text} from 'components';
 
 export interface HeroButtonProps {
   label: string;
