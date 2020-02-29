@@ -1,7 +1,7 @@
-import * as React from 'react';
-import * as Styled from './Page.styles';
+import * as React from "react";
+import * as Styled from "./Page.styles";
 
-import {Topbar} from '../';
+import { Topbar } from "../";
 
 interface PageProps {
   locked: boolean;
@@ -9,13 +9,12 @@ interface PageProps {
 }
 
 const Page: React.FC<PageProps> = props => {
-  const {children, locked} = props;
+  const { children, locked } = props;
 
   return (
     <Styled.Container>
       <Topbar />
-      {children}
-      {locked && <Styled.lockedPage />}
+      <div>{children}</div>
     </Styled.Container>
   );
 };

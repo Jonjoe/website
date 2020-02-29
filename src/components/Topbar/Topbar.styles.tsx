@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Header = styled.header`
+export const OuterContainer = styled.nav`
   width: 100%;
   display: flex;
   justify-content: center;

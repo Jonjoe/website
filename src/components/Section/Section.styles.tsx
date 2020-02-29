@@ -48,10 +48,6 @@ export const Container = styled.section<ContainerProps>`
     }
   }
 
-  &:first-child {
-    background: green!important;
-  }
-
   &:last-child {
     padding-top: 200px!important;
     padding-bottom: 50px!important;

@@ -5,6 +5,11 @@ const routes = [
     path: "/",
     exact: true,
     component: Pages.Home
+  },
+  {
+    path: "/projects",
+    exact: true,
+    component: Pages.Projects
   }
 ]
 

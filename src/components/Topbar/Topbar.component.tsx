@@ -15,7 +15,7 @@ const TopbarLink: React.FC<TopbarLinkProps> = props => (
 
 const Topbar: React.FC = () => {
   return (
-    <Styled.Header>
+    <Styled.OuterContainer>
       <Styled.InnerContainer>
         <Styled.LeftLinks>
           <TopbarLink label="Home" />
@@ -33,7 +33,7 @@ const Topbar: React.FC = () => {
           <TopbarLink label="Contact" />
         </Styled.RightLinks>
       </Styled.InnerContainer>
-    </Styled.Header>
+    </Styled.OuterContainer>
   );
 };
 

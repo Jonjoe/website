@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Container = styled.section`
+export const Container = styled.header`
   position: relative;
   height: 80vh;
   width: 100%;
