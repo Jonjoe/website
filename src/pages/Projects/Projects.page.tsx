@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import { Page, Section, FeaturedProjects } from "../../components";
+import { Page, Section, FeaturedProjects } from "components";
 
 const ProjectsPage: React.FC = () => {
   return (
