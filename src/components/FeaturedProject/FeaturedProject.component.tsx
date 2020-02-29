@@ -1,24 +1,41 @@
-import React from 'react';
-import * as Styled from './FeaturedProject.styles';
-import {Text, TechCard} from '..';
+import React from "react";
+import * as Styled from "./FeaturedProject.styles";
 
-const FeaturedProject: React.FC = () => {
+import { Text, TechCard } from "..";
+import { IconName } from "../Icon/Icon.component";
+
+export interface FProject {
+  name: string;
+  description: string;
+  tags: Tag[];
+  image: string;
+}
+
+export interface Tag {
+  label: string;
+  icon: IconName;
+}
+
+interface FeaturedProjectProps {
+  project: FProject;
+}
+
+const FeaturedProject: React.FC<FeaturedProjectProps> = props => {
+  const { project } = props;
+
   return (
     <Styled.Container>
       <Styled.Content>
-        <Text.Heading5>Rabbble</Text.Heading5>
+        <Text.Heading5>{project.name}</Text.Heading5>
+
         <Styled.ContentBody>
-          <Text.Body>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
-          </Text.Body>
+          <Text.Body>{project.description}</Text.Body>
         </Styled.ContentBody>
+
         <Styled.Tags>
-          <TechCard label="" icon="nodejs" />
-          <TechCard label="" icon="nodejs" />
-          <TechCard label="" icon="nodejs" />
+          {project.tags.map((tag: Tag) => (
+            <TechCard label={tag.label} icon={tag.icon} />
+          ))}
         </Styled.Tags>
       </Styled.Content>
       <Styled.Image />

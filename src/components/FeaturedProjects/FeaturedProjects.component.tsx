@@ -1,10 +1,16 @@
-import * as React from 'react';
-import {FeaturedProject} from '../';
+import * as React from "react";
 
-const FeaturedProjects: React.FC = () => {
+import projects from "../../data/projects.data";
+import FeaturedProject, {
+  FProject
+} from "../FeaturedProject/FeaturedProject.component";
+
+const FeaturedProjects: React.FC = props => {
   return (
     <div>
-      <FeaturedProject />
+      {projects.map((project: FProject) => (
+        <FeaturedProject project={project} />
+      ))}
     </div>
   );
 };

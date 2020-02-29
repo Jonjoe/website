@@ -13,7 +13,7 @@ export const Image = styled.div`
 export const Content = styled.div`
   display: flex;
   flex-direction: column;
-  width: 400px;
+  width: 500px;
 `;
 
 export const ContentBody = styled.div`
@@ -21,6 +21,7 @@ export const ContentBody = styled.div`
   padding: 15px;
   width: 100%;
   z-index: 900;
+  margin-top: 20px;
 `;
 
 export const Tags = styled.div`
@@ -31,6 +32,7 @@ export const Tags = styled.div`
 export const Container = styled.article`
   position: relative;
   display: flex;
+  min-height: 300px;
   margin-bottom: 50px;
 
   &:nth-child(even) {
