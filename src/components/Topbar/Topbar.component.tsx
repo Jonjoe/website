@@ -1,7 +1,7 @@
-import * as React from 'react';
-import * as Styled from './Topbar.styles';
+import * as React from "react";
+import * as Styled from "./Topbar.styles";
 
-import {Icon, Text} from '../';
+import { Icon, Text } from "../";
 
 interface TopbarLinkProps {
   label: string;
@@ -16,15 +16,23 @@ const TopbarLink: React.FC<TopbarLinkProps> = props => (
 const Topbar: React.FC = () => {
   return (
     <Styled.Header>
-      <TopbarLink label="Home" />
-      <TopbarLink label="CV" />
-      
-      <Styled.CenterPiece>
-        <Icon name="alien" size="2rem" />
-      </Styled.CenterPiece>
-      
-      <TopbarLink label="Labs" />
-      <TopbarLink label="Contact" />
+      <Styled.InnerContainer>
+        <Styled.LeftLinks>
+          <TopbarLink label="Home" />
+          <TopbarLink label="CV" />
+          <TopbarLink label="Projects" />
+        </Styled.LeftLinks>
+
+        <Styled.CenterPiece>
+          <Icon name="alien" size="2rem" />
+        </Styled.CenterPiece>
+
+        <Styled.RightLinks>
+          <TopbarLink label="Labs" />
+          <TopbarLink label="References" />
+          <TopbarLink label="Contact" />
+        </Styled.RightLinks>
+      </Styled.InnerContainer>
     </Styled.Header>
   );
 };
