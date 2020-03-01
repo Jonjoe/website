@@ -14,6 +14,7 @@ export { default as Button } from './atoms/Button/Button.component';
 export { default as TechCard } from './molecules/TechCard/TechCard.component';
 export { default as SocialLinks } from './molecules/SocialLinks/SocialLinks.component';
 export { default as Card } from './molecules/Card/Card.component';
+export { default as Tags } from './molecules/Tags/Tags.component';
 
 /*
  * Organisms
