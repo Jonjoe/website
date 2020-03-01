@@ -1,15 +1,22 @@
 import * as React from "react";
 import * as Styled from "./Topbar.styles";
 
+import { Link } from "react-router-dom";
+
 import { Icon, Text } from "components";
+
+import { ROUTES } from 'routes'
 
 interface TopbarLinkProps {
   label: string;
+  to: string;
 }
 
 const TopbarLink: React.FC<TopbarLinkProps> = props => (
   <Styled.Link>
-    <Text.Body>{props.label}</Text.Body>
+    <Link to={props.to}>
+      <Text.Body>{props.label}</Text.Body>
+    </Link>
   </Styled.Link>
 );
 
@@ -18,9 +25,9 @@ const Topbar: React.FC = () => {
     <Styled.OuterContainer>
       <Styled.InnerContainer>
         <Styled.LeftLinks>
-          <TopbarLink label="Home" />
-          <TopbarLink label="CV" />
-          <TopbarLink label="Projects" />
+          <TopbarLink to={ROUTES.HOME}label="Home" />
+          <TopbarLink to={ROUTES.HOME} label="CV" />
+          <TopbarLink to={ROUTES.PROJECTS}label="Projects" />
         </Styled.LeftLinks>
 
         <Styled.CenterPiece>
@@ -28,9 +35,9 @@ const Topbar: React.FC = () => {
         </Styled.CenterPiece>
 
         <Styled.RightLinks>
-          <TopbarLink label="Labs" />
-          <TopbarLink label="References" />
-          <TopbarLink label="Contact" />
+          <TopbarLink to={ROUTES.HOME} label="Labs" />
+          <TopbarLink to={ROUTES.WORK_HISTORY} label="History" />
+          <TopbarLink to={ROUTES.HOME} label="Contact" />
         </Styled.RightLinks>
       </Styled.InnerContainer>
     </Styled.OuterContainer>
