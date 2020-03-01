@@ -13,6 +13,7 @@ export { default as Button } from './atoms/Button/Button.component';
 */
 export { default as TechCard } from './molecules/TechCard/TechCard.component';
 export { default as SocialLinks } from './molecules/SocialLinks/SocialLinks.component';
+export { default as Card } from './molecules/Card/Card.component';
 
 /*
  * Organisms
@@ -28,6 +29,7 @@ export { default as Section } from './layouts/Section/Section.component';
 export { default as Container } from './layouts/Container/Container.component';
 export { default as Struct } from './layouts/Struct/Struct.component';
 export { default as Column } from './layouts/Column/Column.component';
+export { default as CardGrid } from './layouts/CardGrid/CardGrid.component';
 
 /*
  * Templates
