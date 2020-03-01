@@ -22,6 +22,7 @@ export type IconName =
   | 'alien'
   | 'hexagon'
   | 'code2'
+  | 'folder'
   | 'rocket'
   | 'bullseye'
   | 'bulletpoint'
@@ -52,6 +53,9 @@ function mapNamePropToFaNames(iconName: IconName): string | string[] {
 
     case 'glasses':
       return ['fad', 'glasses'];
+
+    case 'folder':
+      return ['fad', 'folder-open'];
     
     case 'hexagon':
       return ['fal', 'hexagon'];

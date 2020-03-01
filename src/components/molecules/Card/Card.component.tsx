@@ -1,14 +1,13 @@
 import * as React from "react";
 import * as Styled from "./Card.styles";
 
-import { Text, Icon } from "components";
 import { Text, Icon, Tags } from "components";
 
 const Card: React.FC = () => {
   return (
     <Styled.Container>
       <Styled.Header>
-        <Icon name="github" />
+        <Icon name="folder" />
         <Text.Heading4>This is the card title</Text.Heading4>
       </Styled.Header>
       <Styled.Content>
