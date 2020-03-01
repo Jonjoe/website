@@ -2,6 +2,7 @@ import * as React from "react";
 import * as Styled from "./Card.styles";
 
 import { Text, Icon } from "components";
+import { Text, Icon, Tags } from "components";
 
 const Card: React.FC = () => {
   return (
@@ -17,12 +18,8 @@ const Card: React.FC = () => {
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam
         </Text.Body>
+        <Tags tags={["javascript", "node", "aws"]} />
       </Styled.Content>
-      <Styled.Footer>
-        <p>Javascript</p>
-        <p>Javascript</p>
-        <p>Javascript</p>
-      </Styled.Footer>
     </Styled.Container>
   );
 };
