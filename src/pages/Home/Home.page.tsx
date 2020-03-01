@@ -11,7 +11,8 @@ import {
   Struct,
   SkillPoints,
   WorkHistory,
-  FeaturedProjects
+  FeaturedProjects,
+  LandingSection
 } from "../../components";
 
 import { strings } from "../../config";
@@ -19,6 +20,7 @@ import { strings } from "../../config";
 const HomePage: React.FC = () => {
   return (
     <Page>
+      <LandingSection />
       <Section title="Hello">
         <ScrollAnimation animateIn="fadeIn">
           <Struct>
