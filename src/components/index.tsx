@@ -43,3 +43,4 @@ export { default as LandingSection } from './implementations/LandingSection/Land
 export { default as WorkHistory } from './implementations/WorkHistory/WorkHistory.component';
 export { default as FeaturedProjects } from './implementations/FeaturedProjects/FeaturedProjects.component';
 export { default as SkillPoints } from './implementations/SkillPoints/SkillPoints.component';
+export { default as Asides } from './implementations/Asides/Asides.component';
