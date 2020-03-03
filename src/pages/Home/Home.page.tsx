@@ -55,11 +55,9 @@ const HomePage: React.FC = () => {
       </Section>
 
       <Section title="Showcase" background={theme.pallet.BLUE}>
-        <FeaturedProjects />
-
-        <Button>
-          <Text.Body>Other Projects</Text.Body>
-        </Button>
+        <Struct column>
+          <FeaturedProjects />
+        </Struct>
       </Section>
 
       <Section title="History" background={theme.pallet.RED}>

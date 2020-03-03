@@ -17,43 +17,29 @@ export const Container = styled.section<ContainerProps>`
       ? `background-color: ${props.background};`
       : `background-color: transparant;`}
 
-  &:before {
+  &:before, &:after {
+    ${(props: ContainerProps) =>
+      props.background && `border: 5px solid ${props.background};`}
+
+    position: absolute;
     display: block;
     content: "";
     height: 50px;
     width: 50px;
-    border-top: 5px solid black;
-    border-right: 5px solid black;
-    border-bottom: 0px solid black;
-    border-left: 0px solid black;
-    position: absolute;
+  }
+
+  &:before {
+    border-bottom-width: 0px;
+    border-left-width: 0px;
     top: -10px;
     right: -10px;
-
-    ${(props: ContainerProps) =>
-      props.background
-        ? `border-color: ${props.background};`
-        : `border-color: transparant;`}
-    
-    ${(props: ContainerProps) => !props.background && "display: none;"}
+  }
 
   &:after {
-    display: block;
-    content: "";
-    height: 50px;
-    width: 50px;
-    border-top: 0px solid black;
-    border-right: 0px solid black;
-    border-bottom: 5px solid black;
-    border-left: 5px solid black;
-    position: absolute;
+    border-top-width: 0px;
+    border-right-width: 0px;
     bottom: -10px;
     left: -10px;
-
-    ${(props: ContainerProps) =>
-      props.background
-        ? `border-color: ${props.background};`
-        : `border-color: transparant;`}
   }
 `;
 
