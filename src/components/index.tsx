@@ -2,6 +2,7 @@
  * Atoms
 */
 export { default as Logo } from './atoms/Logo/Logo.component';
+export { default as Divider } from './atoms/Divider/Divider.component';
 export { default as Icon } from './atoms/Icon/Icon.component';
 export { default as Text } from './atoms/Text/Text.component';
 export { default as Button } from './atoms/Button/Button.component';
