@@ -1,10 +1,13 @@
 import styled from "styled-components";
+import { theme } from "config";
 
 import { DynamicTypeProps } from "./Text.component";
 
 function getBaseTypography(props: DynamicTypeProps) {
   const fontWeight: string = props.strong ? "900" : "300";
-  const fontColor: string = props.inverted ? "white" : "#39373a";
+  const fontColor: string = props.inverted
+    ? theme.pallet.WHITE
+    : theme.pallet.BLACK;
   const textAlignment: string = props.centered ? "center" : "left";
 
   return `
@@ -25,6 +28,13 @@ export const Heading1 = styled.h1<DynamicTypeProps>`
 
 export const Heading2 = styled.h2<DynamicTypeProps>`
   ${(props: DynamicTypeProps) => getBaseTypography(props)}
+  font-size: 6rem;
+  font-weight: 900;
+
+  &:after {
+    content: ".";
+    display: "block";
+  }
 `;
 
 export const Heading3 = styled.h3<DynamicTypeProps>`
@@ -38,6 +48,12 @@ export const Heading4 = styled.h4<DynamicTypeProps>`
 
 export const Heading5 = styled.h5<DynamicTypeProps>`
   ${(props: DynamicTypeProps) => getBaseTypography(props)}
+`;
+
+export const Heading6 = styled.h6<DynamicTypeProps>`
+  ${(props: DynamicTypeProps) => getBaseTypography(props)}
+  font-size: 1.2rem;
+  font-weight: 900;
 `;
 
 export const Body = styled.p<DynamicTypeProps>`
