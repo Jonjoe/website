@@ -14,28 +14,30 @@ import {
   LandingSection
 } from "../../components";
 
-import { strings } from "../../config";
+import { strings, theme } from "config";
 
 const HomePage: React.FC = () => {
   return (
     <Page>
       <LandingSection />
-      <Section title="Hello">
+
+      <Section background={theme.pallet.BLACK} title="Hello">
+        <Struct>
           <Struct>
-            <Struct>
-              <Text.Heading4>{parse(strings.INTRO_TITLE) as any}</Text.Heading4>
-            </Struct>
-            <Struct fixedWidth={30} />
-            <Struct>
-              <Text.Body>{parse(strings.INTRO_CONTENT) as any}</Text.Body>
-            </Struct>
+            <Text.Heading4 inverted>
+              {parse(strings.INTRO_TITLE) as any}
+            </Text.Heading4>
           </Struct>
+
           <Struct>
-            <SkillPoints />
+            <Text.Body inverted>
+              {parse(strings.INTRO_CONTENT) as any}
+            </Text.Body>
           </Struct>
+        </Struct>
       </Section>
 
-      <Section title="Showcase" background="#e0795f">
+      <Section title="Showcase" background={theme.pallet.BLUE}>
         <FeaturedProjects />
 
         <Button>
@@ -43,7 +45,7 @@ const HomePage: React.FC = () => {
         </Button>
       </Section>
 
-      <Section title="History" background="#4a95d4">
+      <Section title="History" background={theme.pallet.RED}>
         <WorkHistory />
       </Section>
 

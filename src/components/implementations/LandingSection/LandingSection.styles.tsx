@@ -5,6 +5,6 @@ export const Container = styled.header`
 `;
 
 export const Content = styled.div`
-  margin-bottom: 50px;
+  margin-bottom: 10px;
   width: 100%;
-`;
+`

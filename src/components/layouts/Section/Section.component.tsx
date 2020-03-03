@@ -1,6 +1,4 @@
 import * as React from "react";
-import ScrollAnimation from "react-animate-on-scroll";
-
 import * as Styled from "./Section.styles";
 
 import { Text, Container } from "components";
@@ -14,12 +12,22 @@ interface SectionProps {
 const Section: React.FC<SectionProps> = props => {
   const { children, title, background } = props;
 
+  function renderHeader(title?: string) {
+    if (!title) {
+      return null;
+    }
+
+    return (
+      <Styled.Header>
+        <Text.Heading2>{title}</Text.Heading2>
+      </Styled.Header>
+    );
+  }
+
   return (
     <Styled.Container background={background}>
-      <Container>
-        {title && <Text.Heading2>{title}</Text.Heading2>}
-        <div>{children}</div>
-      </Container>
+      {renderHeader(title)}
+      {children}
     </Styled.Container>
   );
 };

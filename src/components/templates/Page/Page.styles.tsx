@@ -7,6 +7,8 @@ export const OuterContainer = styled.div`
 `;
 
 export const InnerContainer = styled.div`
-  box-sizing: border-box;
-  //background: #39373a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #f8f8f8;
 `;

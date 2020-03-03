@@ -7,11 +7,18 @@ interface ContainerProps {
 export const Container = styled.section<ContainerProps>`
   display: flex;
   width: 100%;
+  max-width: 1000px;
   position: relative;
-  margin-bottom: 100px;
+  margin: 100px 0;
+  padding: 50px;
 
   ${(props: ContainerProps) =>
     props.background
       ? `background-color: ${props.background};`
       : `background-color: transparant;`}
+`;
+
+export const Header = styled.header`
+  position: absolute;
+  top: -80px;
 `;
