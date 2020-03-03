@@ -11,4 +11,5 @@ export const InnerContainer = styled.div`
   flex-direction: column;
   align-items: center;
   background: #f8f8f8;
+  margin-bottom: 50px;
 `;
