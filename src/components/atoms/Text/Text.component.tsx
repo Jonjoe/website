@@ -8,63 +8,35 @@ interface TypeProps extends DynamicTypeProps {
 export interface DynamicTypeProps {
   strong?: boolean;
   inverted?: boolean;
-  centered?: boolean;
+  align?: "left" | "right" | "center";
 }
 
 export const Heading1: React.FC<TypeProps> = props => {
-  return (
-    <Styled.Heading1 {...props}>
-      {props.children}
-    </Styled.Heading1>
-  );
+  return <Styled.Heading1 {...props}>{props.children}</Styled.Heading1>;
 };
 
 export const Heading2: React.FC<TypeProps> = props => {
-  return (
-    <Styled.Heading2 {...props}>
-      {props.children}
-    </Styled.Heading2>
-  );
+  return <Styled.Heading2 {...props}>{props.children}</Styled.Heading2>;
 };
 
 export const Heading3: React.FC<TypeProps> = props => {
-  return (
-    <Styled.Heading3 {...props}>
-      {props.children}
-    </Styled.Heading3>
-  );
+  return <Styled.Heading3 {...props}>{props.children}</Styled.Heading3>;
 };
 
 export const Heading4: React.FC<TypeProps> = props => {
-  return (
-    <Styled.Heading4 {...props}>
-      {props.children}
-    </Styled.Heading4>
-  );
+  return <Styled.Heading4 {...props}>{props.children}</Styled.Heading4>;
 };
 
 export const Heading5: React.FC<TypeProps> = props => {
-  return (
-    <Styled.Heading5 {...props}>
-      {props.children}
-    </Styled.Heading5>
-  );
+  return <Styled.Heading5 {...props}>{props.children}</Styled.Heading5>;
 };
 
 export const Heading6: React.FC<TypeProps> = props => {
-  return (
-    <Styled.Heading6 {...props}>
-      {props.children}
-    </Styled.Heading6>
-  );
+  return <Styled.Heading6 {...props}>{props.children}</Styled.Heading6>;
 };
 
 export const Body: React.FC<TypeProps> = props => {
-  return (
-    <Styled.Body {...props}>
-      {props.children}
-    </Styled.Body>
-  );
+  return <Styled.Body {...props}>{props.children}</Styled.Body>;
 };
 
 export default {

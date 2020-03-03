@@ -8,7 +8,8 @@ function getBaseTypography(props: DynamicTypeProps) {
   const fontColor: string = props.inverted
     ? theme.pallet.WHITE
     : theme.pallet.BLACK;
-  const textAlignment: string = props.centered ? "center" : "left";
+
+  const textAlignment: string = props.align ? props.align : "left";
 
   return `
     font-family: Gilroy;
@@ -48,6 +49,12 @@ export const Heading4 = styled.h4<DynamicTypeProps>`
 
 export const Heading5 = styled.h5<DynamicTypeProps>`
   ${(props: DynamicTypeProps) => getBaseTypography(props)}
+
+  font-size: 2.1rem;
+  font-weight: 900;
+  > strong {
+    color: ${theme.pallet.BLUE};
+  }
 `;
 
 export const Heading6 = styled.h6<DynamicTypeProps>`
@@ -58,4 +65,7 @@ export const Heading6 = styled.h6<DynamicTypeProps>`
 
 export const Body = styled.p<DynamicTypeProps>`
   ${(props: DynamicTypeProps) => getBaseTypography(props)}
+  > strong {
+    font-weight: 900;
+  }
 `;
