@@ -65,8 +65,35 @@ export const Heading6 = styled.h6<DynamicTypeProps>`
 `;
 
 export const Body = styled.p<DynamicTypeProps>`
-  ${(props: DynamicTypeProps) => getBaseTypography(props)}
+  ${(props: DynamicTypeProps) => getBaseTypography(props)};
+
+  display: flex;
+  width: 100%;
+
   > strong {
     font-weight: 900;
+    margin-left: 5px;
+    margin-right: 5px;
   }
+
+  > div {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  ${(props: DynamicTypeProps) => {
+    switch (props.align) {
+      case "left":
+        return "justify-content: flex-start";
+
+      case "right":
+        return "justify-content: flex-end";
+
+      case "center":
+        return "justify-content: center";
+
+      default:
+        return "justify-content: flex-start";
+    }
+  }}
 `;

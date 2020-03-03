@@ -2,7 +2,7 @@ import * as React from "react";
 import * as Styled from "./Text.styles";
 
 interface TypeProps extends DynamicTypeProps {
-  children: string | JSX.Element;
+  children: any;
 }
 
 export interface DynamicTypeProps {
