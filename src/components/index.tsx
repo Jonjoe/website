@@ -40,7 +40,6 @@ export { default as Page } from './templates/Page/Page.component';
 /*
  * Implementation
 */
-export { default as LandingSection } from './implementations/LandingSection/LandingSection.component';
 export { default as WorkHistory } from './implementations/WorkHistory/WorkHistory.component';
 export { default as FeaturedProjects } from './implementations/FeaturedProjects/FeaturedProjects.component';
 export { default as SkillPoints } from './implementations/SkillPoints/SkillPoints.component';
