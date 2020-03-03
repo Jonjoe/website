@@ -6,11 +6,12 @@ import {
   Page,
   Section,
   SocialLinks,
+  SkillPoints,
   Text,
   Struct,
   WorkHistory,
   FeaturedProjects,
-  LandingSection
+  Divider
 } from "../../components";
 
 import { strings, theme } from "config";
@@ -18,7 +19,16 @@ import { strings, theme } from "config";
 const HomePage: React.FC = () => {
   return (
     <Page>
-      <LandingSection />
+      <Section>
+        <Struct column>
+          <Text.Heading3 align="center">
+            Web / Mobile / Maker / Hacker
+          </Text.Heading3>
+
+          <Text.Heading1 align="center">Jonjoe Whitfield</Text.Heading1>
+          <SkillPoints />
+        </Struct>
+      </Section>
 
       <Section background={theme.pallet.BLACK} title="Hello">
         <Struct column>
