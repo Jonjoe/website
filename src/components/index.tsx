@@ -27,6 +27,7 @@ export { default as Topbar } from './organisms/Topbar/Topbar.component';
 export { default as Section } from './layouts/Section/Section.component';
 export { default as Container } from './layouts/Container/Container.component';
 export { default as Struct } from './layouts/Struct/Struct.component';
+export { default as Centered } from './layouts/Centered/Centered.component';
 export { default as Column } from './layouts/Column/Column.component';
 export { default as CardGrid } from './layouts/CardGrid/CardGrid.component';
 
