@@ -20,7 +20,7 @@ const WorkHistory: React.FC = () => {
         {workExperience.map((work: any, index: number) => (
           <Styled.Experience key={index}>
             <Struct column>
-              <Text.HeroBody>{work.company}</Text.HeroBody>
+              <Text.Body>{work.company}</Text.Body>
             </Struct>
             <List data={work.points} />
             <Struct vPadded />

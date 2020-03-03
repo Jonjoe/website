@@ -1,5 +1,4 @@
 import * as React from "react";
-import ScrollAnimation from "react-animate-on-scroll";
 import parse from "html-react-parser";
 
 import {
@@ -22,7 +21,6 @@ const HomePage: React.FC = () => {
     <Page>
       <LandingSection />
       <Section title="Hello">
-        <ScrollAnimation animateIn="fadeIn">
           <Struct>
             <Struct>
               <Text.Heading4>{parse(strings.INTRO_TITLE) as any}</Text.Heading4>
@@ -35,14 +33,13 @@ const HomePage: React.FC = () => {
           <Struct>
             <SkillPoints />
           </Struct>
-        </ScrollAnimation>
       </Section>
 
       <Section title="Showcase" background="#e0795f">
         <FeaturedProjects />
 
         <Button>
-          <Text.HeroBody>Other Projects</Text.HeroBody>
+          <Text.Body>Other Projects</Text.Body>
         </Button>
       </Section>
 

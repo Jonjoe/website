@@ -6,7 +6,6 @@ import { Column, Caption, Button, Text, SocialLinks } from "components";
 const LandingSection: React.FC = () => {
   return (
     <Styled.Container>
-      <Styled.Background />
       <Styled.Content>
         <Column>
           <Caption
@@ -16,7 +15,7 @@ const LandingSection: React.FC = () => {
 
           <div style={{ marginBottom: 30 }}>
             <Button>
-              <Text.HeroBody>Contact Me</Text.HeroBody>
+              <Text.Body>Contact Me</Text.Body>
             </Button>
           </div>
 
