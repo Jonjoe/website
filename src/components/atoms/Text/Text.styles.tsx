@@ -40,7 +40,8 @@ export const Heading2 = styled.h2<DynamicTypeProps>`
 
 export const Heading3 = styled.h3<DynamicTypeProps>`
   ${(props: DynamicTypeProps) => getBaseTypography(props)}
-  font-size: 2rem;
+  font-size: 2.2rem;
+  text-transform: uppercase;
 `;
 
 export const Heading4 = styled.h4<DynamicTypeProps>`

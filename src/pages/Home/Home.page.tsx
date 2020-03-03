@@ -48,6 +48,8 @@ const HomePage: React.FC = () => {
             </Struct>
           </Struct>
 
+          <Divider />
+
           <SocialLinks />
         </Struct>
       </Section>

@@ -34,7 +34,9 @@ export const Container = styled.section<ContainerProps>`
       props.background
         ? `border-color: ${props.background};`
         : `border-color: transparant;`}
-  }
+    
+    ${(props: ContainerProps) => !props.background && "display: none;"}
+
   &:after {
     display: block;
     content: "";

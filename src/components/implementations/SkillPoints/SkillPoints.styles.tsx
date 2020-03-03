@@ -1,11 +1,10 @@
 import styled from 'styled-components';
-import { theme } from "config";
 
 export const Container = styled.div`
   display: flex;
   width: 100%;
   margin-top: 50px;
-  justify-content: space-between;
+  justify-content: center;
 
   @media only screen and (max-width: 600px) {
     flex-wrap: wrap;

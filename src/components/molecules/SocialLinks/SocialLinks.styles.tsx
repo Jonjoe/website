@@ -5,7 +5,6 @@ export const Container = styled.nav`
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-top: 50px;
 `;
 
 export const Link = styled.a`
