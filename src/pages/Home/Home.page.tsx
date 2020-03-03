@@ -8,7 +8,6 @@ import {
   SocialLinks,
   Text,
   Struct,
-  SkillPoints,
   WorkHistory,
   FeaturedProjects,
   LandingSection
@@ -22,18 +21,24 @@ const HomePage: React.FC = () => {
       <LandingSection />
 
       <Section background={theme.pallet.BLACK} title="Hello">
-        <Struct>
+        <Struct column>
           <Struct>
-            <Text.Heading4 inverted>
-              {parse(strings.INTRO_TITLE) as any}
-            </Text.Heading4>
+            <Struct>
+              <Text.Heading5 inverted align="right">
+                {parse(strings.INTRO_TITLE) as any}
+              </Text.Heading5>
+            </Struct>
+
+            <Struct fixedWidth={30} />
+
+            <Struct>
+              <Text.Body inverted align="left">
+                {parse(strings.INTRO_CONTENT) as any}
+              </Text.Body>
+            </Struct>
           </Struct>
 
-          <Struct>
-            <Text.Body inverted>
-              {parse(strings.INTRO_CONTENT) as any}
-            </Text.Body>
-          </Struct>
+          <SocialLinks />
         </Struct>
       </Section>
 

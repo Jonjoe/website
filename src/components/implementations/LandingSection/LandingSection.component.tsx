@@ -8,8 +8,11 @@ const LandingSection: React.FC = () => {
     <Styled.Container>
       <Centered>
         <Styled.Content>
-          <Text.Heading3 centered>Web / Mobile / Maker / Hacker</Text.Heading3>
-          <Text.Heading1 centered>Jonjoe Whitfield</Text.Heading1>
+          <Text.Heading3 align="center">
+            Web / Mobile / Maker / Hacker
+          </Text.Heading3>
+
+          <Text.Heading1 align="center">Jonjoe Whitfield</Text.Heading1>
         </Styled.Content>
 
         <SkillPoints />
