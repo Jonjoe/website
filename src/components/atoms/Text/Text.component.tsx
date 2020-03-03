@@ -51,6 +51,14 @@ export const Heading5: React.FC<TypeProps> = props => {
   );
 };
 
+export const Heading6: React.FC<TypeProps> = props => {
+  return (
+    <Styled.Heading6 {...props}>
+      {props.children}
+    </Styled.Heading6>
+  );
+};
+
 export const Body: React.FC<TypeProps> = props => {
   return (
     <Styled.Body {...props}>
@@ -65,5 +73,6 @@ export default {
   Heading3,
   Heading4,
   Heading5,
+  Heading6,
   Body
 };
