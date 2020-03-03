@@ -15,7 +15,7 @@ const Point: React.FC<PointProps> = props => {
   return (
     <Styled.Point>
       <Icon size="50px" name={icon} />
-      <Text.Body>{label}</Text.Body>
+      <Text.Heading6>{label}</Text.Heading6>
     </Styled.Point>
   );
 };

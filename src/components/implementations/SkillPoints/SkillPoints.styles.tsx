@@ -1,8 +1,10 @@
 import styled from 'styled-components';
+import { theme } from "config";
 
 export const Container = styled.div`
   display: flex;
   width: 100%;
+  margin-top: 50px;
   justify-content: space-between;
 
   @media only screen and (max-width: 600px) {
@@ -17,9 +19,8 @@ export const Point = styled.div`
   flex-direction: column;
   margin: 30px;
 
-  p {
-    margin-top: 15px;
-    text-align: center;
+  h6 {
+    margin-top: 25px;
   }
 
   @media only screen and (max-width: 600px) {
