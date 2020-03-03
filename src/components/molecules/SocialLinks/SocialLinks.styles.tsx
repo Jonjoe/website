@@ -2,10 +2,6 @@ import styled from 'styled-components'
 
 export const Container = styled.nav`
   display: flex;
-
-  * {
-    color: white;
-  }
 `
 
 export const Link = styled.a`

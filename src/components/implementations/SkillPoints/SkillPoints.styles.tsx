@@ -16,7 +16,6 @@ export const Point = styled.div`
   justify-content: center;
   flex-direction: column;
   margin: 30px;
-  color: white;
 
   p {
     margin-top: 15px;
