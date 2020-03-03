@@ -1,14 +1,12 @@
-import styled, {createGlobalStyle} from 'styled-components';
+import styled from "styled-components";
 
-export const Container = styled.div`
+export const OuterContainer = styled.div`
   min-height: 100vh;
   width: 100%;
-  box-sizing: border-box;
-  background: #39373a;
+  padding: 25px 100px 50px 100px;
 `;
 
-export const lockedPage = createGlobalStyle`
-  html {
-    overflow: hidden;
-  }
-`
+export const InnerContainer = styled.div`
+  box-sizing: border-box;
+  //background: #39373a;
+`;

@@ -11,10 +11,10 @@ const Page: React.FC<PageProps> = props => {
   const { children } = props;
 
   return (
-    <Styled.Container>
+    <Styled.OuterContainer>
       <Topbar />
-      <div>{children}</div>
-    </Styled.Container>
+      <Styled.InnerContainer>{children}</Styled.InnerContainer>
+    </Styled.OuterContainer>
   );
 };
 
