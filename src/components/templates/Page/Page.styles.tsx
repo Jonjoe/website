@@ -12,4 +12,5 @@ export const InnerContainer = styled.div`
   align-items: center;
   background: #f8f8f8;
   margin-bottom: 50px;
+  padding: 50px;
 `;

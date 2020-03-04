@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 interface StructWrapperProps {
   column?: boolean;
@@ -8,15 +8,16 @@ interface StructWrapperProps {
   vPadded?: boolean;
   fixedHeight?: number;
   fixedWidth?: number;
+  centered?: boolean;
 }
 
 export const StructWrapper = styled.div`
   display: flex;
-  padding: ${(props: StructWrapperProps) => (props.padded ? '10px' : '0')};
+  padding: ${(props: StructWrapperProps) => (props.padded ? "10px" : "0")};
   flex: ${(props: StructWrapperProps) => (props.size ? props.size : 1)};
 
   flex-direction: ${(props: StructWrapperProps) =>
-    props.column ? 'column' : 'row'};
+    props.column ? "column" : "row"};
 
   ${(props: StructWrapperProps) =>
     props.vPadded &&
@@ -30,6 +31,13 @@ export const StructWrapper = styled.div`
     `
       padding-left: 20px;
       padding-right: 20px;
+    `}
+  
+  ${(props: StructWrapperProps) =>
+    props.centered &&
+    `
+      align-items: center;
+      justify-content: center;
     `}
 
   ${(props: StructWrapperProps) =>

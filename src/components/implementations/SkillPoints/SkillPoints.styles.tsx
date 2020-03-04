@@ -4,6 +4,7 @@ export const Container = styled.div`
   display: flex;
   width: 100%;
   margin-top: 50px;
+  flex-wrap: wrap;
   justify-content: center;
 
   @media only screen and (max-width: 600px) {

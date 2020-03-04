@@ -15,6 +15,7 @@ function getBaseTypography(props: DynamicTypeProps) {
     font-family: Gilroy;
     padding: 0;
     margin: 0;
+    max-width: 550px;
     text-align: ${textAlignment};
     font-weight: ${fontWeight};
     color: ${fontColor};
@@ -25,12 +26,14 @@ export const Heading1 = styled.h1<DynamicTypeProps>`
   ${(props: DynamicTypeProps) => getBaseTypography(props)}
   font-size: 5.5rem;
   font-weight: 900;
+  max-width: 100%;
 `;
 
 export const Heading2 = styled.h2<DynamicTypeProps>`
   ${(props: DynamicTypeProps) => getBaseTypography(props)}
   font-size: 6rem;
   font-weight: 900;
+  max-width: 100%;
 
   &:after {
     content: ".";
@@ -41,6 +44,7 @@ export const Heading2 = styled.h2<DynamicTypeProps>`
 export const Heading3 = styled.h3<DynamicTypeProps>`
   ${(props: DynamicTypeProps) => getBaseTypography(props)}
   font-size: 2.2rem;
+  max-width: 100%;
   text-transform: uppercase;
 `;
 
@@ -52,8 +56,10 @@ export const Heading5 = styled.h5<DynamicTypeProps>`
   ${(props: DynamicTypeProps) => getBaseTypography(props)}
 
   font-size: 2.1rem;
-  font-weight: 900;
+  font-weight: 500;
+  margin-bottom: 25px;
   > strong {
+    font-weight: 900;
     color: ${theme.pallet.BLUE};
   }
 `;

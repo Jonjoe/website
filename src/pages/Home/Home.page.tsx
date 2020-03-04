@@ -31,22 +31,14 @@ const HomePage: React.FC = () => {
       </Section>
 
       <Section background={theme.pallet.BLACK} title="Hello">
-        <Struct column>
-          <Struct>
-            <Struct>
-              <Text.Heading5 inverted align="right">
-                {parse(strings.INTRO_TITLE) as any}
-              </Text.Heading5>
-            </Struct>
+        <Struct column centered>
+          <Text.Heading5 inverted align="center">
+            {parse(strings.INTRO_TITLE) as any}
+          </Text.Heading5>
 
-            <Struct fixedWidth={30} />
-
-            <Struct>
-              <Text.Body inverted align="left">
-                {parse(strings.INTRO_CONTENT) as any}
-              </Text.Body>
-            </Struct>
-          </Struct>
+          <Text.Body inverted align="center">
+            {parse(strings.INTRO_CONTENT) as any}
+          </Text.Body>
 
           <Divider />
 
