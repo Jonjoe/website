@@ -18,14 +18,15 @@ const Page: React.FC<PageProps> = props => {
 
       <Asides />
 
-      <Text.Body align="center">
+      <Text.Inline align="center">
         Made with <Icon name="heart" size="1rem" /> by <strong>me</strong> ...
         duhh
-      </Text.Body>
-      <Text.Body align="center">
+      </Text.Inline>
+      
+      <Text.Inline align="center">
         <Icon name="copyright" size="0.8rem"/>
         Copyright 1969
-      </Text.Body>
+      </Text.Inline>
     </Styled.OuterContainer>
   );
 };

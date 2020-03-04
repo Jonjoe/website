@@ -64,7 +64,7 @@ export const Heading6 = styled.h6<DynamicTypeProps>`
   font-weight: 900;
 `;
 
-export const Body = styled.p<DynamicTypeProps>`
+export const Inline = styled.span<DynamicTypeProps>`
   ${(props: DynamicTypeProps) => getBaseTypography(props)};
 
   display: flex;
@@ -96,4 +96,12 @@ export const Body = styled.p<DynamicTypeProps>`
         return "justify-content: flex-start";
     }
   }}
+`;
+
+export const Body = styled.p<DynamicTypeProps>`
+  ${(props: DynamicTypeProps) => getBaseTypography(props)};
+
+  > strong {
+    font-weight: 900;
+  }
 `;

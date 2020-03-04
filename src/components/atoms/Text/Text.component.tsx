@@ -39,6 +39,10 @@ export const Body: React.FC<TypeProps> = props => {
   return <Styled.Body {...props}>{props.children}</Styled.Body>;
 };
 
+export const Inline: React.FC<TypeProps> = props => {
+  return <Styled.Inline {...props}>{props.children}</Styled.Inline>;
+};
+
 export default {
   Heading1,
   Heading2,
@@ -46,5 +50,6 @@ export default {
   Heading4,
   Heading5,
   Heading6,
+  Inline,
   Body
 };
