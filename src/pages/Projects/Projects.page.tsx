@@ -1,10 +1,11 @@
 import * as React from "react";
+import { theme } from 'config'
 
 import { Page, Section, Card, CardGrid } from "components";
 
 const ProjectsPage: React.FC = () => {
   return (
-    <Page>
+    <Page accent={theme.pallet.RED}>
       <Section>
         <p>hi</p>
       </Section>

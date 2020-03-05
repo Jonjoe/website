@@ -17,9 +17,12 @@ import {
 import { strings, theme } from "config";
 
 const HomePage: React.FC = () => {
+  const [accent, setAccent] = React.useState(theme.pallet.BLACK)
+  
   return (
-    <Page>
+    <Page accent={accent}>
       <Section>
+        <Waypoint onEnter={() => setAccent(theme.pallet.BLACK)} bottomOffset={500} />
         <Struct column>
           <Text.Heading3 align="center">
             Web / Mobile / Maker / Hacker
@@ -45,19 +48,21 @@ const HomePage: React.FC = () => {
       </Section>
 
       <Section title="Showcase" background={theme.pallet.BLUE}>
-        <Waypoint onEnter={() => console.log('hi')}>
-          <Struct column centered>
-            <FeaturedProjects />
-            <Button>
-              <Text.Body inverted align="center">
-                View Other Projects
-              </Text.Body>
-            </Button>
-          </Struct>
-        </Waypoint>
+        <Waypoint onEnter={() => setAccent(theme.pallet.BLUE)} bottomOffset={500} />
+
+        <Struct column centered>
+          <FeaturedProjects />
+          <Button>
+            <Text.Body inverted align="center">
+              View Other Projects
+            </Text.Body>
+          </Button>
+        </Struct>
       </Section>
 
       <Section title="Labs" background={theme.pallet.RED}>
+        <Waypoint onEnter={() => setAccent(theme.pallet.RED)} bottomOffset={500} />
+        <Struct fixedHeight={1000} />
         <Struct column centered>
           <Button>
             <Text.Body inverted align="center">

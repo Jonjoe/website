@@ -2,8 +2,6 @@ import styled from "styled-components";
 import { theme } from "config";
 
 const baseAsideStyles = `
-  background: ${theme.pallet.RED};
-  border: 5px solid ${theme.pallet.RED};
   position: relative;
   width: 50px;
   display: flex;
@@ -17,7 +15,6 @@ const baseAsideStyles = `
     height: 20px;
     width: 20px;
     content: "";
-    border: 5px solid ${theme.pallet.RED};
     position: absolute;
   }
   
@@ -48,9 +45,24 @@ export const InnerContainer = styled.div`
   justify-content: space-between;
 `;
 
-export const LeftAside = styled.aside`
+interface StyledAsideProps {
+  accent: string;
+}
+
+export const LeftAside = styled.aside<StyledAsideProps>`
   ${baseAsideStyles}
   left: -100px;
+
+  ${props => `
+    background: ${props.accent};
+    border: 5px solid ${props.accent};
+  `}
+
+  &:before, &:after {
+    ${props => `
+      border: 5px solid ${props.accent};
+    `}
+  }
 
   &:before {
     top: -15px;
@@ -75,15 +87,28 @@ export const LeftAside = styled.aside`
     transition: all 0.318s;
     &:hover {
       background: white;
-      color: ${theme.pallet.RED};
+      ${props => `
+        color: ${props.accent};
+      `}
     }
   }
 `;
 
-export const RightAside = styled.aside`
+export const RightAside = styled.aside<StyledAsideProps>`
   ${baseAsideStyles}
   right: -100px;
   writing-mode: vertical-rl;
+
+  ${props => `
+    background: ${props.accent};
+    border: 5px solid ${props.accent};
+  `}
+
+  &:before, &:after {
+    ${props => `
+      border: 5px solid ${props.accent};
+    `}
+  }
 
   &:before {
     top: -15px;
@@ -110,7 +135,9 @@ export const RightAside = styled.aside`
     cursor: pointer;
 
     > * {
-      color: ${theme.pallet.RED};
+      ${props => `
+        color: ${props.accent};
+      `}
     }
   }
 `;

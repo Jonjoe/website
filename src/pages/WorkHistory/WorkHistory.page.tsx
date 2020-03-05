@@ -1,9 +1,10 @@
 import * as React from "react";
+import { theme } from "config";
 import { Page, Section } from "components";
 
 const WorkHistoryPage: React.FC = () => {
   return (
-    <Page>
+    <Page accent={theme.pallet.RED}>
       <Section>
         <p>Hi</p>
       </Section>

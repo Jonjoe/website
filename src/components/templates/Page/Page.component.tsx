@@ -5,15 +5,16 @@ import { Asides, Topbar, Footer } from "components";
 
 interface PageProps {
   children: JSX.Element[] | JSX.Element;
+  accent: string
 }
 
 const Page: React.FC<PageProps> = props => {
-  const { children } = props;
+  const { children, accent } = props;
 
   return (
     <Styled.OuterContainer>
       <Topbar />
-      <Asides />
+      <Asides accent={accent} />
       <Styled.InnerContainer>{children}</Styled.InnerContainer>
       <Footer />
     </Styled.OuterContainer>
