@@ -1,7 +1,7 @@
 import * as React from "react";
 import * as Styled from "./Section.styles";
 
-import { Text } from "components";
+import { Text, Struct } from "components";
 
 interface SectionProps {
   children: JSX.Element | JSX.Element[];
@@ -27,7 +27,9 @@ const Section: React.FC<SectionProps> = props => {
   return (
     <Styled.Container background={background}>
       {renderHeader(title)}
-      {children}
+      <Struct column centered>
+        {children}
+      </Struct>
     </Styled.Container>
   );
 };
