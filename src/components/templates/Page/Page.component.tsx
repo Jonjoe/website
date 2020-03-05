@@ -1,7 +1,7 @@
 import * as React from "react";
 import * as Styled from "./Page.styles";
 
-import { Asides, Topbar, Footer, Text, Icon } from "components";
+import { Asides, Topbar, Footer } from "components";
 
 interface PageProps {
   children: JSX.Element[] | JSX.Element;

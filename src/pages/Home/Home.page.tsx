@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Waypoint } from "react-waypoint";
 
 import parse from "html-react-parser";
 
@@ -44,6 +45,7 @@ const HomePage: React.FC = () => {
       </Section>
 
       <Section title="Showcase" background={theme.pallet.BLUE}>
+        <Waypoint onEnter={() => console.log('hi')}>
           <Struct column centered>
             <FeaturedProjects />
             <Button>
@@ -52,6 +54,7 @@ const HomePage: React.FC = () => {
               </Text.Body>
             </Button>
           </Struct>
+        </Waypoint>
       </Section>
 
       <Section title="Labs" background={theme.pallet.RED}>
