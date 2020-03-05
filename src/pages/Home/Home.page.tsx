@@ -63,7 +63,7 @@ const HomePage: React.FC = () => {
           bottomOffset={500}
         />
         <CardGrid>
-          {Array(10)
+          {Array(5)
             .fill("")
             .map((item: any) => (
               <Card />

@@ -35,7 +35,7 @@ const Topbar: React.FC = () => {
         </Styled.CenterPiece>
 
         <Styled.RightLinks>
-          <TopbarLink to={ROUTES.HOME} label="Labs" />
+          <TopbarLink to={ROUTES.LABS} label="Labs" />
           <TopbarLink to={ROUTES.WORK_HISTORY} label="History" />
           <TopbarLink to={ROUTES.HOME} label="Contact" />
         </Styled.RightLinks>

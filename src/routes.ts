@@ -7,6 +7,7 @@ interface Routes {
 export const ROUTES: Routes = {
   HOME: '/',
   PROJECTS: '/projects',
+  LABS: '/labs',
   WORK_HISTORY: '/work-history'
 }
 
@@ -20,6 +21,11 @@ const routes = [
     path: ROUTES.PROJECTS,
     exact: true,
     component: Pages.Projects
+  },
+  {
+    path: ROUTES.LABS,
+    exact: true,
+    component: Pages.Labs
   },
   {
     path: ROUTES.WORK_HISTORY,
