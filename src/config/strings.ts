@@ -1,6 +1,8 @@
 const strings = {
-  INTRO_TITLE: "Hi, I'm <strong>Jonjoe</strong>. I am a 29 year old engineer from <strong>London</strong>.",
-  INTRO_CONTENT: "I love to code, my biggest <strong>passion</strong> is building world class applications and solutions that <strong>solve real problems</strong>. Nothing brings me more satisfaction than watching a product evolve from scribbles on a notepad to a <strong>scalable</strong> production application with lots of happy users."
+  INTRO_ONE: "I'm <strong>Jonjoe</strong>. A 29 year old product engineer from <strong>London</strong>.",
+  INTRO_TWO: "From <strong>scribbles</strong> on a napkin to <strong>MVP</strong> to full scale <strong>production</strong> ready specimens of glory.",
+  INTRO_THREE: "From scribbles on a napkin to MVP to full scale production ready specimens of glory.",
+  
 }
 
 export default strings;

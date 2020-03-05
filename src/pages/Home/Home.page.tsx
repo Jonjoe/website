@@ -33,12 +33,14 @@ const HomePage: React.FC = () => {
       <Section background={theme.pallet.BLACK} title="Hello">
         <Struct column centered>
           <Text.Heading5 inverted align="center">
-            {parse(strings.INTRO_TITLE) as any}
+            {parse(strings.INTRO_ONE) as any}
           </Text.Heading5>
 
-          <Text.Body inverted align="center">
-            {parse(strings.INTRO_CONTENT) as any}
-          </Text.Body>
+          <Divider />
+
+          <Text.Heading5 inverted align="center">
+            {parse(strings.INTRO_TWO) as any}
+          </Text.Heading5>
 
           <Divider />
 
@@ -50,14 +52,6 @@ const HomePage: React.FC = () => {
         <Struct column>
           <FeaturedProjects />
         </Struct>
-      </Section>
-
-      <Section title="History" background={theme.pallet.RED}>
-        <WorkHistory />
-      </Section>
-
-      <Section title="Say Hi">
-        <SocialLinks />
       </Section>
     </Page>
   );

@@ -57,7 +57,6 @@ export const Heading5 = styled.h5<DynamicTypeProps>`
 
   font-size: 2.1rem;
   font-weight: 500;
-  margin-bottom: 25px;
   > strong {
     font-weight: 900;
     color: ${theme.pallet.BLUE};
