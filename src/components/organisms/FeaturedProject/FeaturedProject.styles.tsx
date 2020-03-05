@@ -1,13 +1,26 @@
 import styled from "styled-components";
-import { Text } from "components";
+import { theme } from 'config'
 
-export const Image = styled.div`
+interface StyledImageProps {
+  image: string;
+}
+
+export const Image = styled.div<StyledImageProps>`
   height: 300px;
   width: 500px;
   background: #eee;
-  opacity: 0.5;
   position: absolute;
   z-index: 800;
+  filter: grayscale(100%);
+  opacity: 0.7;
+  transition: all 0.318s;
+  border: 5px solid ${theme.pallet.BLACK};
+
+  ${(props: StyledImageProps) => `
+    background-image: url('/images/${props.image}');
+    background-repeat: no-repeat;
+    background-size: cover;
+  `}
 `;
 
 export const Content = styled.div`
@@ -33,7 +46,15 @@ export const Container = styled.article`
   position: relative;
   display: flex;
   min-height: 300px;
+  width: 100%;
   margin-bottom: 50px;
+
+  &:hover {
+    ${Image} {
+      filter: grayscale(0);
+      opacity: 1;
+    }
+  }
 
   &:nth-child(even) {
     justify-content: flex-end;
@@ -43,6 +64,12 @@ export const Container = styled.article`
     }
 
     ${Content} {
+    }
+
+    ${ContentBody} {
+      > * {
+        text-align: right;
+      }
     }
 
     h5 {

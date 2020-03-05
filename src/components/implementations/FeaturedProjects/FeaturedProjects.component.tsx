@@ -7,11 +7,11 @@ import { FProject } from "components/organisms/FeaturedProject/FeaturedProject.c
 
 const FeaturedProjects: React.FC = () => {
   return (
-    <div>
+    <React.Fragment>
       {projects.map((project: FProject) => (
         <FeaturedProject project={project} />
       ))}
-    </div>
+    </React.Fragment>
   );
 };
 

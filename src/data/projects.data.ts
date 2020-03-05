@@ -1,20 +1,26 @@
 export default [
   {
-    name: "project name",
+    name: "Edge Contract Builder",
     description: "This is a project",
-    tags: [],
-    image: ""
+    tags: ['javascript'],
+    image: "rabbble.jpg"
   },
   {
-    name: "project name",
+    name: "Factory App",
     description: "This is a project",
     tags: [],
-    image: ""
+    image: "rabbble.jpg"
   },
   {
-    name: "project name",
+    name: "Rabble Networking",
     description: "This is a project",
     tags: [],
-    image: ""
-  }
+    image: "rabbble.jpg"
+  },
+  {
+    name: "Pizzahut App",
+    description: "This is a project",
+    tags: [],
+    image: "rabbble.jpg"
+  },
 ];

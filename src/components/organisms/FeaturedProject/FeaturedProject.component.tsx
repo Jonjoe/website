@@ -26,10 +26,10 @@ const FeaturedProject: React.FC<FeaturedProjectProps> = props => {
   return (
     <Styled.Container>
       <Styled.Content>
-        <Text.Heading5>{project.name}</Text.Heading5>
+        <Text.Heading5 inverted>{project.name}</Text.Heading5>
 
         <Styled.ContentBody>
-          <Text.Body>{project.description}</Text.Body>
+          <Text.Body inverted>{project.description}</Text.Body>
         </Styled.ContentBody>
 
         <Styled.Tags>
@@ -38,7 +38,8 @@ const FeaturedProject: React.FC<FeaturedProjectProps> = props => {
           ))}
         </Styled.Tags>
       </Styled.Content>
-      <Styled.Image />
+
+      <Styled.Image image={project.image}/>
     </Styled.Container>
   );
 };
