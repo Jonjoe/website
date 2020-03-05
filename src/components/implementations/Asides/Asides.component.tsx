@@ -1,25 +1,23 @@
 import * as React from "react";
 import * as Styled from "./Asides.styles";
 
-import { Icon } from "components"
+import { Icon, Text } from "components";
 
 const Asides: React.FC = () => (
-  <React.Fragment>
-    <Styled.LeftAside>
-      <Styled.SocialContainer>
+  <Styled.Container>
+    <Styled.InnerContainer>
+      <Styled.LeftAside>
         <Icon name="email" size="1rem" />
-        <Icon name="linkedin" size="1rem"/>
-        <Icon name="dribbble" size="1rem"/>
-        <Icon name="github" size="1rem"/>
-      </Styled.SocialContainer>
-      <Styled.Bar />
-    </Styled.LeftAside>
+        <Icon name="linkedin" size="1rem" />
+        <Icon name="dribbble" size="1rem" />
+        <Icon name="github" size="1rem" />
+      </Styled.LeftAside>
 
-    <Styled.RightAside>
-      <span>hi</span>
-      <Styled.Bar />
-    </Styled.RightAside>
-  </React.Fragment>
+      <Styled.RightAside>
+        <Text.Body>me@jonjoe.io</Text.Body>
+      </Styled.RightAside>
+    </Styled.InnerContainer>
+  </Styled.Container>
 );
 
 export default Asides;

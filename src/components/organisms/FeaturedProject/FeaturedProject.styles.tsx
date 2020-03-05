@@ -12,7 +12,7 @@ export const Image = styled.div<StyledImageProps>`
   position: absolute;
   z-index: 800;
   filter: grayscale(100%);
-  opacity: 0.7;
+  opacity: 0.5;
   transition: all 0.318s;
   border: 5px solid ${theme.pallet.BLACK};
 
@@ -40,6 +40,10 @@ export const ContentBody = styled.div`
 export const Tags = styled.div`
   display: flex;
   justify-content: flex-start;
+  
+  > * {
+    padding: 10px;  
+  }
 `;
 
 export const Container = styled.article`

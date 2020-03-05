@@ -1,14 +1,14 @@
 export default [
   {
-    name: "Edge Contract Builder",
+    name: "Contract Builder",
     description: "This is a project",
-    tags: ['javascript'],
+    tags: ['Javascript', 'NodeJS', 'React', 'Typescript'],
     image: "rabbble.jpg"
   },
   {
     name: "Factory App",
     description: "This is a project",
-    tags: [],
+    tags: ['React Native', 'NodeJS', 'Typescript'],
     image: "rabbble.jpg"
   },
   {

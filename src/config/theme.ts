@@ -10,8 +10,8 @@ const theme: Theme = {
     BLUE: '#4a95d4',
     BLACK: '#39373a',
     RED: '#e0795f',
-    GREY: '#f8f8f8',
-    LIGHT_GREY: '#949494'
+    LIGHT_GREY: '#f8f8f8',
+    GREY: '#949494'
   }
 }
 

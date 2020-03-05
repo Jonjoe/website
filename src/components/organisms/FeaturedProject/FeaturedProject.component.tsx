@@ -2,19 +2,14 @@ import React from "react";
 import * as Styled from "./FeaturedProject.styles";
 
 import { Text, TechCard } from "components";
-import { IconName } from "components/atoms/Icon/Icon.component";
 
 export interface FProject {
   name: string;
   description: string;
-  tags: Tag[];
+  tags: string[];
   image: string;
 }
 
-export interface Tag {
-  label: string;
-  icon: IconName;
-}
 
 interface FeaturedProjectProps {
   project: FProject;
@@ -33,8 +28,8 @@ const FeaturedProject: React.FC<FeaturedProjectProps> = props => {
         </Styled.ContentBody>
 
         <Styled.Tags>
-          {project.tags.map((tag: Tag) => (
-            <TechCard label={tag.label} icon={tag.icon} />
+          {project.tags.map((tag: string) => (
+            <Text.Body>{tag}</Text.Body>
           ))}
         </Styled.Tags>
       </Styled.Content>

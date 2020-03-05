@@ -44,3 +44,4 @@ export { default as WorkHistory } from './implementations/WorkHistory/WorkHistor
 export { default as FeaturedProjects } from './implementations/FeaturedProjects/FeaturedProjects.component';
 export { default as SkillPoints } from './implementations/SkillPoints/SkillPoints.component';
 export { default as Asides } from './implementations/Asides/Asides.component';
+export { default as Footer } from './implementations/Footer/Footer.component';
