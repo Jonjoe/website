@@ -1,29 +1,25 @@
 import * as React from "react";
-import * as Styled from "./SocialLinks.styles";
 
 import { Icon } from "components";
 
 const SocialLinks: React.FC = () => {
-  const iconSize = "2rem";
+  const iconSize = "1.4rem";
 
   return (
-    <Styled.Container>
-      <Styled.Link>
-        <Icon name="email" size={iconSize} />
-      </Styled.Link>
-      <Styled.Link>
+    <React.Fragment>
+      <a href="https://dribbble.com/jonjoe">
         <Icon name="dribbble" size={iconSize} />
-      </Styled.Link>
-      <Styled.Link>
+      </a>
+      <a href="https://twitter.com/_jonjoe">
         <Icon name="twitter" size={iconSize} />
-      </Styled.Link>
-      <Styled.Link>
+      </a>
+      <a href="https://github.com/jonjoe">
         <Icon name="github" size={iconSize} />
-      </Styled.Link>
-      <Styled.Link>
+      </a>
+      <a href="https://linkedin.com/in/jonjoe">
         <Icon name="linkedin" size={iconSize} />
-      </Styled.Link>{" "}
-    </Styled.Container>
+      </a>
+    </React.Fragment>
   );
 };
 

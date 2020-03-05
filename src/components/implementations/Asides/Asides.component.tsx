@@ -1,16 +1,13 @@
 import * as React from "react";
 import * as Styled from "./Asides.styles";
 
-import { Icon, Text } from "components";
+import { Text, SocialLinks } from "components";
 
 const Asides: React.FC = () => (
   <Styled.Container>
     <Styled.InnerContainer>
       <Styled.LeftAside>
-        <Icon name="email" size="1rem" />
-        <Icon name="linkedin" size="1rem" />
-        <Icon name="dribbble" size="1rem" />
-        <Icon name="github" size="1rem" />
+        <SocialLinks />
       </Styled.LeftAside>
 
       <Styled.RightAside>

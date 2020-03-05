@@ -1,7 +1,7 @@
 import * as React from "react";
 import * as Styled from "./Section.styles";
 
-import { Text, Container } from "components";
+import { Text } from "components";
 
 interface SectionProps {
   children: JSX.Element | JSX.Element[];

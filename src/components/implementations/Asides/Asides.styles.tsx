@@ -3,6 +3,7 @@ import { theme } from "config";
 
 const baseAsideStyles = `
   background: ${theme.pallet.RED};
+  border: 5px solid ${theme.pallet.RED};
   position: relative;
   width: 50px;
   display: flex;
@@ -10,6 +11,7 @@ const baseAsideStyles = `
   justify-content: center;
   align-items: center;
   position: relative;
+  transition: all 0.318s;
 
   &:before, &:after {
     height: 20px;
@@ -51,15 +53,15 @@ export const LeftAside = styled.aside`
   left: -100px;
 
   &:before {
-    top: -10px;
-    left: -10px;
+    top: -15px;
+    left: -15px;
     border-right: none;
     border-bottom: none;
   }
 
   &:after {
-    bottom: -10px;
-    left: -10px;
+    bottom: -15px;
+    left: -15px;
     border-right: none;
     border-top: none;
   }
@@ -70,6 +72,11 @@ export const LeftAside = styled.aside`
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: all 0.318s;
+    &:hover {
+      background: white;
+      color: ${theme.pallet.RED};
+    }
   }
 `;
 
@@ -79,17 +86,32 @@ export const RightAside = styled.aside`
   writing-mode: vertical-rl;
 
   &:before {
-    top: -10px;
-    right: -10px;
+    top: -15px;
+    right: -15px;
     border-left: none;
     border-bottom: none;
   }
 
   &:after {
-    bottom: -10px;
-    right: -10px;
+    bottom: -15px;
+    right: -15px;
     border-left: none;
     border-top: none;
+  }
+
+  > * {
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  &:hover {
+    background: white;
+    cursor: pointer;
+
+    > * {
+      color: ${theme.pallet.RED};
+    }
   }
 `;
 

@@ -10,7 +10,7 @@ export const OuterContainer = styled.nav`
   z-index: 999;
 `;
 
-export const Link = styled.a`
+export const Link = styled.div`
   padding: 10px;
   color: white;
   z-index: 999;

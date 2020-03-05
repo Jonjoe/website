@@ -8,8 +8,8 @@ import { FProject } from "components/organisms/FeaturedProject/FeaturedProject.c
 const FeaturedProjects: React.FC = () => {
   return (
     <React.Fragment>
-      {projects.map((project: FProject) => (
-        <FeaturedProject project={project} />
+      {projects.map((project: FProject, index: number) => (
+        <FeaturedProject project={project} key={index} />
       ))}
     </React.Fragment>
   );

@@ -30,7 +30,7 @@ export const Content = styled.div`
 `;
 
 export const ContentBody = styled.div`
-  background: #39373a;
+  background: ${theme.pallet.BLACK};
   padding: 15px;
   width: 100%;
   z-index: 900;
@@ -40,9 +40,17 @@ export const ContentBody = styled.div`
 export const Tags = styled.div`
   display: flex;
   justify-content: flex-start;
-  
+  position: relative;
+  z-index: 999;
+
   > * {
-    padding: 10px;  
+    border: 5px solid ${theme.pallet.BLACK};
+    background: ${theme.pallet.WHITE};
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: 900;
+    margin: 5px 5px 0 0;
+    padding: 2px 5px;
   }
 `;
 

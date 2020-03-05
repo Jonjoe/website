@@ -1,15 +1,14 @@
 import * as React from "react";
+
 import parse from "html-react-parser";
 
 import {
   Button,
   Page,
   Section,
-  SocialLinks,
   SkillPoints,
   Text,
   Struct,
-  WorkHistory,
   FeaturedProjects,
   Divider
 } from "../../components";
@@ -41,23 +40,27 @@ const HomePage: React.FC = () => {
           <Text.Heading5 inverted align="center">
             {parse(strings.INTRO_TWO) as any}
           </Text.Heading5>
-
-          <Divider />
-
-          <SocialLinks />
         </Struct>
       </Section>
 
       <Section title="Showcase" background={theme.pallet.BLUE}>
-        <Struct column centered>
-          <FeaturedProjects />
-          <Button><Text.Body inverted align="center">View Other Projects</Text.Body></Button>
-        </Struct>
+          <Struct column centered>
+            <FeaturedProjects />
+            <Button>
+              <Text.Body inverted align="center">
+                View Other Projects
+              </Text.Body>
+            </Button>
+          </Struct>
       </Section>
-      
+
       <Section title="Labs" background={theme.pallet.RED}>
         <Struct column centered>
-          <Button><Text.Body inverted align="center">View Other Labs</Text.Body></Button>
+          <Button>
+            <Text.Body inverted align="center">
+              View Other Labs
+            </Text.Body>
+          </Button>
         </Struct>
       </Section>
     </Page>

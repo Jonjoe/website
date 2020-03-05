@@ -1,7 +1,7 @@
 import React from "react";
 import * as Styled from "./FeaturedProject.styles";
 
-import { Text, TechCard } from "components";
+import { Text } from "components";
 
 export interface FProject {
   name: string;
@@ -9,7 +9,6 @@ export interface FProject {
   tags: string[];
   image: string;
 }
-
 
 interface FeaturedProjectProps {
   project: FProject;
@@ -24,17 +23,17 @@ const FeaturedProject: React.FC<FeaturedProjectProps> = props => {
         <Text.Heading5 inverted>{project.name}</Text.Heading5>
 
         <Styled.ContentBody>
-          <Text.Body inverted>{project.description}</Text.Body>
+          <Text.Body>{project.description}</Text.Body>
         </Styled.ContentBody>
 
         <Styled.Tags>
-          {project.tags.map((tag: string) => (
-            <Text.Body>{tag}</Text.Body>
+          {project.tags.map((tag: string, index: number) => (
+            <Text.Body key={index}>{tag}</Text.Body>
           ))}
         </Styled.Tags>
       </Styled.Content>
 
-      <Styled.Image image={project.image}/>
+      <Styled.Image image={project.image} />
     </Styled.Container>
   );
 };
