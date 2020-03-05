@@ -49,8 +49,15 @@ const HomePage: React.FC = () => {
       </Section>
 
       <Section title="Showcase" background={theme.pallet.BLUE}>
-        <Struct column>
+        <Struct column centered>
           <FeaturedProjects />
+          <Button><Text.Body inverted align="center">View Other Projects</Text.Body></Button>
+        </Struct>
+      </Section>
+      
+      <Section title="Labs" background={theme.pallet.RED}>
+        <Struct column centered>
+          <Button><Text.Body inverted align="center">View Other Labs</Text.Body></Button>
         </Struct>
       </Section>
     </Page>
