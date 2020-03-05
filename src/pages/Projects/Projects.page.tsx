@@ -5,12 +5,8 @@ import { Page, Section, Card, CardGrid } from "components";
 
 const ProjectsPage: React.FC = () => {
   return (
-    <Page accent={theme.pallet.RED}>
-      <Section>
-        <p>hi</p>
-      </Section>
-
-      <Section background="#4a95d4">
+    <Page accent={theme.pallet.BLUE}>
+      <Section title="Projects" background={theme.pallet.BLUE}>
         <CardGrid>
           <Card />
           <Card />
@@ -22,10 +18,6 @@ const ProjectsPage: React.FC = () => {
           <Card />
           <Card />
         </CardGrid>
-      </Section>
-
-      <Section>
-        <p>hi</p>
       </Section>
     </Page>
   );
