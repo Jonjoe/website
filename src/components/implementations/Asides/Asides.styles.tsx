@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { theme } from "config";
+import { theme, breakpoints } from "config";
 
 const baseAsideStyles = `
   position: relative;
@@ -10,6 +10,7 @@ const baseAsideStyles = `
   align-items: center;
   position: relative;
   transition: all 0.318s;
+  z-index: 999;
 
   &:before, &:after {
     height: 20px;
@@ -40,7 +41,6 @@ export const Container = styled.div`
 export const InnerContainer = styled.div`
   width: 100%;
   max-width: 1100px;
-  background: blue;
   display: flex;
   justify-content: space-between;
 `;
@@ -51,7 +51,7 @@ interface StyledAsideProps {
 
 export const LeftAside = styled.aside<StyledAsideProps>`
   ${baseAsideStyles}
-  left: -100px;
+  left: -70px;
 
   ${props => `
     background: ${props.accent};
@@ -92,11 +92,15 @@ export const LeftAside = styled.aside<StyledAsideProps>`
       `}
     }
   }
+
+  @media only screen and (max-width: ${breakpoints.LARGE}) {
+    left: 0;
+  }
 `;
 
 export const RightAside = styled.aside<StyledAsideProps>`
   ${baseAsideStyles}
-  right: -100px;
+  right: -70px;
   writing-mode: vertical-rl;
 
   ${props => `
@@ -139,6 +143,10 @@ export const RightAside = styled.aside<StyledAsideProps>`
         color: ${props.accent};
       `}
     }
+  }
+
+  @media only screen and (max-width: ${breakpoints.LARGE}) {
+    right: 0;
   }
 `;
 

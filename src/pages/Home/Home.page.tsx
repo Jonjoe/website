@@ -42,9 +42,9 @@ const HomePage: React.FC = () => {
 
         <Divider />
 
-        <Text.Heading5 inverted align="center">
+        <Text.Heading6 inverted align="center">
           {parse(strings.INTRO_TWO) as any}
-        </Text.Heading5>
+        </Text.Heading6>
       </Section>
 
       <Section title="Showcase" background={theme.pallet.BLUE}>
@@ -57,20 +57,16 @@ const HomePage: React.FC = () => {
         <Button>View Other Projects</Button>
       </Section>
 
-      <Section title="Labs" background={theme.pallet.RED}>
-        <Waypoint
-          onEnter={() => setAccent(theme.pallet.RED)}
-          bottomOffset={500}
-        />
-        <CardGrid>
-          {Array(5)
-            .fill("")
-            .map((item: any) => (
-              <Card />
-            ))}
-        </CardGrid>
-        <Divider />
-        <Button width="300px">View Other Labs</Button>
+      <Section title="title three">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum."
+        </p>
       </Section>
     </Page>
   );

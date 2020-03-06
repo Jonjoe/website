@@ -55,9 +55,4 @@ export const StructWrapper = styled.div`
       min-height: ${props.fixedHeight}px;
       max-height: ${props.fixedHeight}px;
     `};
-
-
-    @media only screen and (max-width: 600px) {
-      flex-direction: column;
-    }
 `;

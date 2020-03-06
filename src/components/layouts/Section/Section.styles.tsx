@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { breakpoints } from "config"
 
 interface ContainerProps {
   background?: string;
@@ -41,9 +42,23 @@ export const Container = styled.section<ContainerProps>`
     bottom: -10px;
     left: -10px;
   }
+
+  @media only screen and (max-width: ${breakpoints.LARGE}) {
+    padding: 50px 30px;
+    margin: 70px 0;
+  }
+  @media only screen and (max-width: ${breakpoints.SMALL}) {
+    padding: 50px 15px;
+    margin: 40px 0;
+  }
 `;
 
 export const Header = styled.header`
   position: absolute;
   top: -80px;
+
+  @media only screen and (max-width: ${breakpoints.MEDIUM}) {
+    left: 0;
+    top: -50px;
+  }
 `;

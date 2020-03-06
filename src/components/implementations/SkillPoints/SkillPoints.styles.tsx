@@ -1,4 +1,5 @@
-import styled from 'styled-components';
+import styled from "styled-components";
+import { breakpoints } from "config";
 
 export const Container = styled.div`
   display: flex;
@@ -7,8 +8,8 @@ export const Container = styled.div`
   flex-wrap: wrap;
   justify-content: center;
 
-  @media only screen and (max-width: 600px) {
-    flex-wrap: wrap;
+  @media only screen and (max-width: ${breakpoints.MEDIUM}) {
+    margin-top: 10px;
   }
 `;
 
@@ -23,8 +24,19 @@ export const Point = styled.div`
     margin-top: 25px;
   }
 
-  @media only screen and (max-width: 600px) {
-    width: 50%;
-    margin: 0;
+  @media only screen and (max-width: ${breakpoints.MEDIUM}) {
+    margin: 20px;
+
+    svg {
+      font-size: 3rem;
+    }
+  }
+  
+  @media only screen and (max-width: ${breakpoints.SMALL}) {
+    margin: 15px;
+
+    svg {
+      font-size: 2.5rem;
+    }
   }
 `;

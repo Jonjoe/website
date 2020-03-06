@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { theme } from "config";
+import { theme, breakpoints } from "config";
 
 import { DynamicTypeProps } from "./Text.component";
 
@@ -27,6 +27,10 @@ export const Heading1 = styled.h1<DynamicTypeProps>`
   font-size: 5.5rem;
   font-weight: 900;
   max-width: 100%;
+
+  @media only screen and (max-width: ${breakpoints.MEDIUM}) {
+    font-size: 4rem;
+  }
 `;
 
 export const Heading2 = styled.h2<DynamicTypeProps>`
@@ -39,6 +43,10 @@ export const Heading2 = styled.h2<DynamicTypeProps>`
     content: ".";
     display: "block";
   }
+
+  @media only screen and (max-width: ${breakpoints.MEDIUM}) {
+    font-size: 3rem;
+  }
 `;
 
 export const Heading3 = styled.h3<DynamicTypeProps>`
@@ -46,6 +54,13 @@ export const Heading3 = styled.h3<DynamicTypeProps>`
   font-size: 2.2rem;
   max-width: 100%;
   text-transform: uppercase;
+
+  @media only screen and (max-width: ${breakpoints.MEDIUM}) {
+    font-size: 1.6rem;
+  }
+  @media only screen and (max-width: ${breakpoints.SM_MEDIUM}) {
+    font-size: 1.2rem;
+  }
 `;
 
 export const Heading4 = styled.h4<DynamicTypeProps>`
@@ -67,6 +82,10 @@ export const Heading6 = styled.h6<DynamicTypeProps>`
   ${(props: DynamicTypeProps) => getBaseTypography(props)}
   font-size: 1.2rem;
   font-weight: 900;
+  > strong {
+    font-weight: 900;
+    color: ${theme.pallet.BLUE};
+  }
 `;
 
 export const Inline = styled.span<DynamicTypeProps>`
