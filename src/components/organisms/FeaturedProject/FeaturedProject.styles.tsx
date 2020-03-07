@@ -11,8 +11,8 @@ export const Image = styled.div<StyledImageProps>`
     background-size: cover;
   `}
 
-  height: 200px;
-  width: 350px;
+  height: 100%;
+  width: 100%;;
   z-index: 900;
   opacity: 0.5;
   filter: grayscale(100%);
@@ -21,5 +21,14 @@ export const Image = styled.div<StyledImageProps>`
 `;
 
 export const Container = styled.article`
-  margin: 5px;
+  margin: 10px;
+  margin-bottom: 5px;
+  height: 250px;
+  width: 350px;
+
+  &:nth-child(1) {
+    width: 700px;
+    height: 400px;
+    margin: 5px;
+  }
 `;

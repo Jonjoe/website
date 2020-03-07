@@ -23,4 +23,10 @@ export default [
     tags: [],
     image: "rabbble.jpg"
   },
+  {
+    name: "Rabble Networking",
+    description: "This is a project",
+    tags: [],
+    image: "rabbble.jpg"
+  }
 ];
