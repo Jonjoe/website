@@ -1,5 +1,5 @@
 import * as React from "react";
-
+import * as Styled from "./FeaturedProjects.styled"
 import projects from "data/projects.data";
 
 import { FeaturedProject } from "components";
@@ -7,11 +7,11 @@ import { FProject } from "components/organisms/FeaturedProject/FeaturedProject.c
 
 const FeaturedProjects: React.FC = () => {
   return (
-    <React.Fragment>
+    <Styled.Container>
       {projects.map((project: FProject, index: number) => (
         <FeaturedProject project={project} key={index} />
       ))}
-    </React.Fragment>
+    </Styled.Container>
   );
 };
 
