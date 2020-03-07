@@ -7,6 +7,7 @@ export { default as Icon } from './atoms/Icon/Icon.component';
 export { default as Text } from './atoms/Text/Text.component';
 export { default as Button } from './atoms/Button/Button.component';
 
+
 /*
  * Molecules
 */
@@ -45,3 +46,4 @@ export { default as FeaturedProjects } from './implementations/FeaturedProjects/
 export { default as SkillPoints } from './implementations/SkillPoints/SkillPoints.component';
 export { default as Asides } from './implementations/Asides/Asides.component';
 export { default as Footer } from './implementations/Footer/Footer.component';
+export { default as Technologies } from './implementations/Technologies/Technologies.component';
