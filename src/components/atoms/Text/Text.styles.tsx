@@ -70,7 +70,7 @@ export const Heading4 = styled.h4<DynamicTypeProps>`
 export const Heading5 = styled.h5<DynamicTypeProps>`
   ${(props: DynamicTypeProps) => getBaseTypography(props)}
 
-  font-size: 2.1rem;
+  font-size: 1.8rem;
   font-weight: 500;
   > strong {
     font-weight: 900;

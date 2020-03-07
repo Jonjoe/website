@@ -1,7 +1,8 @@
 import React from "react";
 import * as Styled from "./FeaturedProject.styles";
+import { theme } from "config";
 
-import { Text, Button } from "components";
+import { Icon, Text, Button } from "components";
 
 export interface FProject {
   name: string;
@@ -19,7 +20,31 @@ const FeaturedProject: React.FC<FeaturedProjectProps> = props => {
 
   return (
     <Styled.Container>
+      <Styled.Header>
+        <Text.Heading5 inverted align="center">
+          {project.name}
+        </Text.Heading5>
+      </Styled.Header>
+
+      <Styled.Content>
+        <Text.Body align="center" inverted>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </Text.Body>
+      </Styled.Content>
+
+      <Styled.Actions>
+        <Icon name="view" />
+        <Icon name="github" />
+      </Styled.Actions>
+
       <Styled.Image image={project.image} />
+
+      <Styled.Tags>
+        <Icon name="nodejs" />
+        <Icon name="react" />
+        <Icon name="aws" />
+      </Styled.Tags>
     </Styled.Container>
   );
 };

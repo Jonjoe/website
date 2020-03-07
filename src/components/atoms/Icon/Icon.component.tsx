@@ -30,6 +30,7 @@ export type IconName =
   | "bullseye"
   | "bulletpoint"
   | "glasses"
+  | "view"
   | "linkedin"
   | "react-native"
   | "react"
@@ -58,6 +59,9 @@ function mapNamePropToFaNames(iconName: IconName): string | string[] {
 
     case "twitter":
       return ["fab", "twitter"];
+    
+    case "view":
+      return ["fad", "external-link"];
 
     case "heart":
       return ["fad", "heart"];

@@ -12,23 +12,109 @@ export const Image = styled.div<StyledImageProps>`
   `}
 
   height: 100%;
-  width: 100%;;
+  width: 100%;
   z-index: 900;
   opacity: 0.5;
   filter: grayscale(100%);
-  border: 5px solid ${theme.pallet.BLACK};
   transition: all 0.318s;
+`;
+
+export const Header = styled.header`
+  width: 100%;
+  background: ${theme.pallet.BLACK};
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  transition: all 0.318s;
+
+  > * {
+    transition: all 0.318s;
+    padding: 20px 0;
+  }
+`;
+
+export const Content = styled.div`
+  background: ${theme.pallet.BLACK};
+  padding: 0px 20px 20px 20px;
+  position: absolute;
+  bottom: -110px;
+  height: 80px;
+  width: 100%;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.318s;
+`;
+
+export const Tags = styled.div`
+  position: absolute;
+  right: -60px;
+  top: 10px;
+  z-index: 999;
+  transition: all 0.318s;
+
+  > * {
+    background: ${theme.pallet.WHITE};
+    border: 5px solid ${theme.pallet.BLACK};
+    padding: 10px;
+    border-radius: 50%;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+`;
+
+export const Actions = styled.div`
+  display: flex;
+  position: absolute;
+  left: 10px;
+  top: -55px;
+  z-index: 999;
+  transition: all 0.318s;
+
+  > * {
+    background: ${theme.pallet.WHITE};
+    border: 5px solid ${theme.pallet.BLACK};
+    padding: 10px;
+    border-radius: 50%;
+    margin-right: 5px;
+  }
 `;
 
 export const Container = styled.article`
   margin: 10px;
+  position: relative;
   margin-bottom: 5px;
-  height: 250px;
-  width: 350px;
+  border: 5px solid ${theme.pallet.BLACK};
+  overflow: hidden;
 
-  &:nth-child(1) {
-    width: 700px;
-    height: 400px;
-    margin: 5px;
+  width: 700px;
+  height: 400px;
+
+  &:hover {
+    ${Header} {
+      top: calc(100% - 130px);
+      > * {
+        padding: 20px 0 0 0;
+      }
+    }
+    ${Content} {
+      bottom: 0;
+    }
+    ${Actions} {
+      top: 10px;
+    }
+    ${Tags} {
+      right: 10px;
+    }
+    ${Image} {
+      opacity: 1;
+      filter: grayscale(0%);
+    }
   }
 `;
