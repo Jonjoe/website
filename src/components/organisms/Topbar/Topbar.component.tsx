@@ -26,16 +26,16 @@ const Topbar: React.FC = () => {
       <Styled.InnerContainer>
         <Styled.LeftLinks>
           <TopbarLink to={ROUTES.HOME}label="Home" />
-          <TopbarLink to={ROUTES.HOME} label="CV" />
           <TopbarLink to={ROUTES.PROJECTS}label="Projects" />
+          <TopbarLink to={ROUTES.LABS} label="Labs" />
         </Styled.LeftLinks>
 
         <Styled.CenterPiece>
-          <Icon name="alien" size="2rem" />
+          <Icon name="d10" size="2rem" />
         </Styled.CenterPiece>
 
         <Styled.RightLinks>
-          <TopbarLink to={ROUTES.LABS} label="Labs" />
+          <TopbarLink to={ROUTES.HOME} label="CV" />
           <TopbarLink to={ROUTES.WORK_HISTORY} label="History" />
           <TopbarLink to={ROUTES.HOME} label="Contact" />
         </Styled.RightLinks>

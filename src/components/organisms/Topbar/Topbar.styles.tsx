@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { breakpoints, theme } from "config"
+import { breakpoints, theme } from "config";
 
 export const OuterContainer = styled.nav`
   width: 100%;
@@ -25,8 +25,12 @@ export const Link = styled.div`
   color: white;
   z-index: 999;
 
-  &:first-letter {
-    font-weight: 900;
+  > a {
+    text-decoration: none;
+
+    &:first-letter {
+      font-weight: 900;
+    }
   }
 `;
 
@@ -66,5 +70,4 @@ export const RightLinks = styled.div`
     position: relative;
     left: 0;
   }
-
 `;
