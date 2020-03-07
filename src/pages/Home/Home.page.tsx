@@ -11,6 +11,7 @@ import {
   Text,
   FeaturedProjects,
   Divider,
+  Technologies,
   Card,
   CardGrid
 } from "../../components";
@@ -47,6 +48,10 @@ const HomePage: React.FC = () => {
         </Text.Heading6>
       </Section>
 
+      <Section title="Technologies">
+        <Technologies />
+      </Section>
+
       <Section title="Showcase" background={theme.pallet.BLUE}>
         <Waypoint
           onEnter={() => setAccent(theme.pallet.BLUE)}
@@ -55,18 +60,6 @@ const HomePage: React.FC = () => {
 
         <FeaturedProjects />
         <Button>View Other Projects</Button>
-      </Section>
-
-      <Section title="title three">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum."
-        </p>
       </Section>
     </Page>
   );

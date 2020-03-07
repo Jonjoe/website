@@ -1,93 +1,67 @@
 import styled from "styled-components";
-import { theme } from 'config'
+import { theme, breakpoints } from "config";
 
 interface StyledImageProps {
   image: string;
 }
 
 export const Image = styled.div<StyledImageProps>`
-  height: 300px;
-  width: 500px;
-  background: #eee;
-  position: absolute;
-  z-index: 800;
-  filter: grayscale(100%);
-  opacity: 0.5;
-  transition: all 0.318s;
-  border: 5px solid ${theme.pallet.BLACK};
-
   ${(props: StyledImageProps) => `
     background-image: url('/images/${props.image}');
-    background-repeat: no-repeat;
     background-size: cover;
   `}
-`;
 
-export const Content = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 500px;
-`;
-
-export const ContentBody = styled.div`
-  background: ${theme.pallet.BLACK};
-  padding: 15px;
-  width: 100%;
+  height: 250px;
+  width: 400px;
   z-index: 900;
-  margin-top: 20px;
+  position: absolute;
+  top: 0;
+  opacity: 0.5;
+  filter: grayscale(100%);
+  border: 5px solid ${theme.pallet.BLACK};
+  transition: all 0.318s;
 `;
 
-export const Tags = styled.div`
-  display: flex;
-  justify-content: flex-start;
-  position: relative;
-  z-index: 999;
+export const Header = styled.header`
+  margin-bottom: 10px;
+`;
 
-  > * {
-    border: 5px solid ${theme.pallet.BLACK};
-    background: ${theme.pallet.WHITE};
-    text-transform: uppercase;
-    font-size: 0.8rem;
-    font-weight: 900;
-    margin: 5px 5px 0 0;
-    padding: 2px 5px;
+export const Content = styled.section`
+  background: ${theme.pallet.BLACK};
+  position: absolute;
+  z-index: 999;
+  width: 500px;
+  top: 20px;
+  padding: 20px;
+
+  > p {
+    color: white;
   }
+`;
+
+export const Tags = styled.ul`
+  list-style-type: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  bottom: -33px;
+  left: 0px;
+`;
+
+export const Tag = styled.li`
+  padding: 5px 10px;
+  margin-right: 1px;
+  background: white;
+  border: 5px solid ${theme.pallet.BLACK};
+  border-top: none;
 `;
 
 export const Container = styled.article`
-  position: relative;
-  display: flex;
-  min-height: 300px;
   width: 100%;
-  margin-bottom: 50px;
-
-  &:hover {
-    ${Image} {
-      filter: grayscale(0);
-      opacity: 1;
-    }
-  }
-
-  &:nth-child(even) {
-    justify-content: flex-end;
-
-    ${Image} {
-      left: 0;
-    }
-
-    ${Content} {
-    }
-
-    ${ContentBody} {
-      > * {
-        text-align: right;
-      }
-    }
-
-    h5 {
-      text-align: right;
-    }
-  }
+  margin-bottom: 20px;
+  position: relative;
+  min-height: 250px;
 
   &:nth-child(odd) {
     ${Image} {
@@ -95,6 +69,24 @@ export const Container = styled.article`
     }
 
     ${Content} {
+      left: 0;
+    }
+  }
+
+  &:nth-child(even) {
+    ${Image} {
+      left: 0;
+    }
+
+    ${Content} {
+      right: 0;
+    }
+  }
+
+  &:hover {
+    ${Image} {
+      filter: grayscale(0%);
+      opacity: 1;
     }
   }
 `;
