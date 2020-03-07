@@ -1,6 +1,5 @@
 import * as React from "react";
 import { Waypoint } from "react-waypoint";
-
 import parse from "html-react-parser";
 
 import {
@@ -31,7 +30,6 @@ const HomePage: React.FC = () => {
         <Text.Heading3 align="center">
           Web / Mobile / Maker / Hacker
         </Text.Heading3>
-
         <Text.Heading1 align="center">Jonjoe Whitfield</Text.Heading1>
         <SkillPoints />
       </Section>
@@ -59,7 +57,19 @@ const HomePage: React.FC = () => {
         />
 
         <FeaturedProjects />
-        <Button>View Other Projects</Button>
+
+        <Divider />
+        <Button width="300px">View Other Projects</Button>
+      </Section>
+      
+      <Section title="Highlights" background={theme.pallet.RED}>
+        <Waypoint
+          onEnter={() => setAccent(theme.pallet.BLUE)}
+          bottomOffset={500}
+        />
+
+        <Divider />
+        <Button width="300px">View Work History</Button>
       </Section>
     </Page>
   );
