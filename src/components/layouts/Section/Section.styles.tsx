@@ -50,12 +50,7 @@ export const Container = styled.section<ContainerProps>`
 
   @media only screen and (max-width: ${breakpoints.SMALL}) {
     margin: 50px 0;
-
-    padding: 20px 10px;
-
-    &:first-child {
-      padding-top: 0px;
-    }
+    padding: 40px 10px;
   }
 `;
 
