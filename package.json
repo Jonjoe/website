@@ -14,6 +14,7 @@
     "@fortawesome/pro-solid-svg-icons": "^5.12.0",
     "@fortawesome/react-fontawesome": "^0.1.8",
     "animate.css": "^3.7.2",
+    "express": "^4.17.1",
     "html-react-parser": "^0.10.1",
     "react": "^16.12.0",
     "react-animate-on-scroll": "^2.1.5",
@@ -48,6 +49,7 @@
   "scripts": {
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
+    "serve": "node ./server.js",
     "test": "react-app-rewired test --env=jsdom",
     "eject": "react-app-rewired eject"
   },
