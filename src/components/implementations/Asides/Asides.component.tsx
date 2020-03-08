@@ -11,17 +11,15 @@ const Asides: React.FC<AsidesProps> = props => {
   const { accent } = props;
 
   return (
-    <Styled.Container>
-      <Styled.InnerContainer>
-        <Styled.LeftAside accent={accent}>
-          <SocialLinks />
-        </Styled.LeftAside>
+    <React.Fragment>
+      <Styled.LeftAside accent={accent}>
+        <SocialLinks />
+      </Styled.LeftAside>
 
-        <Styled.RightAside accent={accent}>
-          <Text.Body>me@jonjoe.io</Text.Body>
-        </Styled.RightAside>
-      </Styled.InnerContainer>
-    </Styled.Container>
+      <Styled.RightAside accent={accent}>
+        <Text.Body>me@jonjoe.io</Text.Body>
+      </Styled.RightAside>
+    </React.Fragment>
   );
 };
 

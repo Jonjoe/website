@@ -7,6 +7,10 @@ export const Container = styled.div`
   justify-content: center;
   margin-top: -10px;
   margin-bottom: -10px;
+
+  @media only screen and (max-width: ${breakpoints.SMALL}) {
+    justify-content: space-between;
+  }
 `;
 
 export const ItemContainer = styled.div`
@@ -48,5 +52,9 @@ export const ItemContainer = styled.div`
 
   @media only screen and (max-width: ${breakpoints.MEDIUM}) {
     width: calc(50% - 20px);  
+  }
+
+  @media only screen and (max-width: ${breakpoints.SMALL}) {
+    height: 150px;
   }
 `;

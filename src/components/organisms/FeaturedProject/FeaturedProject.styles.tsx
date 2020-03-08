@@ -66,6 +66,8 @@ export const Tags = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 50px;
+    width: 50px;
   }
 `;
 
@@ -83,6 +85,8 @@ export const Actions = styled.div`
     padding: 10px;
     border-radius: 50%;
     margin-right: 5px;
+    height: 50px;
+    width: 50px;
   }
 `;
 
@@ -93,7 +97,7 @@ export const Container = styled.article`
   border: 5px solid ${theme.pallet.BLACK};
   overflow: hidden;
 
-  width: 700px;
+  width: 100%;
   height: 400px;
 
   &:hover {
@@ -103,18 +107,51 @@ export const Container = styled.article`
         padding: 20px 0 0 0;
       }
     }
+
     ${Content} {
       bottom: 0;
     }
+
     ${Actions} {
       top: 10px;
     }
+
     ${Tags} {
       right: 10px;
     }
+
     ${Image} {
       opacity: 1;
       filter: grayscale(0%);
+    }
+  }
+
+  @media only screen and (max-width: ${breakpoints.SMALL}) {
+    height: 450px;
+
+    ${Header} {
+      top: 0;
+      padding-bottom: 10px;
+      > * {
+      }
+    }
+    ${Content} {
+      height: 100px;
+      padding-top: 20px;
+      bottom: 0;
+    }
+
+    ${Actions}, ${Tags} {
+      top: 90px;
+    }
+
+    ${Tags} {
+      right: 10px;
+    }
+
+    ${Image} {
+      opacity: 0.9;
+      filter: grayscale(90%);
     }
   }
 `;

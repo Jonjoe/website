@@ -27,10 +27,10 @@ const HomePage: React.FC = () => {
           onEnter={() => setAccent(theme.pallet.BLACK)}
           bottomOffset={500}
         />
+        <Text.Heading1 align="center">Jonjoe Whitfield</Text.Heading1>
         <Text.Heading3 align="center">
           Web / Mobile / Maker / Hacker
         </Text.Heading3>
-        <Text.Heading1 align="center">Jonjoe Whitfield</Text.Heading1>
         <SkillPoints />
       </Section>
 

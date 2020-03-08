@@ -58,8 +58,9 @@ export const Heading3 = styled.h3<DynamicTypeProps>`
   @media only screen and (max-width: ${breakpoints.MEDIUM}) {
     font-size: 1.6rem;
   }
-  @media only screen and (max-width: ${breakpoints.SM_MEDIUM}) {
+  @media only screen and (max-width: ${breakpoints.SMALL}) {
     font-size: 1.2rem;
+    margin-bottom: 20px;
   }
 `;
 

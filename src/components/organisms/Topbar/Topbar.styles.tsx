@@ -12,12 +12,17 @@ export const OuterContainer = styled.nav`
 
   @media only screen and (max-width: ${breakpoints.MEDIUM}) {
     position: fixed;
-    bottom: 0;
+    top: 0;
     left: 0;
     height: 100px;
     width: 100%;
-    background: ${theme.pallet.RED};
+    background: ${theme.pallet.WHITE};
+    border-bottom: 5px solid ${theme.pallet.BLACK};
+    padding-bottom: 25px;
   }
+
+  @media only screen and (max-width: ${breakpoints.SMALL}) {
+    display: none;  }
 `;
 
 export const Link = styled.div`

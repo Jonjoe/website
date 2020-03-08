@@ -48,8 +48,13 @@ export const Container = styled.section<ContainerProps>`
     margin: 70px 0;
   }
   @media only screen and (max-width: ${breakpoints.SMALL}) {
-    padding: 50px 15px;
-    margin: 40px 0;
+    margin: 50px 0;
+
+    padding: 20px 10px;
+
+    &:first-child {
+      padding-top: 0px;
+    }
   }
 `;
 

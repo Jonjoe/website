@@ -3,15 +3,17 @@ import { theme, breakpoints } from "config";
 
 const baseAsideStyles = `
   position: relative;
+  height: 275px;
   width: 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: relative;
+  position: fixed;
   transition: all 0.318s;
   z-index: 999;
-
+  top: calc(50% - 150px);
+  
   &:before, &:after {
     height: 20px;
     width: 20px;
@@ -25,33 +27,13 @@ const baseAsideStyles = `
   }
 `;
 
-export const Container = styled.div`
-  height: 100%;
-  width: 100%;
-  position: fixed;
-  z-index: 700;
-  padding: 20px;
-  top: 0;
-  left: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
-
-export const InnerContainer = styled.div`
-  width: 100%;
-  max-width: 1100px;
-  display: flex;
-  justify-content: space-between;
-`;
-
 interface StyledAsideProps {
   accent: string;
 }
 
 export const LeftAside = styled.aside<StyledAsideProps>`
   ${baseAsideStyles}
-  left: -70px;
+  left: 20px;
 
   ${props => `
     background: ${props.accent};
@@ -93,14 +75,14 @@ export const LeftAside = styled.aside<StyledAsideProps>`
     }
   }
 
-  @media only screen and (max-width: ${breakpoints.LARGE}) {
-    left: 0;
+  @media only screen and (max-width: ${breakpoints.SMALL}) {
+    display: none;
   }
 `;
 
 export const RightAside = styled.aside<StyledAsideProps>`
   ${baseAsideStyles}
-  right: -70px;
+  right: 30px;
   writing-mode: vertical-rl;
 
   ${props => `
@@ -144,12 +126,9 @@ export const RightAside = styled.aside<StyledAsideProps>`
       `}
     }
   }
-
-  @media only screen and (max-width: ${breakpoints.LARGE}) {
-    right: 0;
+  @media only screen and (max-width: ${breakpoints.SMALL}) {
+    display: none;
   }
 `;
-
-export const Bar = styled.div``;
 
 export const SocialContainer = styled.nav``;
