@@ -34,7 +34,7 @@ const HomePage: React.FC = () => {
         <SkillPoints />
       </Section>
 
-      <Section background={theme.pallet.BLACK} title="Hello">
+      <Section accent={theme.pallet.BLACK} title="Hello">
         <Text.Heading5 inverted align="center">
           {parse(strings.INTRO_ONE) as any}
         </Text.Heading5>

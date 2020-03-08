@@ -5,7 +5,7 @@ import { Page, Section, UnderConstruction } from "components";
 const WorkHistoryPage: React.FC = () => {
   return (
     <Page accent={theme.pallet.RED}>
-      <Section background={theme.pallet.RED}>
+      <Section accent={theme.pallet.RED}>
         <UnderConstruction />
       </Section>
     </Page>

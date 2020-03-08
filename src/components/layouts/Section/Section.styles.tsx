@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { breakpoints } from "config"
 
 interface ContainerProps {
-  background?: string;
+  accent?: string;
 }
 
 export const Container = styled.section<ContainerProps>`
@@ -14,13 +14,13 @@ export const Container = styled.section<ContainerProps>`
   padding: 50px;
 
   ${(props: ContainerProps) =>
-    props.background
-      ? `background-color: ${props.background};`
+    props.accent
+      ? `background-color: ${props.accent};`
       : `background-color: transparant;`}
 
   &:before, &:after {
     ${(props: ContainerProps) =>
-      props.background && `border: 5px solid ${props.background};`}
+      props.accent && `border: 5px solid ${props.accent};`}
 
     position: absolute;
     display: block;

@@ -6,11 +6,11 @@ import { Text, Struct } from "components";
 interface SectionProps {
   children: JSX.Element | JSX.Element[];
   title?: string;
-  background?: string;
+  accent?: string;
 }
 
 const Section: React.FC<SectionProps> = props => {
-  const { children, title, background } = props;
+  const { children, title, accent } = props;
 
   function renderHeader(title?: string) {
     if (!title) {
@@ -25,7 +25,7 @@ const Section: React.FC<SectionProps> = props => {
   }
 
   return (
-    <Styled.Container background={background}>
+    <Styled.Container accent={accent}>
       {renderHeader(title)}
       <Struct column centered>
         {children}
