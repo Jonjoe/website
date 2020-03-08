@@ -54,59 +54,7 @@ const HomePage: React.FC = () => {
         <Technologies />
       </Section>
 
-      <Section title="Showcase" background={theme.pallet.BLUE}>
-        <Waypoint
-          onEnter={() => setAccent(theme.pallet.BLUE)}
-          bottomOffset={500}
-        />
-
-        <FeaturedProjects />
-
-        <Divider />
-        <Button width="300px">View Other Projects</Button>
-
-        <Waypoint
-          onEnter={() => setAccent(theme.pallet.BLUE)}
-          bottomOffset={500}
-        />
-      </Section>
-
-      <Section title="Highlights" background={theme.pallet.RED}>
-        <Waypoint
-          onEnter={() => setAccent(theme.pallet.RED)}
-          bottomOffset={500}
-        />
-
-        <Divider />
-        <Divider />
-        <Divider />
-        <Divider />
-        <Divider />
-        <Divider />
-        <Divider />
-        <Divider />
-        <Divider />
-        <Button width="300px">View Work History</Button>
-      </Section>
-      
-      <Section title="Labs" background={theme.pallet.GREEN}>
-        <Waypoint
-          onEnter={() => setAccent(theme.pallet.GREEN)}
-          bottomOffset={500}
-        />
-
-        <Divider />
-        <Divider />
-        <Divider />
-        <Divider />
-        <Divider />
-        <Divider />
-        <Divider />
-        <Divider />
-        <Divider />
-        <Button width="300px">View Other Labs</Button>
-      </Section>
-    </Page>
+          </Page>
   );
 };
 
