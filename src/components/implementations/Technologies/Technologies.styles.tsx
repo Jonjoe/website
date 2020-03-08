@@ -6,7 +6,7 @@ export const Container = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   margin-top: -10px;
-  margin-bottom: -10px;
+  margin-bottom: -20px;
 
   @media only screen and (max-width: ${breakpoints.SMALL}) {
     justify-content: space-between;

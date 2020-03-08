@@ -13,6 +13,7 @@ const Page: React.FC<PageProps> = props => {
 
   return (
     <Styled.OuterContainer>
+      <Topbar />
       <Styled.InnerContainer>{children}</Styled.InnerContainer>
       <Asides accent={accent} />
       <Footer />

@@ -1,23 +1,13 @@
 import * as React from "react";
-import { theme } from 'config'
+import { theme } from "config";
 
-import { Page, Section, Card, CardGrid } from "components";
+import { Page, Section, Card, CardGrid, UnderConstruction } from "components";
 
 const LabsPage: React.FC = () => {
   return (
     <Page accent={theme.pallet.GREEN}>
       <Section title="Labs" background={theme.pallet.GREEN}>
-        <CardGrid>
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-        </CardGrid>
+        <UnderConstruction />
       </Section>
     </Page>
   );

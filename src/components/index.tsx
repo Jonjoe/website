@@ -47,3 +47,4 @@ export { default as SkillPoints } from './implementations/SkillPoints/SkillPoint
 export { default as Asides } from './implementations/Asides/Asides.component';
 export { default as Footer } from './implementations/Footer/Footer.component';
 export { default as Technologies } from './implementations/Technologies/Technologies.component';
+export { default as UnderConstruction } from './implementations/UnderConstruction/UnderConstruction.component';
