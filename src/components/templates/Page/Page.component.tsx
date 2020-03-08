@@ -1,11 +1,11 @@
 import * as React from "react";
 import * as Styled from "./Page.styles";
 
-import { Asides, Topbar, Footer } from "components";
+import { Asides, Topbar, Footer, MobileNavigation } from "components";
 
 interface PageProps {
   children: JSX.Element[] | JSX.Element;
-  accent: string
+  accent: string;
 }
 
 const Page: React.FC<PageProps> = props => {
@@ -14,6 +14,7 @@ const Page: React.FC<PageProps> = props => {
   return (
     <Styled.OuterContainer>
       <Topbar />
+      <MobileNavigation />
       <Styled.InnerContainer>{children}</Styled.InnerContainer>
       <Asides accent={accent} />
       <Footer />

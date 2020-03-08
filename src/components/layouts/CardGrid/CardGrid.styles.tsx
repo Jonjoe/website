@@ -1,7 +1,8 @@
-import styled from "styled-components"
+import styled from "styled-components";
+import { breakpoints } from "config";
 
 export const Container = styled.div`
   display: grid;
   gap: 10px;
   grid-template-columns: 1fr 1fr;
-`
+`;
