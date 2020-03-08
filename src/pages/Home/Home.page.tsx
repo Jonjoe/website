@@ -53,8 +53,7 @@ const HomePage: React.FC = () => {
         />
         <Technologies />
       </Section>
-
-          </Page>
+    </Page>
   );
 };
 

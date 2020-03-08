@@ -3,7 +3,7 @@ import { theme, breakpoints } from "config";
 
 const baseAsideStyles = `
   position: relative;
-  height: 275px;
+  height: 250px;
   width: 50px;
   display: flex;
   flex-direction: column;
@@ -24,6 +24,11 @@ const baseAsideStyles = `
   
   > * {
     color: white;
+    flex: 1;
+    display: flex;
+    transition: all 0.318s;
+    align-items: center;
+    justify-content: center;
   }
 `;
 
@@ -61,12 +66,7 @@ export const LeftAside = styled.aside<StyledAsideProps>`
   }
 
   > * {
-    padding: 20px 10px;
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.318s;
     &:hover {
       background: white;
       ${props => `
