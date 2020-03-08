@@ -14,7 +14,6 @@ const Page: React.FC<PageProps> = props => {
   return (
     <Styled.OuterContainer>
       <Styled.InnerContainer>{children}</Styled.InnerContainer>
-      <Asides accent={accent} />
       <Footer />
     </Styled.OuterContainer>
   );
