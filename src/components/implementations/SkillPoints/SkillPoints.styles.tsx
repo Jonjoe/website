@@ -7,10 +7,6 @@ export const Container = styled.div`
   margin-top: 50px;
   flex-wrap: wrap;
   justify-content: center;
-
-  @media only screen and (max-width: ${breakpoints.MEDIUM}) {
-    margin-top: 10px;
-  }
 `;
 
 export const Point = styled.div`

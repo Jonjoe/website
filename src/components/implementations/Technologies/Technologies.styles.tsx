@@ -16,7 +16,6 @@ export const Container = styled.div`
 export const ItemContainer = styled.div`
   margin: 10px;
   background: ${theme.pallet.WHITE};
-  border: 5px solid ${theme.pallet.BLACK};
   height: 180px;
   width: 180px;
   display: flex;
