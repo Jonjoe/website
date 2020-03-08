@@ -27,6 +27,7 @@ export const Heading1 = styled.h1<DynamicTypeProps>`
   font-size: 5.5rem;
   font-weight: 900;
   max-width: 100%;
+  margin-bottom: 20px;
 
   @media only screen and (max-width: ${breakpoints.MEDIUM}) {
     font-size: 4rem;
@@ -44,7 +45,7 @@ export const Heading2 = styled.h2<DynamicTypeProps>`
     display: "block";
   }
 
-  @media only screen and (max-width: ${breakpoints.MEDIUM}) {
+  @media only screen and (max-width: ${breakpoints.LARGE}) {
     font-size: 3rem;
   }
 `;
@@ -58,6 +59,7 @@ export const Heading3 = styled.h3<DynamicTypeProps>`
   @media only screen and (max-width: ${breakpoints.MEDIUM}) {
     font-size: 1.6rem;
   }
+
   @media only screen and (max-width: ${breakpoints.SMALL}) {
     font-size: 1.2rem;
     margin-bottom: 20px;

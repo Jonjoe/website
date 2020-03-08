@@ -47,6 +47,7 @@ export const Container = styled.section<ContainerProps>`
     padding: 50px 30px;
     margin: 70px 0;
   }
+
   @media only screen and (max-width: ${breakpoints.SMALL}) {
     margin: 50px 0;
 
@@ -62,6 +63,11 @@ export const Header = styled.header`
   position: absolute;
   top: -80px;
 
+  @media only screen and (max-width: ${breakpoints.LARGE}) {
+    left: 0;
+    top: -60px;
+  }
+  
   @media only screen and (max-width: ${breakpoints.MEDIUM}) {
     left: 0;
     top: -50px;

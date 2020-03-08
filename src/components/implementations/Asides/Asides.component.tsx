@@ -17,7 +17,7 @@ const Asides: React.FC<AsidesProps> = props => {
       </Styled.LeftAside>
 
       <Styled.RightAside accent={accent}>
-        <Text.Body>me@jonjoe.io</Text.Body>
+        <Text.Body inverted>me@jonjoe.io</Text.Body>
       </Styled.RightAside>
     </React.Fragment>
   );
