@@ -5,7 +5,7 @@ interface Breakpoints {
 const breakpoints: Breakpoints = {
   SMALL: "575px",
   MEDIUM: "768px",
-  LARGE: "1000px",
+  LARGE: "1100px",
   XL_LARGE: "1200px",
 };
 
