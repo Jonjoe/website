@@ -1,15 +1,12 @@
 import * as React from "react";
 import { theme } from "config";
-import { Page, Section } from "components";
+import { Page, Section, UnderConstruction } from "components";
 
 const WorkHistoryPage: React.FC = () => {
   return (
     <Page accent={theme.pallet.RED}>
-      <Section>
-        <p>Hi</p>
-      </Section>
-      <Section>
-        <p>Hi</p>
+      <Section background={theme.pallet.RED}>
+        <UnderConstruction />
       </Section>
     </Page>
   );

@@ -6,7 +6,7 @@ export const OuterContainer = styled.div`
   width: 100%;
   padding: 50px 150px;
   position: relative;
-  z-index: 900;
+  z-index: 800;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -36,7 +36,6 @@ export const InnerContainer = styled.div`
   max-width: 1100px;
   box-sizing: border-box;
   position: relative;
-  z-index: 900;
   margin-bottom: 50px;
 
   @media only screen and (max-width: ${breakpoints.LARGE}) {
@@ -51,6 +50,7 @@ export const InnerContainer = styled.div`
 
   @media only screen and (max-width: ${breakpoints.SMALL}) {
     padding: 10px;
+    padding-top: 100px;
     margin: 0 0 50px 0;
   }
 `;

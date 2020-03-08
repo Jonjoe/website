@@ -12,7 +12,7 @@ const baseAsideStyles = `
   position: fixed;
   transition: all 0.318s;
   z-index: 999;
-  top: calc(50% - 150px);
+  top: calc(50% - 125px);
   
   &:before, &:after {
     height: 20px;
