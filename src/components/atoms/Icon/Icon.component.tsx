@@ -27,6 +27,7 @@ export type IconName =
   | "code2"
   | "folder"
   | "cross"
+  | "scroll"
   | "bars"
   | "rocket"
   | "bullseye"
@@ -88,6 +89,9 @@ function mapNamePropToFaNames(iconName: IconName): string | string[] {
 
     case "alien":
       return ["fad", "alien"];
+    
+    case "scroll":
+      return ["fad", "scroll-old"];
     
     case "d10":
       return ["fad", "dice-d10"];

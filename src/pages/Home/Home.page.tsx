@@ -12,13 +12,14 @@ import {
   Divider,
   Technologies,
   Card,
-  CardGrid
+  CardGrid,
+  Highlights,
 } from "../../components";
 
 import { strings, theme } from "config";
 
 const HomePage: React.FC = () => {
-  const [accent, setAccent] = React.useState(theme.pallet.BLACK);
+  const [accent, setAccent] = React.useState<string>(theme.pallet.BLACK);
 
   return (
     <Page accent={accent}>
@@ -31,19 +32,15 @@ const HomePage: React.FC = () => {
         <Text.Heading3 align="center">
           Web / Mobile / Maker / Hacker
         </Text.Heading3>
+          
+        <Button hero width="300px">Contact Me</Button>
         <SkillPoints />
       </Section>
 
-      <Section background={theme.pallet.BLACK} title="Hello">
+      <Section accent={theme.pallet.BLACK} title="Hello">
         <Text.Heading5 inverted align="center">
           {parse(strings.INTRO_ONE) as any}
         </Text.Heading5>
-
-        <Divider />
-
-        <Text.Heading6 inverted align="center">
-          {parse(strings.INTRO_TWO) as any}
-        </Text.Heading6>
       </Section>
 
       <Section title="Technologies">
@@ -52,6 +49,14 @@ const HomePage: React.FC = () => {
           bottomOffset={500}
         />
         <Technologies />
+      </Section>
+
+      <Section title="Highlights" accent={theme.pallet.RED}>
+        <Waypoint
+          onEnter={() => setAccent(theme.pallet.RED)}
+          bottomOffset={500}
+        />
+        <Highlights accent={accent}/>
       </Section>
     </Page>
   );

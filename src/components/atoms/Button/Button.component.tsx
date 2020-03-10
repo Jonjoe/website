@@ -7,13 +7,14 @@ import { Text } from "components";
 interface ButtonProps {
   children: string;
   width?: string
+  hero?: boolean;
 }
 
 const Button: React.FC<ButtonProps> = props => {
-  const { children, width } = props;
+  const { children, width, hero } = props;
 
   return (
-    <Styled.Button width={width}>
+    <Styled.Button width={width} hero={hero}>
       <Text.Inline inverted>{children}</Text.Inline>
     </Styled.Button>
   );
