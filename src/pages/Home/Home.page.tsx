@@ -19,7 +19,7 @@ import {
 import { strings, theme } from "config";
 
 const HomePage: React.FC = () => {
-  const [accent, setAccent] = React.useState(theme.pallet.BLACK);
+  const [accent, setAccent] = React.useState<string>(theme.pallet.BLACK);
 
   return (
     <Page accent={accent}>
@@ -32,6 +32,8 @@ const HomePage: React.FC = () => {
         <Text.Heading3 align="center">
           Web / Mobile / Maker / Hacker
         </Text.Heading3>
+          
+        <Button hero width="300px">Contact Me</Button>
         <SkillPoints />
       </Section>
 
@@ -39,12 +41,6 @@ const HomePage: React.FC = () => {
         <Text.Heading5 inverted align="center">
           {parse(strings.INTRO_ONE) as any}
         </Text.Heading5>
-
-        <Divider />
-
-        <Text.Heading6 inverted align="center">
-          {parse(strings.INTRO_TWO) as any}
-        </Text.Heading6>
       </Section>
 
       <Section title="Technologies">
@@ -60,7 +56,7 @@ const HomePage: React.FC = () => {
           onEnter={() => setAccent(theme.pallet.RED)}
           bottomOffset={500}
         />
-        <Highlights />
+        <Highlights accent={accent}/>
       </Section>
     </Page>
   );
