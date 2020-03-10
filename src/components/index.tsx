@@ -46,6 +46,7 @@ export { default as Page } from './templates/Page/Page.component';
 export { default as WorkHistory } from './implementations/WorkHistory/WorkHistory.component';
 export { default as FeaturedProjects } from './implementations/FeaturedProjects/FeaturedProjects.component';
 export { default as SkillPoints } from './implementations/SkillPoints/SkillPoints.component';
+export { default as Highlights } from './implementations/Highlights/Highlights.component';
 export { default as Asides } from './implementations/Asides/Asides.component';
 export { default as Technologies } from './implementations/Technologies/Technologies.component';
 export { default as UnderConstruction } from './implementations/UnderConstruction/UnderConstruction.component';

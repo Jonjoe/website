@@ -12,7 +12,8 @@ import {
   Divider,
   Technologies,
   Card,
-  CardGrid
+  CardGrid,
+  Highlights,
 } from "../../components";
 
 import { strings, theme } from "config";
@@ -52,6 +53,14 @@ const HomePage: React.FC = () => {
           bottomOffset={500}
         />
         <Technologies />
+      </Section>
+
+      <Section title="Highlights" accent={theme.pallet.RED}>
+        <Waypoint
+          onEnter={() => setAccent(theme.pallet.RED)}
+          bottomOffset={500}
+        />
+        <Highlights />
       </Section>
     </Page>
   );
