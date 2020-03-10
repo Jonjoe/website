@@ -16,7 +16,6 @@ const Page: React.FC<PageProps> = props => {
       <Topbar />
       <MobileNavigation />
       <Styled.InnerContainer>{children}</Styled.InnerContainer>
-      <Asides accent={accent} />
       <Footer />
     </Styled.OuterContainer>
   );
