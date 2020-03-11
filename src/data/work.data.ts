@@ -1,11 +1,14 @@
+import { constants } from "config";
+
 import { IconName } from "components/atoms/Icon/Icon.component";
 
-interface JobTag {
+export interface JobTag {
+  id: string;
   label: string;
   icon: IconName;
 }
 
-interface Job {
+export interface Job {
   name: string;
   description: string;
   duration: string;
@@ -23,10 +26,21 @@ const workHistory: Job[] = [
     duration: "Current Role",
     logo: "the-guardian.png",
     tags: [
-      { label: "Javascript", icon: "javascript" },
-      { label: "NodeJS", icon: "nodejs" },
-      { label: "React Native", icon: "react-native" },
-      { label: "Typescript", icon: "typescript" }
+      {
+        id: constants.techLabels.JAVASCRIPT,
+        label: "Javascript",
+        icon: "javascript"
+      },
+      {
+        id: constants.techLabels.REACT_NATIVE,
+        label: "React Native",
+        icon: "react-native"
+      },
+      {
+        id: constants.techLabels.TYPESCRIPT,
+        label: "Typescript",
+        icon: "typescript"
+      }
     ]
   },
   {
@@ -37,11 +51,23 @@ const workHistory: Job[] = [
     duration: "6 Months",
     logo: "backstabbing-ceo.png",
     tags: [
-      { label: "Javascript", icon: "javascript" },
-      { label: "Typescript", icon: "typescript" },
-      { label: "React", icon: "react" },
-      { label: "NodeJs", icon: "nodejs" },
-      { label: "AWS", icon: "aws" }
+      {
+        id: constants.techLabels.JAVASCRIPT,
+        label: "Javascript",
+        icon: "javascript"
+      },
+      { id: constants.techLabels.NODEJS, label: "NodeJS", icon: "nodejs" },
+      {
+        id: constants.techLabels.REACT,
+        label: "React Native",
+        icon: "react-native"
+      },
+      {
+        id: constants.techLabels.TYPESCRIPT,
+        label: "Typescript",
+        icon: "typescript"
+      },
+      { id: constants.techLabels.AWS, label: "AWS", icon: "aws" }
     ]
   },
   {
@@ -52,10 +78,21 @@ const workHistory: Job[] = [
     duration: "7 Months",
     logo: "evrythng.jpg",
     tags: [
-      { label: "Javascript", icon: "javascript" },
-      { label: "Typescript", icon: "typescript" },
-      { label: "React Native", icon: "react-native" },
-      { label: "NodeJS", icon: "nodejs" }
+      {
+        id: constants.techLabels.JAVASCRIPT,
+        label: "Javascript",
+        icon: "javascript"
+      },
+      {
+        id: constants.techLabels.REACT_NATIVE,
+        label: "React Native",
+        icon: "react-native"
+      },
+      {
+        id: constants.techLabels.TYPESCRIPT,
+        label: "Typescript",
+        icon: "typescript"
+      }
     ]
   },
   {
@@ -66,11 +103,21 @@ const workHistory: Job[] = [
     duration: "1 Year",
     logo: "sapient.jpg",
     tags: [
-      { label: "Javascript", icon: "javascript" },
-      { label: "Typescript", icon: "typescript" },
-      { label: "React", icon: "react" },
-      { label: "React Native", icon: "react-native" },
-      { label: "NodeJS", icon: "nodejs" }
+      {
+        id: constants.techLabels.JAVASCRIPT,
+        label: "Javascript",
+        icon: "javascript"
+      },
+      {
+        id: constants.techLabels.REACT_NATIVE,
+        label: "React Native",
+        icon: "react-native"
+      },
+      {
+        id: constants.techLabels.TYPESCRIPT,
+        label: "Typescript",
+        icon: "typescript"
+      }
     ]
   }
 ];

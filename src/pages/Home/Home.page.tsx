@@ -13,7 +13,8 @@ import {
   Technologies,
   Card,
   CardGrid,
-  Highlights,
+  MyProcess,
+  Highlights
 } from "../../components";
 
 import { strings, theme } from "config";
@@ -32,8 +33,10 @@ const HomePage: React.FC = () => {
         <Text.Heading3 align="center">
           Web / Mobile / Maker / Hacker
         </Text.Heading3>
-          
-        <Button hero width="300px">Contact Me</Button>
+
+        <Button hero width="300px">
+          Contact Me
+        </Button>
         <SkillPoints />
       </Section>
 
@@ -56,7 +59,7 @@ const HomePage: React.FC = () => {
           onEnter={() => setAccent(theme.pallet.RED)}
           bottomOffset={500}
         />
-        <Highlights accent={accent}/>
+        <Highlights accent={accent} />
       </Section>
     </Page>
   );

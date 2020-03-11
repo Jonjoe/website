@@ -1,19 +1,61 @@
 import styled from "styled-components";
-import { theme } from "config";
+import { theme, breakpoints } from "config";
 
 export const Container = styled.div`
   position: relative;
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
 `;
 
+export const FilterContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  width: 100%;
+`;
+
+interface StyledFilterProps {
+  active: boolean;
+}
+
+export const Filter = styled.div<StyledFilterProps>`
+  padding: 5px 15px;
+  font-weight: 900;
+  margin: 5px;
+  background: transparant;
+  border: 5px solid white;
+  transition: all 0.318s;
+  > * {
+    transition: all 0.318s;
+    color: white;
+  }
+
+  ${(props: StyledFilterProps) =>
+    props.active &&
+    `
+    background: white;
+    > * {
+      color: ${theme.pallet.BLACK};
+    }
+  `}
+
+  &:hover {
+    background: white;
+    cursor: pointer;
+
+    > * {
+      color: ${theme.pallet.BLACK};
+    }
+  }
+`;
+
+export const EntryContainer = styled.div``;
 export const Entry = styled.article`
   width: 100%;
   position: relative;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-top: 75px;
+  margin-bottom: 75px;
   background: rgba(45, 45, 45, 0.2);
 
   &:after {
@@ -24,6 +66,10 @@ export const Entry = styled.article`
     position: absolute;
     bottom: -100px;
     left: 47.5px;
+  }
+
+  &:first-child {
+    margin-top: 50px;
   }
 
   &:last-child {
@@ -63,6 +109,7 @@ export const InnerContainer = styled.div<InnerContainerProps>`
 export const Title = styled.div`
   display: flex;
   flex-direction: column;
+
   > p {
     font-weight: 900;
     text-transform: uppercase;
@@ -74,6 +121,18 @@ export const Header = styled.header`
   align-items: center;
   justify-content: space-between;
   margin-bottom: 10px;
+
+  > p {
+    font-weight: 900;
+  }
+
+  @media only screen and (max-width: ${breakpoints.SMALL}) {
+    align-items: flex-start;
+
+    > p {
+      text-align: right;
+    }
+  }
 `;
 
 export const Icon = styled.div`
@@ -98,11 +157,13 @@ export const Footer = styled.footer`
   display: flex;
   flex-wrap: wrap;
 `;
+
 export const Tag = styled.div`
   padding: 10px;
   background: rgba(255, 255, 255, 0.5);
   margin-right: 10px;
   margin-top: 10px;
+
   > * {
     display: flex;
     align-items: center;
