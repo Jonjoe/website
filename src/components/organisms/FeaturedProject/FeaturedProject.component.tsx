@@ -28,8 +28,7 @@ const FeaturedProject: React.FC<FeaturedProjectProps> = props => {
 
       <Styled.Content>
         <Text.Body align="center" inverted>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          {project.description}
         </Text.Body>
       </Styled.Content>
 

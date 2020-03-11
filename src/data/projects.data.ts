@@ -1,15 +1,25 @@
-export default [
+export interface Project {
+  name: string;
+  description: string;
+  tags: string[];
+  image: string;
+}
+
+const projects: Project[] = [
   {
     name: "Contract Builder",
-    description: "This is a project",
-    tags: ['Javascript', 'NodeJS', 'React', 'Typescript'],
-    image: "rabbble.jpg"
+    description:
+      "With an intuitive design and mathematically verifiable audit trails, this contract builder was some of the best work I have ever done. The contrast between the insanely complex mechanisms and the beautifully simple user experience was immense fun.",
+    tags: ["Javascript", "NodeJS", "React", "Typescript"],
+    image: "contracts.png"
   },
   {
-    name: "Factory App",
-    description: "This is a project",
-    tags: ['React Native', 'NodeJS', 'Typescript'],
-    image: "rabbble.jpg"
+    name: "Authentication App",
+    description:
+      "The Factory App had a simple objective. Pair two sets of barcodes together and register them against a database. This objective sounds very simple... it wasnt! Some of the challenges included: exotic input devices, rapid interaction loops, and unstable internet connections.",
+
+    tags: ["React Native", "NodeJS", "Typescript"],
+    image: "ralph-lauren.png"
   },
   {
     name: "Rabble Networking",
@@ -17,4 +27,6 @@ export default [
     tags: [],
     image: "rabbble.jpg"
   }
-]
+];
+
+export default projects;

@@ -14,7 +14,7 @@ export const Image = styled.div<StyledImageProps>`
   height: 100%;
   width: 100%;
   z-index: 900;
-  opacity: 0.5;
+  opacity: 0.8;
   filter: grayscale(100%);
   transition: all 0.318s;
 `;
@@ -38,14 +38,13 @@ export const Header = styled.header`
 
 export const Content = styled.div`
   background: ${theme.pallet.BLACK};
-  padding: 0px 20px 20px 20px;
+  padding: 10px;
   position: absolute;
   bottom: -110px;
-  height: 80px;
   width: 100%;
   z-index: 999;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   transition: all 0.318s;
 `;
@@ -92,20 +91,15 @@ export const Actions = styled.div`
 
 export const Container = styled.article`
   margin: 10px;
+  margin-bottom: 0;
   position: relative;
-  margin-bottom: 5px;
-  border: 5px solid ${theme.pallet.BLACK};
   overflow: hidden;
-
   width: 100%;
   height: 400px;
 
   &:hover {
     ${Header} {
-      top: calc(100% - 130px);
-      > * {
-        padding: 20px 0 0 0;
-      }
+      top: calc(100% - 140px);
     }
 
     ${Content} {
@@ -136,7 +130,6 @@ export const Container = styled.article`
       }
     }
     ${Content} {
-      height: 100px;
       padding-top: 20px;
       bottom: 0;
     }
