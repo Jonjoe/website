@@ -28,10 +28,14 @@ export const Point = styled.div`
   }
   
   @media only screen and (max-width: ${breakpoints.SMALL}) {
-    margin: 15px;
+    width: 100%;
 
     svg {
-      font-size: 2.5rem;
+      font-size: 4rem;
+    }
+
+    h6 {
+      font-size: 1.5rem;
     }
   }
 `;
