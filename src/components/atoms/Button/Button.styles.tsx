@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { theme } from "config";
+import { theme, breakpoints } from "config";
 
 interface StyledButtonProps {
   width?: string;
@@ -16,9 +16,8 @@ export const Button = styled.button<StyledButtonProps>`
 
   background: ${(props: StyledButtonProps) =>
     props.hero ? theme.pallet.BLACK : "transparant"};
-  
-  ${(props: StyledButtonProps) =>
-    props.hero && "margin: 75px 0 50px 0"};
+
+  ${(props: StyledButtonProps) => props.hero && "margin: 75px 0 50px 0"};
 
   color: white;
 
@@ -27,5 +26,14 @@ export const Button = styled.button<StyledButtonProps>`
     justify-content: center;
     text-align: center;
     font-weight: 900;
+  }
+
+  &:hover {
+    cursor: pointer;
+    background: transparant;
+  }
+
+  @media only screen and (max-width: ${breakpoints.SMALL}) {
+    width: 100%;
   }
 `;

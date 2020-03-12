@@ -19,7 +19,6 @@ export { default as Tags } from './molecules/Tags/Tags.component';
 /*
  * Organisms
 */
-export { default as FeaturedProject } from './organisms/FeaturedProject/FeaturedProject.component';
 export { default as List } from './organisms/List/List.component';
 export { default as Topbar } from './organisms/Topbar/Topbar.component';
 export { default as Footer } from './organisms/Footer/Footer.component';
@@ -44,7 +43,7 @@ export { default as Page } from './templates/Page/Page.component';
  * Implementation
 */
 export { default as WorkHistory } from './implementations/WorkHistory/WorkHistory.component';
-export { default as FeaturedProjects } from './implementations/FeaturedProjects/FeaturedProjects.component';
+export { default as FeaturedProject } from './implementations/FeaturedProject/FeaturedProject.component';
 export { default as SkillPoints } from './implementations/SkillPoints/SkillPoints.component';
 export { default as Highlights } from './implementations/Highlights/Highlights.component';
 export { default as Asides } from './implementations/Asides/Asides.component';

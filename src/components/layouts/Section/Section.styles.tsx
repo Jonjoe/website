@@ -68,3 +68,8 @@ export const Header = styled.header`
     top: -50px;
   }
 `;
+
+export const Subheader = styled.div`
+  width: 100%;
+  margin-bottom: 10px;
+`

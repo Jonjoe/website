@@ -22,7 +22,7 @@ export const OuterContainer = styled.div`
   }
   
   @media only screen and (max-width: ${breakpoints.SMALL}) {
-    padding: 10px;
+    padding: 0px;
   }
 `;
 

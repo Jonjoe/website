@@ -13,7 +13,7 @@ export const Image = styled.div<StyledImageProps>`
 
   height: 100%;
   width: 100%;
-  z-index: 900;
+  z-index: 800;
   opacity: 0.8;
   filter: grayscale(100%);
   transition: all 0.318s;
@@ -27,7 +27,7 @@ export const Header = styled.header`
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 999;
+  z-index: 800;
   transition: all 0.318s;
 
   > * {
@@ -42,7 +42,7 @@ export const Content = styled.div`
   position: absolute;
   bottom: -110px;
   width: 100%;
-  z-index: 999;
+  z-index: 800;
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -53,7 +53,7 @@ export const Tags = styled.div`
   position: absolute;
   right: -60px;
   top: 10px;
-  z-index: 999;
+  z-index: 800;
   transition: all 0.318s;
 
   > * {
@@ -75,7 +75,7 @@ export const Actions = styled.div`
   position: absolute;
   left: 10px;
   top: -55px;
-  z-index: 999;
+  z-index: 800;
   transition: all 0.318s;
 
   > * {
@@ -97,26 +97,28 @@ export const Container = styled.article`
   width: 100%;
   height: 400px;
 
-  &:hover {
-    ${Header} {
-      top: calc(100% - 140px);
-    }
+  @media only screen and (min-width: ${breakpoints.SMALL}) {
+    &:hover {
+      ${Header} {
+        top: calc(100% - 140px);
+      }
 
-    ${Content} {
-      bottom: 0;
-    }
+      ${Content} {
+        bottom: 0;
+      }
 
-    ${Actions} {
-      top: 10px;
-    }
+      ${Actions} {
+        top: 10px;
+      }
 
-    ${Tags} {
-      right: 10px;
-    }
+      ${Tags} {
+        right: 10px;
+      }
 
-    ${Image} {
-      opacity: 1;
-      filter: grayscale(0%);
+      ${Image} {
+        opacity: 1;
+        filter: grayscale(0%);
+      }
     }
   }
 

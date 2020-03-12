@@ -20,12 +20,6 @@ const projects: Project[] = [
 
     tags: ["React Native", "NodeJS", "Typescript"],
     image: "ralph-lauren.png"
-  },
-  {
-    name: "Rabble Networking",
-    description: "This is a project",
-    tags: [],
-    image: "rabbble.jpg"
   }
 ];
 
