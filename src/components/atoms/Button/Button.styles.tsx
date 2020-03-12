@@ -17,7 +17,7 @@ export const Button = styled.button<StyledButtonProps>`
   background: ${(props: StyledButtonProps) =>
     props.hero ? theme.pallet.BLACK : theme.pallet.WHITE};
 
-  ${(props: StyledButtonProps) => props.hero && "margin: 75px 0 50px 0"};
+  ${(props: StyledButtonProps) => props.hero && "margin: 10px"};
 
   color: white;
 
