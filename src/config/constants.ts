@@ -20,6 +20,13 @@ const constants = {
     REACT_NATIVE: "react-native",
     REACT: "react",
     AWS: "aws"
+  },
+  links: {
+    GITHUB: "https://github.com/jonjoe",
+    TWITTER: "https://twitter.com/_jonjoe",
+    LINKEDIN: "https://linkedin.com/in/jonjoe",
+    DRIBBBLE: "https://dribbble.com/jonjoe",
+    EMAIL: "me@jonjoe.io"
   }
 };
 

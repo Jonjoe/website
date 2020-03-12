@@ -1,12 +1,12 @@
 import * as React from "react";
-import { theme } from "config";
+import { theme, constants } from "config";
 import { Page, Section, Button, Highlights } from "components";
 
 const WorkHistoryPage: React.FC = () => {
   return (
     <Page accent={theme.pallet.RED}>
       <Section>
-        <Button hero width="300px">
+        <Button hero href={constants.links.LINKEDIN} width="300px">
           View Full Work History
         </Button>
       </Section>
@@ -16,7 +16,7 @@ const WorkHistoryPage: React.FC = () => {
       </Section>
 
       <Section>
-        <Button hero width="300px">
+        <Button hero href={constants.links.LINKEDIN} width="300px">
           View Full Work History
         </Button>
       </Section>
