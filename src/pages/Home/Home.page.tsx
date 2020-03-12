@@ -1,6 +1,6 @@
 import * as React from "react";
 import parse from "html-react-parser";
-import { strings, theme } from "config";
+import { strings, theme, constants } from "config";
 
 import { Waypoint } from "react-waypoint";
 import {
@@ -33,7 +33,7 @@ const HomePage: React.FC = () => {
           Web / Mobile / Maker / Hacker
         </Text.Heading3>
 
-        <Button hero width="300px" href={strings.links.LINKEDIN}>
+        <Button hero width="300px" href={constants.links.LINKEDIN}>
           Contact Me
         </Button>
 
@@ -72,9 +72,11 @@ const HomePage: React.FC = () => {
         </React.Fragment>
       </Section>
 
-      <Section title="Highlights"
+      <Section
+        title="Highlights"
         subtitle="Some of my favoriate contracts"
-        accent={theme.pallet.RED}>
+        accent={theme.pallet.RED}
+      >
         <Waypoint
           onEnter={() => setAccent(theme.pallet.RED)}
           bottomOffset={500}

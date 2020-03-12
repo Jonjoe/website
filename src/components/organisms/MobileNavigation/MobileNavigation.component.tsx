@@ -4,7 +4,7 @@ import * as Styled from "./MobileNavigation.styles";
 import { Link as RouterLink } from "react-router-dom";
 import { Icon, Text, SocialLinks } from "components";
 
-import { strings } from "config";
+import { constants } from "config";
 import { ROUTES } from "routes";
 
 interface LinkProps {
@@ -55,8 +55,8 @@ const MobileNavigation: React.FC = () => {
             <SocialLinks />
           </Styled.SocialLinks>
 
-          <Styled.Email href={`mailto:${strings.links.EMAIL}`}>
-            <Text.Body align="center">{strings.links.EMAIL}</Text.Body>
+          <Styled.Email href={`mailto:${constants.links.EMAIL}`}>
+            <Text.Body align="center">{constants.links.EMAIL}</Text.Body>
           </Styled.Email>
         </Styled.Footer>
       </Styled.Pane>

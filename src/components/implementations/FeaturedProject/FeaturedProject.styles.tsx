@@ -91,7 +91,6 @@ export const Actions = styled.div`
 
 export const Container = styled.article`
   margin: 10px;
-  margin-bottom: 0;
   position: relative;
   overflow: hidden;
   width: 100%;
