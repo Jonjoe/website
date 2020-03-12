@@ -47,7 +47,7 @@ const workHistory: Job[] = [
     name: "Edge Esports",
     role: "Interrim CTO/ Lead Engineer",
     description:
-      "<p>Small start up, big ideas.</p> <p>My role was to build a technical team and build the first iterations of the initial product offerings. I built some of the most beautiful and well crafted solutions of my career during this role and faced some of the biggest technical challenges of my career as well.</p>",
+      "Small start up, big ideas. My role was to build a technical team and build the first iterations of the initial product offerings. I built some of the most beautiful and well crafted solutions of my career during this role and faced some of the biggest technical challenges of my career as well.",
     duration: "6 Months",
     logo: "backstabbing-ceo.png",
     tags: [
@@ -99,7 +99,7 @@ const workHistory: Job[] = [
     name: "Sapient - British Gas",
     role: "Team Lead Engineer",
     description:
-      "<p>For this contract, I was tasked with building the next generation mobile app for British Gas. I was part of one of the three teams responsible for making this happen. During this contract, I won multiple internal awards, lead engineering standards and thought led on techniques and models.</p> <p>Initially, a 6-month contract I was offered a 6 Month extension and day rate increase at the end of the contract which I took. I left later on due to the app having been shipped and entering beta and looking for a new challenge.</p>",
+      "For this contract, I was tasked with building the next generation mobile app for British Gas. I was part of one of the three teams responsible for making this happen. During this contract, I won multiple internal awards, lead engineering standards and thought led on techniques and models. Initially, a 6-month contract I was offered a 6 Month extension and day rate increase at the end of the contract which I took. I left later on due to the app having been shipped and entering beta and looking for a new challenge.",
     duration: "1 Year",
     logo: "sapient.jpg",
     tags: [

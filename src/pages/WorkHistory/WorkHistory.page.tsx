@@ -1,6 +1,6 @@
 import * as React from "react";
 import { theme } from "config";
-import { Page, Section, Text, Button, Highlights } from "components";
+import { Page, Section, Button, Highlights } from "components";
 
 const WorkHistoryPage: React.FC = () => {
   return (

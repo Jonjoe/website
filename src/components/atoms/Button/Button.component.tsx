@@ -22,7 +22,7 @@ const Button: React.FC<ButtonProps> = props => {
 
   return (
     <Styled.Button width={width} hero={hero} onClick={() => handleOnClick(href)}>
-      <Text.Inline inverted>{children}</Text.Inline>
+      <Text.Inline inverted={hero}>{children}</Text.Inline>
     </Styled.Button>
   );
 };

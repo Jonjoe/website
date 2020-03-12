@@ -1,8 +1,7 @@
 import React from "react";
 import * as Styled from "./FeaturedProject.styles";
-import { theme } from "config";
 
-import { Icon, Text, Button } from "components";
+import { Icon, Text } from "components";
 
 export interface FProject {
   name: string;

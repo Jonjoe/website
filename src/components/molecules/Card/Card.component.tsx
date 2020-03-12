@@ -1,34 +1,66 @@
 import * as React from "react";
 import * as Styled from "./Card.styles";
 
-import { Button, Text, Icon } from "components";
+import { Text, Icon } from "components";
+import { IconName } from "components/atoms/Icon/Icon.component";
 
-const Card: React.FC = () => {
-  return (
-    <Styled.Container>
+interface CardProps {
+  title: string;
+  body: string;
+  icon?: IconName;
+  tags?: string[];
+  actions?: any;
+}
+
+const Card: React.FC<CardProps> = props => {
+  const { title, body, icon, tags, actions } = props;
+
+  function renderIcon(icon?: IconName) {
+    if (!icon) {
+      return null;
+    }
+
+    return (
       <Styled.Header>
-        <Icon name="folder" size="3.5rem" />
+        <Icon name={icon} size="3.5rem" />
       </Styled.Header>
+    );
+  }
 
-      <Styled.Content>
-        <Text.Heading6 inverted>This is the body title</Text.Heading6>
-        <Text.Body inverted>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam
-        </Text.Body>
-      </Styled.Content>
+  function renderTags(tags?: string[]) {
+    if (!tags) {
+      return null;
+    }
 
-      <Styled.Footer>
-        <Button>View Project</Button>
-        <Button>View Code </Button>
-      </Styled.Footer>
-
+    return (
       <Styled.Tags>
         <Text.Body>javascript</Text.Body>
         <Text.Body>javascript</Text.Body>
         <Text.Body>javascript</Text.Body>
       </Styled.Tags>
+    );
+  }
+
+  function renderActions(actions: any) {
+    if (!actions) {
+      return null;
+    }
+
+    return <Styled.Footer>{actions}</Styled.Footer>;
+  }
+
+  return (
+    <Styled.Container hasTags={tags}>
+      {renderIcon(icon)}
+
+      <Styled.Content>
+        <Text.Heading6 inverted>{title}</Text.Heading6>
+        <Text.Body inverted>{body} </Text.Body>
+      </Styled.Content>
+
+      {renderActions(actions)}
+
+      {renderTags(tags)}
     </Styled.Container>
   );
 };

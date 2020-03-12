@@ -36,7 +36,7 @@ const Topbar: React.FC = () => {
         </Styled.CenterPiece>
 
         <Styled.RightLinks>
-          <TopbarLink to={ROUTES.HOME} label="CV" />
+          <TopbarLink to={ROUTES.CV} label="CV" />
           <TopbarLink to={ROUTES.WORK_HISTORY} label="History" />
           <Styled.Link>
             <a target="blank" href={strings.links.LINKEDIN}><Text.Body>Contact</Text.Body></a>
