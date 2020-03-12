@@ -1,7 +1,8 @@
 import * as React from "react";
-import { Waypoint } from "react-waypoint";
 import parse from "html-react-parser";
+import { strings, theme } from "config";
 
+import { Waypoint } from "react-waypoint";
 import {
   Button,
   Page,
@@ -9,15 +10,12 @@ import {
   SkillPoints,
   Text,
   Technologies,
-  MyProcess,
-  Struct,
   FeaturedProject,
   Highlights
 } from "../../components";
-import projects from "data/projects.data";
 
 import { FProject } from "components/implementations/FeaturedProject/FeaturedProject.component";
-import { strings, theme } from "config";
+import projects from "data/projects.data";
 
 const HomePage: React.FC = () => {
   const [accent, setAccent] = React.useState<string>(theme.pallet.BLACK);
@@ -30,13 +28,15 @@ const HomePage: React.FC = () => {
           bottomOffset={500}
         />
         <Text.Heading1 align="center">Jonjoe Whitfield</Text.Heading1>
+
         <Text.Heading3 align="center">
           Web / Mobile / Maker / Hacker
         </Text.Heading3>
 
-        <Button hero width="300px">
+        <Button hero width="300px" href={strings.links.LINKEDIN}>
           Contact Me
         </Button>
+
         <SkillPoints />
       </Section>
 
@@ -51,6 +51,7 @@ const HomePage: React.FC = () => {
           onEnter={() => setAccent(theme.pallet.BLACK)}
           bottomOffset={500}
         />
+
         <Technologies />
       </Section>
 
@@ -59,6 +60,7 @@ const HomePage: React.FC = () => {
           onEnter={() => setAccent(theme.pallet.BLUE)}
           bottomOffset={500}
         />
+
         <React.Fragment>
           {projects.map((project: FProject, index: number) => (
             <FeaturedProject project={project} key={index} />
@@ -71,6 +73,7 @@ const HomePage: React.FC = () => {
           onEnter={() => setAccent(theme.pallet.RED)}
           bottomOffset={500}
         />
+
         <Highlights accent={accent} />
       </Section>
     </Page>
