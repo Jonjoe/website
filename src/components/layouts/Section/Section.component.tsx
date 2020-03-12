@@ -33,6 +33,7 @@ const Section: React.FC<SectionProps> = props => {
     return (
       <Styled.Subheader>
         <Text.Heading5 inverted>{subtitle}</Text.Heading5>
+        <Divider />
       </Styled.Subheader>
     )
   }
@@ -43,7 +44,6 @@ const Section: React.FC<SectionProps> = props => {
 
       <Struct column centered>
         {renderSubheader(subtitle)}
-        <Divider />
         {children}
       </Struct>
     </Styled.Container>
