@@ -8,15 +8,15 @@ import {
   Section,
   SkillPoints,
   Text,
-  FeaturedProjects,
-  Divider,
   Technologies,
-  Card,
-  CardGrid,
   MyProcess,
+  Struct,
+  FeaturedProject,
   Highlights
 } from "../../components";
+import projects from "data/projects.data";
 
+import { FProject } from "components/implementations/FeaturedProject/FeaturedProject.component";
 import { strings, theme } from "config";
 
 const HomePage: React.FC = () => {
@@ -52,6 +52,18 @@ const HomePage: React.FC = () => {
           bottomOffset={500}
         />
         <Technologies />
+      </Section>
+
+      <Section title="Showcase" accent={theme.pallet.BLUE}>
+        <Waypoint
+          onEnter={() => setAccent(theme.pallet.BLUE)}
+          bottomOffset={500}
+        />
+        <React.Fragment>
+          {projects.map((project: FProject, index: number) => (
+            <FeaturedProject project={project} key={index} />
+          ))}
+        </React.Fragment>
       </Section>
 
       <Section title="Highlights" accent={theme.pallet.RED}>
