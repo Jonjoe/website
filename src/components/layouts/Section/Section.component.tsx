@@ -1,16 +1,17 @@
 import * as React from "react";
 import * as Styled from "./Section.styles";
 
-import { Text, Struct } from "components";
+import { Text, Struct, Divider } from "components";
 
 interface SectionProps {
   children: JSX.Element | JSX.Element[];
+  subtitle?: string;
   title?: string;
   accent?: string;
 }
 
 const Section: React.FC<SectionProps> = props => {
-  const { children, title, accent } = props;
+  const { children, title, subtitle, accent } = props;
 
   function renderHeader(title?: string) {
     if (!title) {
@@ -24,10 +25,25 @@ const Section: React.FC<SectionProps> = props => {
     );
   }
 
+  function renderSubheader(subtitle?: string) {
+    if(!subtitle) {
+      return null
+    }
+
+    return (
+      <Styled.Subheader>
+        <Text.Heading5 inverted>{subtitle}</Text.Heading5>
+      </Styled.Subheader>
+    )
+  }
+
   return (
     <Styled.Container accent={accent}>
       {renderHeader(title)}
+
       <Struct column centered>
+        {renderSubheader(subtitle)}
+        <Divider />
         {children}
       </Struct>
     </Styled.Container>

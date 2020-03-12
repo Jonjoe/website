@@ -36,14 +36,8 @@ const Highlights: React.FC<HighlightsProps> = props => {
     containsSelectedTag(highlight, selectedTag)
   );
 
-  const cleanSelectedTag = selectedTag === "" ? "All" : selectedTag;
-
   return (
     <Styled.Container>
-      <Text.Heading6 inverted>
-        {filteredHighlights.length + 1} Highlights
-      </Text.Heading6>
-
       <Styled.FilterContainer>
         <Styled.Filter
           active={selectedTag === ""}
@@ -61,10 +55,6 @@ const Highlights: React.FC<HighlightsProps> = props => {
           </Styled.Filter>
         ))}
       </Styled.FilterContainer>
-
-      <Divider />
-
-      <Text.Heading5 inverted>{cleanSelectedTag} Highlights</Text.Heading5>
 
       <Styled.EntryContainer>
         {filteredHighlights.map(highlight => (

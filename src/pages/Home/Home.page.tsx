@@ -55,7 +55,11 @@ const HomePage: React.FC = () => {
         <Technologies />
       </Section>
 
-      <Section title="Showcase" accent={theme.pallet.BLUE}>
+      <Section
+        title="Showcase"
+        subtitle="Some of my favoriate projects"
+        accent={theme.pallet.BLUE}
+      >
         <Waypoint
           onEnter={() => setAccent(theme.pallet.BLUE)}
           bottomOffset={500}
@@ -68,12 +72,13 @@ const HomePage: React.FC = () => {
         </React.Fragment>
       </Section>
 
-      <Section title="Highlights" accent={theme.pallet.RED}>
+      <Section title="Highlights"
+        subtitle="Some of my favoriate contracts"
+        accent={theme.pallet.RED}>
         <Waypoint
           onEnter={() => setAccent(theme.pallet.RED)}
           bottomOffset={500}
         />
-
         <Highlights accent={accent} />
       </Section>
     </Page>

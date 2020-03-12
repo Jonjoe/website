@@ -28,6 +28,11 @@ export const Button = styled.button<StyledButtonProps>`
     font-weight: 900;
   }
 
+  &:hover {
+    cursor: pointer;
+    background: transparant;
+  }
+
   @media only screen and (max-width: ${breakpoints.SMALL}) {
     width: 100%;
   }
