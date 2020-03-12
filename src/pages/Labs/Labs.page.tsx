@@ -1,7 +1,7 @@
 import * as React from "react";
 import { theme } from "config";
 
-import { Page, Section, Card, CardGrid, UnderConstruction } from "components";
+import { Page, Section, UnderConstruction } from "components";
 
 const LabsPage: React.FC = () => {
   return (

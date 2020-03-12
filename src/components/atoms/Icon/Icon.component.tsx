@@ -129,9 +129,6 @@ function mapNamePropToFaNames(iconName: IconName): string | string[] {
     case "nodejs":
       return ["fab", "node"];
 
-    case "react":
-      return ["fab", "react"];
-
     case "github":
       return ["fab", "github"];
 

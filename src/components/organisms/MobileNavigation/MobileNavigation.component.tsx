@@ -2,7 +2,7 @@ import * as React from "react";
 import * as Styled from "./MobileNavigation.styles";
 
 import { Link as RouterLink } from "react-router-dom";
-import { Button, Icon, Text, SocialLinks } from "components";
+import { Icon, Text, SocialLinks } from "components";
 
 import { strings } from "config";
 import { ROUTES } from "routes";

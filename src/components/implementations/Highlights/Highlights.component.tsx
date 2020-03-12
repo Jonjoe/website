@@ -1,8 +1,6 @@
 import * as React from "react";
-import FlipMove from "react-flip-move";
 
 import * as Styled from "./Highlights.styles";
-import parse from "html-react-parser";
 
 import { constants } from "config";
 
@@ -21,7 +19,6 @@ const Highlights: React.FC<HighlightsProps> = props => {
 
   function containsSelectedTag(highlight: Job, filterTag: string) {
     if (filterTag === "") {
-      console.log("blank");
       return true;
     }
 
@@ -46,8 +43,9 @@ const Highlights: React.FC<HighlightsProps> = props => {
           <Text.Body align="center">All</Text.Body>
         </Styled.Filter>
 
-        {Object.values(constants.techLabels).map(label => (
+        {Object.values(constants.techLabels).map((label, index) => (
           <Styled.Filter
+            key={index}
             active={selectedTag === label}
             onClick={() => setSelectedTag(label)}
           >
@@ -57,8 +55,8 @@ const Highlights: React.FC<HighlightsProps> = props => {
       </Styled.FilterContainer>
 
       <Styled.EntryContainer>
-        {filteredHighlights.map(highlight => (
-          <Styled.Entry>
+        {filteredHighlights.map((highlight, index) => (
+          <Styled.Entry key={index}>
             <Styled.Icon>
               <Icon name="scroll" color={accent} size="1rem" />
             </Styled.Icon>
@@ -66,6 +64,7 @@ const Highlights: React.FC<HighlightsProps> = props => {
             <Styled.InnerContainer logoUrl={highlight.logo}>
               <Styled.Header>
                 <Styled.Title>
+
                   <Text.Heading5 inverted>{highlight.name}</Text.Heading5>
                   <Text.Body inverted>{highlight.role}</Text.Body>
                 </Styled.Title>
@@ -75,14 +74,12 @@ const Highlights: React.FC<HighlightsProps> = props => {
               <Divider left soft />
 
               <Styled.Content>
-                <Text.Body inverted>
-                  {parse(highlight.description) as any}
-                </Text.Body>
+                <Text.Body inverted>{highlight.description}</Text.Body>
               </Styled.Content>
 
               <Styled.Footer>
-                {highlight.tags.map(tag => (
-                  <Styled.Tag>
+                {highlight.tags.map((tag, index) => (
+                  <Styled.Tag key={index}>
                     <Text.Inline>
                       <Icon name={tag.icon} />
                       {tag.label}

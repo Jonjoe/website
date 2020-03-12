@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { breakpoints } from "config";
 
 export const Container = styled.div`
   display: grid;
