@@ -33,6 +33,7 @@ export { default as Struct } from './layouts/Struct/Struct.component';
 export { default as Centered } from './layouts/Centered/Centered.component';
 export { default as Column } from './layouts/Column/Column.component';
 export { default as CardGrid } from './layouts/CardGrid/CardGrid.component';
+export { default as ButtonRow } from './layouts/ButtonRow/ButtonRow.component';
 
 /*
  * Templates

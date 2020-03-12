@@ -1,10 +1,13 @@
 import * as React from "react";
 import parse from "html-react-parser";
+
+import { ROUTES } from "routes";
 import { strings, theme, constants } from "config";
 
 import { Waypoint } from "react-waypoint";
 import {
   Button,
+  ButtonRow,
   Page,
   Section,
   SkillPoints,
@@ -33,9 +36,15 @@ const HomePage: React.FC = () => {
           Web / Mobile / Maker / Hacker
         </Text.Heading3>
 
-        <Button hero width="300px" href={constants.links.LINKEDIN}>
-          Contact Me
-        </Button>
+        <ButtonRow>
+          <Button hero width="300px" to={ROUTES.CV}>
+            My CV
+          </Button>
+
+          <Button hero width="300px" href={constants.links.LINKEDIN}>
+            Contact Me
+          </Button>
+        </ButtonRow>
 
         <SkillPoints />
       </Section>
