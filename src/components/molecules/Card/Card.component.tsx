@@ -1,7 +1,7 @@
 import * as React from "react";
 import * as Styled from "./Card.styles";
 
-import { Button, Text, Icon } from "components";
+import { Text, Icon } from "components";
 import { IconName } from "components/atoms/Icon/Icon.component";
 
 interface CardProps {
@@ -22,7 +22,7 @@ const Card: React.FC<CardProps> = props => {
 
     return (
       <Styled.Header>
-        <Icon name="folder" size="3.5rem" />
+        <Icon name={icon} size="3.5rem" />
       </Styled.Header>
     );
   }

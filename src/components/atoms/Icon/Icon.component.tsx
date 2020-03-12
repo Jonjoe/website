@@ -25,6 +25,7 @@ export type IconName =
   | "heart"
   | "hexagon"
   | "code2"
+  | "file"
   | "folder"
   | "cross"
   | "scroll"
@@ -83,6 +84,9 @@ function mapNamePropToFaNames(iconName: IconName): string | string[] {
 
     case "folder":
       return ["fad", "folder-open"];
+
+    case "file":
+      return ["fad", "file-alt"];
 
     case "hexagon":
       return ["fal", "hexagon"];

@@ -44,7 +44,7 @@ const CvsPage: React.FC = () => {
             {cvs.map((cv: any) => {
               return (
                 <Card
-                  icon="folder"
+                  icon="file"
                   key={cv.id}
                   title={cleanFileName(cv.name)}
                   body={cv.description}
