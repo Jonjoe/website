@@ -97,26 +97,28 @@ export const Container = styled.article`
   width: 100%;
   height: 400px;
 
-  &:hover {
-    ${Header} {
-      top: calc(100% - 140px);
-    }
+  @media only screen and (min-width: ${breakpoints.SMALL}) {
+    &:hover {
+      ${Header} {
+        top: calc(100% - 140px);
+      }
 
-    ${Content} {
-      bottom: 0;
-    }
+      ${Content} {
+        bottom: 0;
+      }
 
-    ${Actions} {
-      top: 10px;
-    }
+      ${Actions} {
+        top: 10px;
+      }
 
-    ${Tags} {
-      right: 10px;
-    }
+      ${Tags} {
+        right: 10px;
+      }
 
-    ${Image} {
-      opacity: 1;
-      filter: grayscale(0%);
+      ${Image} {
+        opacity: 1;
+        filter: grayscale(0%);
+      }
     }
   }
 
