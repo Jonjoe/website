@@ -47,6 +47,7 @@ const MobileNavigation: React.FC = () => {
           <Link to={ROUTES.PROJECTS} label="Projects" />
           <Link to={ROUTES.LABS} label="Labs" />
           <Link to={ROUTES.WORK_HISTORY} label="Work History" />
+          <Link to={ROUTES.CV} label="CV" />
         </Styled.Links>
 
         <Styled.Footer>

@@ -1,15 +1,16 @@
-import * as Pages from './pages'
+import * as Pages from "./pages";
 
 interface Routes {
   [handle: string]: string;
 }
 
 export const ROUTES: Routes = {
-  HOME: '/',
-  PROJECTS: '/projects',
-  LABS: '/labs',
-  WORK_HISTORY: '/work-history'
-}
+  HOME: "/",
+  PROJECTS: "/projects",
+  LABS: "/labs",
+  CV: "/cv",
+  WORK_HISTORY: "/work-history"
+};
 
 const routes = [
   {
@@ -31,7 +32,12 @@ const routes = [
     path: ROUTES.WORK_HISTORY,
     exact: true,
     component: Pages.WorkHistory
+  },
+  {
+    path: ROUTES.CV,
+    exact: true,
+    component: Pages.Cv
   }
-]
+];
 
-export default routes
+export default routes;
