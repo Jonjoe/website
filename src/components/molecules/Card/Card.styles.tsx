@@ -1,14 +1,21 @@
 import styled from "styled-components";
 import { theme } from "config";
 
+interface StyledContainerProps {
+  hasTags?: string[];
+}
+
 export const Container = styled.article`
-  background: rgba(45, 45, 45, 0.2);
+  background: rgba(45, 45, 45, 0.4);
   padding: 20px;
   display: flex;
   flex-direction: column;
   margin-left: 40px;
   border: 5px solid ${theme.pallet.BLACK};
   position: relative;
+
+  ${(props: StyledContainerProps) =>
+    props.hasTags ? "margin-left: 40px;" : "margin-left: 0"}
 `;
 
 export const Header = styled.header`
