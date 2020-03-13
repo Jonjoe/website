@@ -5,7 +5,8 @@ config({ path: resolve(__dirname, "../../.env") });
 
 const constants = {
   apiKeys: {
-    GDRIVE: process.env.REACT_APP_GDRIVE_API_KEY || ""
+    GDRIVE: process.env.REACT_APP_GDRIVE_API_KEY || "",
+    GA_CODE: 'UA-160618455-1',
   },
   apiUrls: {
     GDRIVE: "https://www.googleapis.com/drive/v3"
