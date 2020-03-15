@@ -28,7 +28,7 @@ export const Header = styled.header`
   top: 0;
   left: 0;
   z-index: 800;
-  transition: all 0.318s;
+  transition: all 0.5s;
 
   > * {
     transition: all 0.318s;
@@ -38,7 +38,7 @@ export const Header = styled.header`
 
 export const Content = styled.div`
   background: ${theme.pallet.BLACK};
-  padding: 10px;
+  padding: 25px 10px;
   position: absolute;
   bottom: -110px;
   width: 100%;
@@ -46,6 +46,7 @@ export const Content = styled.div`
   display: flex;
   align-items: flex-start;
   justify-content: center;
+  opacity: 0;
   transition: all 0.318s;
 `;
 
@@ -99,11 +100,12 @@ export const Container = styled.article`
   @media only screen and (min-width: ${breakpoints.SMALL}) {
     &:hover {
       ${Header} {
-        top: calc(100% - 140px);
+        top: 100%;
       }
 
       ${Content} {
         bottom: 0;
+        opacity: 1;
       }
 
       ${Actions} {
