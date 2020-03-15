@@ -13,6 +13,7 @@ import {
   SkillPoints,
   Struct,
   Text,
+  Divider,
   Technologies,
   FeaturedProject,
   Highlights
@@ -54,7 +55,7 @@ const HomePage: React.FC = () => {
       <Section accent={theme.pallet.BLACK} title="Hello">
         <Struct centered column>
           <Text.Heading5 inverted align="center">
-            {parse(strings.INTRO_ONE) as any}
+            {parse(strings.INTRO) as any}
           </Text.Heading5>
         </Struct>
       </Section>
@@ -68,11 +69,7 @@ const HomePage: React.FC = () => {
         <Technologies />
       </Section>
 
-      <Section
-        title="Showcase"
-        subtitle="Some of my favoriate projects"
-        accent={theme.pallet.BLUE}
-      >
+      <Section title="Showcase" accent={theme.pallet.BLUE}>
         <Waypoint
           onEnter={() => setAccent(theme.pallet.BLUE)}
           bottomOffset={500}
@@ -95,6 +92,12 @@ const HomePage: React.FC = () => {
           bottomOffset={500}
         />
         <Highlights accent={accent} />
+        <Divider />
+        <Struct centered>
+          <Text.Body align="center" inverted>
+            {strings.BULLSHIT_DISCLAIMER}
+          </Text.Body>
+        </Struct>
       </Section>
     </Page>
   );
