@@ -11,7 +11,9 @@ import {
   Page,
   Section,
   SkillPoints,
+  Struct,
   Text,
+  Divider,
   Technologies,
   FeaturedProject,
   Highlights
@@ -30,6 +32,7 @@ const HomePage: React.FC = () => {
           onEnter={() => setAccent(theme.pallet.BLACK)}
           bottomOffset={500}
         />
+
         <Text.Heading1 align="center">Jonjoe Whitfield</Text.Heading1>
 
         <Text.Heading3 align="center">
@@ -50,9 +53,11 @@ const HomePage: React.FC = () => {
       </Section>
 
       <Section accent={theme.pallet.BLACK} title="Hello">
-        <Text.Heading5 inverted align="center">
-          {parse(strings.INTRO_ONE) as any}
-        </Text.Heading5>
+        <Struct centered column>
+          <Text.Heading5 inverted align="center">
+            {parse(strings.INTRO) as any}
+          </Text.Heading5>
+        </Struct>
       </Section>
 
       <Section title="Technologies">
@@ -64,11 +69,7 @@ const HomePage: React.FC = () => {
         <Technologies />
       </Section>
 
-      <Section
-        title="Showcase"
-        subtitle="Some of my favoriate projects"
-        accent={theme.pallet.BLUE}
-      >
+      <Section title="Showcase" accent={theme.pallet.BLUE}>
         <Waypoint
           onEnter={() => setAccent(theme.pallet.BLUE)}
           bottomOffset={500}
@@ -91,6 +92,12 @@ const HomePage: React.FC = () => {
           bottomOffset={500}
         />
         <Highlights accent={accent} />
+        <Divider />
+        <Struct centered>
+          <Text.Body align="center" inverted>
+            {strings.BULLSHIT_DISCLAIMER}
+          </Text.Body>
+        </Struct>
       </Section>
     </Page>
   );

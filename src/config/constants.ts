@@ -9,7 +9,8 @@ const constants = {
     GA_CODE: 'UA-160618455-1',
   },
   apiUrls: {
-    GDRIVE: "https://www.googleapis.com/drive/v3"
+    GDRIVE: "https://www.googleapis.com/drive/v3",
+    GITHUB: "https://api.github.com",
   },
   googleFolderIds: {
     CV_FOLDER: "1_gb8kcaINJgpNDyZlA2PsKtBBJyz5c6i"

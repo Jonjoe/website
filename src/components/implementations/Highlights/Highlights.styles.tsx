@@ -8,76 +8,12 @@ export const Container = styled.div`
   flex-direction: column;
 `;
 
-export const FilterContainer = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  width: 100%;
-`;
-
-interface StyledFilterProps {
-  active: boolean;
-}
-
-export const Filter = styled.div<StyledFilterProps>`
-  padding: 5px 15px;
-  font-weight: 900;
-  margin: 5px;
-  background: transparant;
-  border: 5px solid white;
-  transition: all 0.318s;
-  > * {
-    transition: all 0.318s;
-    color: white;
-  }
-
-  ${(props: StyledFilterProps) =>
-    props.active &&
-    `
-    background: white;
-    > * {
-      color: ${theme.pallet.BLACK};
-    }
-  `}
-
-  &:hover {
-    background: white;
-    cursor: pointer;
-
-    > * {
-      color: ${theme.pallet.BLACK};
-    }
-  }
-`;
-
 export const EntryContainer = styled.div``;
 export const Entry = styled.article`
   width: 100%;
   position: relative;
-  margin-top: 75px;
-  margin-bottom: 75px;
+  margin-bottom: 10px;
   background: rgba(45, 45, 45, 0.2);
-
-  &:after {
-    height: 100px;
-    width: 5px;
-    background: white;
-    content: "";
-    position: absolute;
-    bottom: -100px;
-    left: 47.5px;
-  }
-
-  &:first-child {
-    margin-top: 50px;
-  }
-
-  &:last-child {
-    margin-bottom: 0;
-    &:after {
-      display: none;
-    }
-  }
 `;
 
 interface InnerContainerProps {
@@ -135,20 +71,6 @@ export const Header = styled.header`
   }
 `;
 
-export const Icon = styled.div`
-  background: white;
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-  border: 5px solid rgba(255, 255, 255, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: -25px;
-  left: 25px;
-`;
-
 export const Content = styled.section`
   margin-bottom: 20px;
 `;
@@ -156,18 +78,4 @@ export const Content = styled.section`
 export const Footer = styled.footer`
   display: flex;
   flex-wrap: wrap;
-`;
-
-export const Tag = styled.div`
-  padding: 10px;
-  background: rgba(255, 255, 255, 0.5);
-  margin-right: 10px;
-  margin-top: 10px;
-
-  > * {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0.8rem;
-  }
 `;

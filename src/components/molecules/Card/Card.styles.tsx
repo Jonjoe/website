@@ -10,8 +10,8 @@ export const Container = styled.article`
   padding: 20px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   margin-left: 40px;
-  border: 5px solid ${theme.pallet.BLACK};
   position: relative;
 
   ${(props: StyledContainerProps) =>

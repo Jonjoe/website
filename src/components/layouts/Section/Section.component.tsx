@@ -26,23 +26,23 @@ const Section: React.FC<SectionProps> = props => {
   }
 
   function renderSubheader(subtitle?: string) {
-    if(!subtitle) {
-      return null
+    if (!subtitle) {
+      return null;
     }
 
     return (
       <Styled.Subheader>
         <Text.Heading5 inverted>{subtitle}</Text.Heading5>
-        <Divider />
+        <Divider left />
       </Styled.Subheader>
-    )
+    );
   }
 
   return (
     <Styled.Container accent={accent}>
       {renderHeader(title)}
 
-      <Struct column centered>
+      <Struct column>
         {renderSubheader(subtitle)}
         {children}
       </Struct>

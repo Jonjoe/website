@@ -1,10 +1,8 @@
 const strings = {
-  INTRO_ONE:
+  INTRO:
     "I'm <strong>Jonjoe</strong>, a 29 year old product engineer from <strong>London</strong>.",
-  INTRO_TWO:
-    "From <strong>scribbles</strong> on a napkin to <strong>MVP</strong> to full scale <strong>production</strong> ready specimens of glory.",
-  INTRO_THREE:
-    "From scribbles on a napkin to MVP to full scale production ready specimens of glory."
+  BULLSHIT_DISCLAIMER:
+    "All of my contract roles were performed under my limited company Indee Softworks Ltd. Contact me for further clarifiation if you need it."
 };
 
 export default strings;

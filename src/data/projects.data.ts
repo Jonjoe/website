@@ -10,7 +10,7 @@ const projects: Project[] = [
     name: "Contract Builder",
     description:
       "With an intuitive design and mathematically verifiable audit trails, this contract builder was some of the best work I have ever done. The contrast between the insanely complex mechanisms and the beautifully simple user experience was immense fun.",
-    tags: ["Javascript", "NodeJS", "React", "Typescript"],
+    tags: ["Javascript", "NodeJS", "React", "AWS"],
     image: "contracts.png"
   },
   {
