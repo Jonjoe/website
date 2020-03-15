@@ -2,7 +2,7 @@ import * as React from "react";
 import { theme } from "config";
 import { github } from "services";
 
-import { Text, Button, Card, CardGrid, Filter } from "components";
+import { Text, Button, Card, CardGrid, Filter, Struct, UnderConstruction } from "components";
 
 import { Page, Section } from "components";
 
@@ -51,12 +51,8 @@ const LabsPage: React.FC = () => {
         accent={theme.pallet.GREEN}
         subtitle="View my hacks, hobby and utility projects"
       >
-        <Filter
-          tags={["a", "b", "c"]}
-          activeTag=""
-          setActiveTag={() => false}
-        />
-        {reposLoading ? renderLoading() : renderCards(repos)}
+       
+        <UnderConstruction />
       </Section>
     </Page>
   );
