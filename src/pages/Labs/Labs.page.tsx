@@ -2,7 +2,9 @@ import * as React from "react";
 import { theme } from "config";
 import { github } from "services";
 
-import { Page, Section, UnderConstruction } from "components";
+import { Text, Button, Card, CardGrid, Filter } from "components";
+
+import { Page, Section } from "components";
 
 const LabsPage: React.FC = () => {
   const [repos, setRepos] = React.useState([]);
@@ -18,14 +20,43 @@ const LabsPage: React.FC = () => {
       });
   }, []);
 
+  function renderLoading() {
+    return <Text.Body inverted>Loading ...</Text.Body>;
+  }
+
+  function renderCards(repos: any) {
+    return (
+      <CardGrid>
+        {repos.map((repo: any) => (
+          <Card
+            title={repo.name}
+            body={repo.description || ""}
+            icon="lab"
+            actions={
+              <React.Fragment>
+                <Button>View Demo</Button>
+                <Button>View Code</Button>
+              </React.Fragment>
+            }
+          />
+        ))}
+      </CardGrid>
+    );
+  }
+
   return (
     <Page accent={theme.pallet.GREEN}>
-      <Section title="Labs" accent={theme.pallet.GREEN}>
-        {reposLoading ? (
-          <p>Loading ...</p>
-        ) : (
-          repos.map((repo: any) => <p>{repo.name}</p>)
-        )}
+      <Section
+        title="Labs"
+        accent={theme.pallet.GREEN}
+        subtitle="View my hacks, hobby and utility projects"
+      >
+        <Filter
+          tags={["a", "b", "c"]}
+          activeTag=""
+          setActiveTag={() => false}
+        />
+        {reposLoading ? renderLoading() : renderCards(repos)}
       </Section>
     </Page>
   );
