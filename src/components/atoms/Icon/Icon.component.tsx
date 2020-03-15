@@ -23,6 +23,7 @@ export type IconName =
   | "alien"
   | "d10"
   | "heart"
+  | "project"
   | "hexagon"
   | "lab"
   | "code2"
@@ -70,6 +71,9 @@ function mapNamePropToFaNames(iconName: IconName): string | string[] {
     
     case "lab":
       return ["fad", "flask"];
+    
+    case "project":
+      return ["fad", "phone-laptop"];
 
     case "heart":
       return ["fad", "heart"];

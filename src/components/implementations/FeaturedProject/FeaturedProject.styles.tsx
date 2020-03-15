@@ -90,14 +90,39 @@ export const Actions = styled.div`
   }
 `;
 
-export const Container = styled.article`
+export const IconRow = styled.div`
+  width: 100%;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+`;
+
+export const Icon = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.2);
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+`;
+
+export const OuterContainer = styled.article`
+  width: 100%;
+
+  &:last-child ${IconRow} {
+    display: none;
+  }
+`;
+
+export const Container = styled.div`
   margin: 10px;
   position: relative;
   overflow: hidden;
   width: 100%;
   height: 400px;
 
-  @media only screen and (min-width: ${breakpoints.SMALL}) {
+  @media only screen and (min-width: ${breakpoints.MEDIUM}) {
     &:hover {
       ${Header} {
         top: 100%;
@@ -123,31 +148,41 @@ export const Container = styled.article`
     }
   }
 
-  @media only screen and (max-width: ${breakpoints.SMALL}) {
-    height: 450px;
-
+  @media only screen and (max-width: ${breakpoints.MEDIUM}) {
+    margin: 0;
+    height: auto;
+    
     ${Header} {
       top: 0;
-      padding-bottom: 10px;
-      > * {
-      }
-    }
-    ${Content} {
-      padding-top: 20px;
-      bottom: 0;
     }
 
-    ${Actions}, ${Tags} {
-      top: 90px;
+    ${Content} {
+      bottom: 0;
+      opacity: 1;
+      margin-bottom: 50px;
+      padding-bottom: 10px;
+    }
+
+    ${Actions} {
+      top: 10px;
     }
 
     ${Tags} {
-      right: 10px;
+      right: auto;
+      top: auto;
+      left: auto;
+      bottom: auto;
+      width: 100%;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      background: ${theme.pallet.BLACK};
     }
 
     ${Image} {
-      opacity: 0.9;
-      filter: grayscale(90%);
+      height: 500px;
+      opacity: 1;
+      filter: grayscale(0%);
     }
   }
 `;
