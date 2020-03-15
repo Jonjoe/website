@@ -8,7 +8,7 @@ interface StyledDividerProps {
 export const Divider = styled.div<StyledDividerProps>`
   width: 40%;
   margin: 30px 30% 30px 30%;
-  border-bottom: 5px solid white;
+  border-bottom: 2px solid white;
 
   ${(props: StyledDividerProps) =>
     props.left &&
