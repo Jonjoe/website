@@ -4,7 +4,7 @@ import * as Styled from "./Highlights.styles";
 
 import { constants } from "config";
 
-import { Text, Icon, Divider, Filter } from "components";
+import { Text, Icon, Divider, Filter, Tag } from "components";
 
 import highlights, { Job, JobTag } from "data/work.data";
 
@@ -43,10 +43,6 @@ const Highlights: React.FC<HighlightsProps> = props => {
       <Styled.EntryContainer>
         {filteredHighlights.map((highlight, index) => (
           <Styled.Entry key={index}>
-            <Styled.Icon>
-              <Icon name="scroll" color={accent} size="1rem" />
-            </Styled.Icon>
-
             <Styled.InnerContainer logoUrl={highlight.logo}>
               <Styled.Header>
                 <Styled.Title>
@@ -64,12 +60,7 @@ const Highlights: React.FC<HighlightsProps> = props => {
 
               <Styled.Footer>
                 {highlight.tags.map((tag, index) => (
-                  <Styled.Tag key={index}>
-                    <Text.Inline>
-                      <Icon name={tag.icon} />
-                      {tag.label}
-                    </Text.Inline>
-                  </Styled.Tag>
+                  <Tag basic key={index} label={tag.label} />
                 ))}
               </Styled.Footer>
             </Styled.InnerContainer>

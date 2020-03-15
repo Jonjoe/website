@@ -5,15 +5,16 @@ import { Text } from "components";
 
 interface TagProps {
   label: string;
-  active: boolean;
-  onClick: () => void;
+  basic?: boolean;
+  active?: boolean;
+  onClick?: () => void;
 }
 
 const Tag: React.FC<TagProps> = props => {
-  const { label, onClick } = props;
+  const { basic, label, onClick } = props;
 
   return (
-    <Styled.Container onClick={onClick}>
+    <Styled.Container onClick={onClick} basic={basic}>
       <Text.Body>{label}</Text.Body>
     </Styled.Container>
   );
