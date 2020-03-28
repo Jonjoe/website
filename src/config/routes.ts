@@ -1,4 +1,4 @@
-import * as Pages from "./pages";
+import * as Pages from "pages";
 
 interface Routes {
   [handle: string]: string;

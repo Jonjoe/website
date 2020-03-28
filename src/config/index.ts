@@ -1,5 +1,3 @@
-export { default as breakpoints } from './breakpoints'
-export { default as strings } from './strings'
-export { default as uri } from './uri-constants'
+export { default as apiKeys } from './api-keys'
 export { default as theme } from './theme'
-export { default as constants } from './constants'
+export { default as routes } from './routes'
