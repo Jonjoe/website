@@ -1,5 +1,7 @@
 import styled from "styled-components";
-import { theme, breakpoints } from "config";
+
+import { breakpoints } from "app-constants";
+import { theme } from "config";
 
 interface StyledImageProps {
   image: string;
@@ -159,7 +161,7 @@ export const Container = styled.div`
     ${Content} {
       bottom: 0;
       opacity: 1;
-      margin-bottom: 50px;
+      margin-bottom: 70px;
       padding-bottom: 10px;
     }
 
@@ -177,6 +179,7 @@ export const Container = styled.div`
       display: flex;
       justify-content: center;
       background: ${theme.pallet.BLACK};
+      padding: 10px 0 10px 0;
     }
 
     ${Image} {

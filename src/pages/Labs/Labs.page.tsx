@@ -2,7 +2,7 @@ import * as React from "react";
 import { theme } from "config";
 import { github } from "services";
 
-import { Text, Button, Card, CardGrid, Filter, Struct, UnderConstruction } from "components";
+import { Text, Button, Card, CardGrid, UnderConstruction } from "components";
 
 import { Page, Section } from "components";
 

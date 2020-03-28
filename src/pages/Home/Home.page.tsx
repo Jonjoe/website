@@ -1,8 +1,9 @@
 import * as React from "react";
 import parse from "html-react-parser";
 
-import { ROUTES } from "routes";
-import { strings, theme, constants } from "config";
+import { ROUTES } from "config/routes";
+import { social, strings } from "app-constants";
+import { theme } from "config";
 
 import { Waypoint } from "react-waypoint";
 import {
@@ -44,7 +45,7 @@ const HomePage: React.FC = () => {
             My CV
           </Button>
 
-          <Button hero width="300px" href={constants.links.LINKEDIN}>
+          <Button hero width="300px" href={social.LINKEDIN}>
             Contact Me
           </Button>
         </ButtonRow>
@@ -91,7 +92,7 @@ const HomePage: React.FC = () => {
           onEnter={() => setAccent(theme.pallet.RED)}
           bottomOffset={500}
         />
-        <Highlights accent={accent} />
+        <Highlights />
         <Divider />
         <Struct centered>
           <Text.Body align="center" inverted>

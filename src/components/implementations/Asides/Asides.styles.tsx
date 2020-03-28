@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import { breakpoints } from "config";
+
+import { breakpoints } from "app-constants";
 
 const baseAsideStyles = `
   position: relative;

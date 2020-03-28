@@ -1,10 +1,10 @@
-import { constants } from "config"
+import { API_URL } from "./";
 
 async function asyncGetRepos() {
-  const queryUrl = `${constants.apiUrls.GITHUB}/users/jonjoe/repos`
-  const response = await fetch(queryUrl)
+  const queryUrl = `${API_URL}/users/jonjoe/repos`;
+  const response = await fetch(queryUrl);
 
-  return response
+  return response;
 }
 
-export default asyncGetRepos
+export default asyncGetRepos;

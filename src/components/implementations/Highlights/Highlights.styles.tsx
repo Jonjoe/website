@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import { theme, breakpoints } from "config";
+
+import { breakpoints } from "app-constants";
 
 export const Container = styled.div`
   position: relative;
@@ -9,6 +10,7 @@ export const Container = styled.div`
 `;
 
 export const EntryContainer = styled.div``;
+
 export const Entry = styled.article`
   width: 100%;
   position: relative;

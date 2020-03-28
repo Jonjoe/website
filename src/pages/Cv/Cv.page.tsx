@@ -1,5 +1,5 @@
 import * as React from "react";
-import { theme, constants } from "config";
+import { theme, apiKeys } from "config";
 
 import { googleDrive } from "services";
 
@@ -10,7 +10,7 @@ const CvsPage: React.FC = () => {
   const [cvsLoading, setCvsLoading] = React.useState(true);
 
   React.useEffect(() => {
-    googleDrive.asyncLsFolder(constants.googleFolderIds.CV_FOLDER).then(data => {
+    googleDrive.asyncLsFolder(apiKeys.GOOGLE_FOLDER_ID).then(data => {
       console.log(data.files);
       setCvs(data.files);
       setCvsLoading(false);

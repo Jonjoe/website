@@ -1,5 +1,7 @@
 import styled from "styled-components";
-import { breakpoints, theme } from "config";
+
+import { theme } from "config";
+import { breakpoints } from "app-constants";
 
 export const OuterContainer = styled.nav`
   width: 100%;
