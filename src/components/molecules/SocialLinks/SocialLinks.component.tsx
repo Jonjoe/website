@@ -1,5 +1,5 @@
 import * as React from "react";
-import { constants } from "config";
+import { social } from "app-constants";
 
 import { Icon } from "components";
 
@@ -8,19 +8,19 @@ const SocialLinks: React.FC = () => {
 
   return (
     <React.Fragment>
-      <a target="blank" href={constants.links.DRIBBBLE}>
+      <a target="blank" href={social.DRIBBBLE}>
         <Icon name="dribbble" size={iconSize} />
       </a>
 
-      <a target="blank" href={constants.links.TWITTER}>
+      <a target="blank" href={social.TWITTER}>
         <Icon name="twitter" size={iconSize} />
       </a>
 
-      <a target="blank" href={constants.links.GITHUB}>
+      <a target="blank" href={social.GITHUB}>
         <Icon name="github" size={iconSize} />
       </a>
 
-      <a target="blank" href={constants.links.LINKEDIN}>
+      <a target="blank" href={social.LINKEDIN}>
         <Icon name="linkedin" size={iconSize} />
       </a>
     </React.Fragment>

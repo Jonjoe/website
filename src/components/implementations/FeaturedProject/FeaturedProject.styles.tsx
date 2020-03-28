@@ -1,5 +1,7 @@
 import styled from "styled-components";
-import { theme, breakpoints } from "config";
+
+import { breakpoints } from "app-constants";
+import { theme } from "config";
 
 interface StyledImageProps {
   image: string;

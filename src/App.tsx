@@ -2,13 +2,11 @@ import * as React from "react";
 import ReactGA from "react-ga";
 import { BrowserRouter } from "react-router-dom";
 import { renderRoutes } from "react-router-config";
-
 import { hot } from "react-hot-loader/root";
 
-import { constants } from "config";
-import routes from "./routes";
+import { routes, apiKeys } from "config";
 
-ReactGA.initialize(constants.apiKeys.GA_CODE);
+ReactGA.initialize(apiKeys.GA_CODE);
 ReactGA.pageview(window.location.pathname + window.location.search);
 
 const App: React.FC = () => {

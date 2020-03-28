@@ -1,4 +1,4 @@
-import { constants } from "config";
+import { techLabels } from "app-constants";
 
 import { IconName } from "components/atoms/Icon/Icon.component";
 
@@ -27,17 +27,17 @@ const workHistory: Job[] = [
     logo: "the-guardian.png",
     tags: [
       {
-        id: constants.techLabels.JAVASCRIPT,
+        id: techLabels.JAVASCRIPT,
         label: "Javascript",
         icon: "javascript"
       },
       {
-        id: constants.techLabels.REACT_NATIVE,
+        id: techLabels.REACT_NATIVE,
         label: "React Native",
         icon: "react-native"
       },
       {
-        id: constants.techLabels.TYPESCRIPT,
+        id: techLabels.TYPESCRIPT,
         label: "Typescript",
         icon: "typescript"
       }
@@ -52,22 +52,22 @@ const workHistory: Job[] = [
     logo: "backstabbing-ceo.png",
     tags: [
       {
-        id: constants.techLabels.JAVASCRIPT,
+        id: techLabels.JAVASCRIPT,
         label: "Javascript",
         icon: "javascript"
       },
-      { id: constants.techLabels.NODEJS, label: "NodeJS", icon: "nodejs" },
+      { id: techLabels.NODEJS, label: "NodeJS", icon: "nodejs" },
       {
-        id: constants.techLabels.REACT,
+        id: techLabels.REACT,
         label: "React Native",
         icon: "react-native"
       },
       {
-        id: constants.techLabels.TYPESCRIPT,
+        id: techLabels.TYPESCRIPT,
         label: "Typescript",
         icon: "typescript"
       },
-      { id: constants.techLabels.AWS, label: "AWS", icon: "aws" }
+      { id: techLabels.AWS, label: "AWS", icon: "aws" }
     ]
   },
   {
@@ -79,17 +79,17 @@ const workHistory: Job[] = [
     logo: "evrythng.jpg",
     tags: [
       {
-        id: constants.techLabels.JAVASCRIPT,
+        id: techLabels.JAVASCRIPT,
         label: "Javascript",
         icon: "javascript"
       },
       {
-        id: constants.techLabels.REACT_NATIVE,
+        id: techLabels.REACT_NATIVE,
         label: "React Native",
         icon: "react-native"
       },
       {
-        id: constants.techLabels.TYPESCRIPT,
+        id: techLabels.TYPESCRIPT,
         label: "Typescript",
         icon: "typescript"
       }
@@ -104,17 +104,17 @@ const workHistory: Job[] = [
     logo: "sapient.jpg",
     tags: [
       {
-        id: constants.techLabels.JAVASCRIPT,
+        id: techLabels.JAVASCRIPT,
         label: "Javascript",
         icon: "javascript"
       },
       {
-        id: constants.techLabels.REACT_NATIVE,
+        id: techLabels.REACT_NATIVE,
         label: "React Native",
         icon: "react-native"
       },
       {
-        id: constants.techLabels.TYPESCRIPT,
+        id: techLabels.TYPESCRIPT,
         label: "Typescript",
         icon: "typescript"
       }

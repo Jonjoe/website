@@ -5,8 +5,8 @@ import { Link } from "react-router-dom";
 
 import { Icon, Text } from "components";
 
-import { constants } from 'config'
-import { ROUTES } from 'routes'
+import { social } from 'app-constants'
+import { ROUTES } from 'config/routes'
 
 interface TopbarLinkProps {
   label: string;
@@ -39,7 +39,7 @@ const Topbar: React.FC = () => {
           <TopbarLink to={ROUTES.CV} label="CV" />
           <TopbarLink to={ROUTES.WORK_HISTORY} label="History" />
           <Styled.Link>
-            <a target="blank" href={constants.links.LINKEDIN}><Text.Body>Contact</Text.Body></a>
+            <a target="blank" href={social.LINKEDIN}><Text.Body>Contact</Text.Body></a>
           </Styled.Link>
         </Styled.RightLinks>
       </Styled.InnerContainer>

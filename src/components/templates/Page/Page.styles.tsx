@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import { theme, breakpoints } from "config";
+import { theme } from "config";
+import { breakpoints } from "app-constants";
 
 export const OuterContainer = styled.div`
   min-height: 100vh;

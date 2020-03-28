@@ -1,20 +1,15 @@
 import * as React from "react";
-
 import * as Styled from "./Highlights.styles";
 
-import { constants } from "config";
+import { techLabels } from "app-constants";
 
-import { Text, Icon, Divider, Filter, Tag } from "components";
+import { Text, Divider, Filter, Tag } from "components";
 
 import highlights, { Job, JobTag } from "data/work.data";
 
-interface HighlightsProps {
-  accent: string;
-}
+interface HighlightsProps {}
 
-const Highlights: React.FC<HighlightsProps> = props => {
-  const { accent } = props;
-
+const Highlights: React.FC<HighlightsProps> = () => {
   const [selectedTag, setSelectedTag] = React.useState("");
 
   function containsSelectedTag(highlight: Job, filterTag: string) {
@@ -36,7 +31,7 @@ const Highlights: React.FC<HighlightsProps> = props => {
   return (
     <Styled.Container>
       <Filter
-        tags={Object.values(constants.techLabels)}
+        tags={Object.values(techLabels)}
         activeTag={selectedTag}
         setActiveTag={setSelectedTag}
       />
