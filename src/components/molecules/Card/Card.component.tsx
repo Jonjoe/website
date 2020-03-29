@@ -30,7 +30,7 @@ function Card(props: CardProps) {
   function renderActions(actions: any) {
     if (!actions) return null;
 
-    return <Styled.Footer>{actions}</Styled.Footer>;
+    return <Styled.Footer>{actions}</Styled.Footer>
   }
 
   function renderExternalLink(linkUrl?: string) {
@@ -53,7 +53,7 @@ function Card(props: CardProps) {
           {title}
         </Text.Heading6>
         <Text.Body align="center" inverted>
-          {body}{" "}
+          {body}
         </Text.Body>
       </Styled.Content>
 

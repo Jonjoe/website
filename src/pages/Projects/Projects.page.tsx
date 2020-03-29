@@ -42,7 +42,7 @@ const ProjectsPage: React.FC = () => {
   function renderActions(websiteUrl: string): JSX.Element {
     return (
       <React.Fragment>
-        <Button href={websiteUrl}>View Demo</Button>;
+        <Button href={websiteUrl}>View Demo</Button>
       </React.Fragment>
     );
   }
