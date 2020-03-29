@@ -1,16 +1,27 @@
-import * as React from "react";
+import React, { useState } from "react";
 import { capitalize } from "lodash";
 
 import { github } from "services";
 import { theme } from "config";
 
-import { Page, Button, Text, Section, CardGrid, Card } from "components";
+import {
+  Page,
+  Button,
+  Text,
+  Section,
+  CardGrid,
+  Card,
+  Loading
+} from "components";
 
 const ProjectsPage: React.FC = () => {
-  const [repos, setRepos] = React.useState<any[]>([]);
-  const [reposLoading, setReposLoading] = React.useState(true);
+  const [repos, setRepos] = useState<any[]>([]);
+  const [reposLoading, setReposLoading] = useState<boolean>(true);
+  const [loaderActive, setLoaderActive] = useState<boolean>(true);
 
   React.useEffect(() => {
+    setTimeout(() => setLoaderActive(false), 750);
+
     github.asyncGetRepos().then(data => {
       setRepos(data);
       setReposLoading(false);
@@ -44,19 +55,21 @@ const ProjectsPage: React.FC = () => {
         subtitle="Things that I am working on or have worked on in the past."
         accent={theme.pallet.BLUE}
       >
-        {reposLoading && <Text.Body>Loading ...</Text.Body>}
-
-        <CardGrid>
-          {filterReposByTag(repos, "project").map(repo => (
-            <Card
-              key={repo.id}
-              title={decorateTitle(repo.name)}
-              body={repo.description}
-              icon={"github"}
-              actions={renderActions(repo.html_url)}
-            />
-          ))}
-        </CardGrid>
+        {reposLoading || loaderActive ? (
+          <Loading />
+        ) : (
+          <CardGrid animated>
+            {filterReposByTag(repos, "project").map(repo => (
+              <Card
+                key={repo.id}
+                title={decorateTitle(repo.name)}
+                body={repo.description}
+                icon={"github"}
+                actions={renderActions(repo.html_url)}
+              />
+            ))}
+          </CardGrid>
+        )}
       </Section>
     </Page>
   );
