@@ -8,12 +8,11 @@ interface CardProps {
   title: string;
   body: string;
   icon?: IconName;
-  tags?: string[];
-  actions?: any;
+  actions?: React.ReactNode;
 }
 
-const Card: React.FC<CardProps> = props => {
-  const { title, body, icon, tags, actions } = props;
+function Card(props: CardProps) {
+  const { title, body, icon, actions } = props;
 
   function renderIcon(icon?: IconName) {
     if (!icon) {
@@ -27,19 +26,6 @@ const Card: React.FC<CardProps> = props => {
     );
   }
 
-  function renderTags(tags?: string[]) {
-    if (!tags) {
-      return null;
-    }
-
-    return (
-      <Styled.Tags>
-        <Text.Body>javascript</Text.Body>
-        <Text.Body>javascript</Text.Body>
-        <Text.Body>javascript</Text.Body>
-      </Styled.Tags>
-    );
-  }
 
   function renderActions(actions: any) {
     if (!actions) {
@@ -50,7 +36,7 @@ const Card: React.FC<CardProps> = props => {
   }
 
   return (
-    <Styled.Container hasTags={tags}>
+    <Styled.Container>
       {renderIcon(icon)}
 
       <Styled.Content>
@@ -59,10 +45,8 @@ const Card: React.FC<CardProps> = props => {
       </Styled.Content>
 
       {renderActions(actions)}
-
-      {renderTags(tags)}
     </Styled.Container>
   );
 };
 
-export default Card;
+export default Card as React.FC<CardProps>;
