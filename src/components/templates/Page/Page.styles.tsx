@@ -5,7 +5,7 @@ import { breakpoints } from "app-constants";
 export const OuterContainer = styled.div`
   min-height: 100vh;
   width: 100%;
-  padding: 50px 150px;
+  padding: 50px 150px 0 150px;
   position: relative;
   z-index: 800;
   display: flex;

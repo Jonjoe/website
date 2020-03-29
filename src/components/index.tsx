@@ -54,3 +54,4 @@ export { default as Asides } from './implementations/Asides/Asides.component';
 export { default as Technologies } from './implementations/Technologies/Technologies.component';
 export { default as UnderConstruction } from './implementations/UnderConstruction/UnderConstruction.component';
 export { default as MyProcess } from './implementations/MyProcess/MyProcess.component';
+export { default as Portals } from './implementations/Portals/Portals.component';
