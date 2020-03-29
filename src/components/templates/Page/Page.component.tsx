@@ -14,7 +14,7 @@ const Page: React.FC<PageProps> = props => {
   return (
     <Styled.OuterContainer>
       <Topbar />
-      <Asides accent={accent}/>
+      <Asides accent={accent} />
       <MobileNavigation />
       <Styled.InnerContainer>{children}</Styled.InnerContainer>
       <Footer />
