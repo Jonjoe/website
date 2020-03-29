@@ -39,11 +39,10 @@ const ProjectsPage: React.FC = () => {
       .join(" ");
   }
 
-  function renderActions(githubUrl: string): JSX.Element {
+  function renderActions(websiteUrl: string): JSX.Element {
     return (
       <React.Fragment>
-        <Button href={githubUrl}>View Demo</Button>;
-        <Button href={githubUrl}>View on Github</Button>;
+        <Button href={websiteUrl}>View Demo</Button>;
       </React.Fragment>
     );
   }
@@ -64,7 +63,7 @@ const ProjectsPage: React.FC = () => {
                 key={repo.id}
                 title={decorateTitle(repo.name)}
                 body={repo.description}
-                icon={"github"}
+                icon={"rocket"}
                 actions={renderActions(repo.html_url)}
               />
             ))}
