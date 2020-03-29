@@ -4,6 +4,8 @@ import { capitalize } from "lodash";
 import { github } from "services";
 import { theme } from "config";
 
+import { selectTagFromRepos } from "selectors";
+
 import {
   Page,
   Button,
@@ -27,10 +29,6 @@ const ProjectsPage: React.FC = () => {
       setReposLoading(false);
     });
   }, []);
-
-  function filterReposByTag(repos: any[], tag: string): any[] {
-    return repos.filter(repo => repo.topics.includes(tag));
-  }
 
   function decorateTitle(title: string): string {
     return title
@@ -58,7 +56,7 @@ const ProjectsPage: React.FC = () => {
           <Loading />
         ) : (
           <CardGrid animated>
-            {filterReposByTag(repos, "project").map(repo => (
+            {selectTagFromRepos(repos, "project").map(repo => (
               <Card
                 key={repo.id}
                 title={decorateTitle(repo.name)}
