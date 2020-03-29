@@ -1,6 +1,6 @@
 import * as React from "react";
-import { theme, apiKeys } from "config";
 
+import { theme, apiKeys } from "config";
 import { googleDrive } from "services";
 
 import { Page, Section, Text, Button, CardGrid, Card } from "components";
@@ -11,7 +11,6 @@ const CvsPage: React.FC = () => {
 
   React.useEffect(() => {
     googleDrive.asyncLsFolder(apiKeys.GOOGLE_FOLDER_ID).then(data => {
-      console.log(data.files);
       setCvs(data.files);
       setCvsLoading(false);
     });
