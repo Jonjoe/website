@@ -7,11 +7,12 @@ interface StyledContainerProps {
 
 export const Container = styled.article`
   background: rgba(45, 45, 45, 0.4);
-  padding: 20px;
+  padding: 30px 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   margin-left: 40px;
+  margin-bottom: 30px;
   position: relative;
 
   ${(props: StyledContainerProps) =>
@@ -20,17 +21,22 @@ export const Container = styled.article`
 
 export const Header = styled.header`
   color: ${theme.pallet.WHITE};
-  margin-bottom: 25px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const Content = styled.section`
-  margin-bottom: 25px;
-  h6 {
-    margin-bottom: 5px;
-  }
+  margin: 20px 0;
 `;
 
 export const Footer = styled.footer`
+  position: absolute;
+  bottom: -20px;
+  left: 10%;
+  width: 80%;
+
   button {
     margin-bottom: 10px;
     &:last-child {
@@ -51,5 +57,16 @@ export const Tags = styled.aside`
     border-left: none;
     writing-mode: vertical-rl;
     transform: rotate(180deg);
+  }
+`;
+
+export const ExternalLinkIcon = styled.div`
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: white;
+
+  &:hover {
+    cursor: pointer;
   }
 `;

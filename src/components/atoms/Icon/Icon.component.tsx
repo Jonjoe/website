@@ -19,6 +19,7 @@ export type IconName =
   | "twitter"
   | "github"
   | "copyright"
+  | "external-link"
   | "code"
   | "alien"
   | "d10"
@@ -91,6 +92,9 @@ function mapNamePropToFaNames(iconName: IconName): string | string[] {
 
     case "glasses":
       return ["fad", "glasses"];
+    
+    case "external-link":
+      return ["fad", "external-link"];
     
     case "bars":
       return ["fad", "bars"];
