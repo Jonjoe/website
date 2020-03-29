@@ -64,7 +64,8 @@ const ProjectsPage: React.FC = () => {
                 title={decorateTitle(repo.name)}
                 body={repo.description}
                 icon={"rocket"}
-                actions={renderActions(repo.html_url)}
+                externalLink={repo.html_url}
+                actions={renderActions(repo.website)}
               />
             ))}
           </CardGrid>
