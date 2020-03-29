@@ -1,46 +1,47 @@
-import * as React from "react";
-import { theme } from "config";
+import React, { useState } from "react";
+import { capitalize } from "lodash";
+
 import { github } from "services";
+import { theme } from "config";
 
-import { Text, Button, Card, CardGrid, UnderConstruction } from "components";
+import { selectTagFromRepos } from "selectors";
 
-import { Page, Section } from "components";
+import {
+  Page,
+  Button,
+  Text,
+  Section,
+  CardGrid,
+  Card,
+  Loading
+} from "components";
 
-const LabsPage: React.FC = () => {
-  const [repos, setRepos] = React.useState([]);
-  const [reposLoading, setReposLoading] = React.useState(true);
+function ProjectsPage() {
+  const [repos, setRepos] = useState<any[]>([]);
+  const [reposLoading, setReposLoading] = useState<boolean>(true);
+  const [loaderActive, setLoaderActive] = useState<boolean>(true);
 
   React.useEffect(() => {
-    github
-      .asyncGetRepos()
-      .then(response => response.json())
-      .then(data => {
-        setRepos(data);
-        setReposLoading(false);
-      });
+    setTimeout(() => setLoaderActive(false), 750);
+
+    github.asyncGetRepos().then(data => {
+      setRepos(data);
+      setReposLoading(false);
+    });
   }, []);
 
-  function renderLoading() {
-    return <Text.Body inverted>Loading ...</Text.Body>;
+  function decorateTitle(title: string): string {
+    return title
+      .split("-")
+      .map(word => capitalize(word))
+      .join(" ");
   }
 
-  function renderCards(repos: any) {
+  function renderActions(websiteUrl: string): JSX.Element {
     return (
-      <CardGrid>
-        {repos.map((repo: any) => (
-          <Card
-            title={repo.name}
-            body={repo.description || ""}
-            icon="lab"
-            actions={
-              <React.Fragment>
-                <Button>View Demo</Button>
-                <Button>View Code</Button>
-              </React.Fragment>
-            }
-          />
-        ))}
-      </CardGrid>
+      <React.Fragment>
+        <Button href={websiteUrl}>View Demo</Button>
+      </React.Fragment>
     );
   }
 
@@ -48,14 +49,28 @@ const LabsPage: React.FC = () => {
     <Page accent={theme.pallet.GREEN}>
       <Section
         title="Labs"
+        subtitle="View my hacks and hobby projects here."
         accent={theme.pallet.GREEN}
-        subtitle="View my hacks, hobby and utility projects"
       >
-       
-        <UnderConstruction />
+        {reposLoading || loaderActive ? (
+          <Loading />
+        ) : (
+          <CardGrid animated>
+            {selectTagFromRepos(repos, "lab").map(repo => (
+              <Card
+                key={repo.id}
+                title={decorateTitle(repo.name)}
+                body={repo.description}
+                icon={"lab"}
+                externalLink={repo.html_url}
+                actions={renderActions(repo.website)}
+              />
+            ))}
+          </CardGrid>
+        )}
       </Section>
     </Page>
   );
 };
 
-export default LabsPage;
+export default ProjectsPage as React.FC;
