@@ -4,13 +4,13 @@ import * as Styled from "./Section.styles";
 import { Text, Struct, Divider } from "components";
 
 interface SectionProps {
-  children: JSX.Element | JSX.Element[];
+  children: React.ReactNode;
   subtitle?: string;
   title?: string;
   accent?: string;
 }
 
-const Section: React.FC<SectionProps> = props => {
+function Section(props: SectionProps) {
   const { children, title, subtitle, accent } = props;
 
   function renderHeader(title?: string) {
@@ -48,6 +48,6 @@ const Section: React.FC<SectionProps> = props => {
       </Struct>
     </Styled.Container>
   );
-};
+}
 
-export default Section;
+export default Section as React.FC<SectionProps>;
