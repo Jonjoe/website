@@ -53,7 +53,7 @@ const ProjectsPage: React.FC = () => {
         accent={theme.pallet.BLUE}
       >
         {reposLoading || loaderActive ? (
-          <Loading />
+          <Loading accent={theme.pallet.BLUE} />
         ) : (
           <CardGrid animated>
             {selectTagFromRepos(repos, "project").map(repo => (

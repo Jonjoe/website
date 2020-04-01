@@ -43,7 +43,11 @@ export const Loadingbar = styled.div`
   }
 `;
 
-export const Text = styled.div`
+interface StyledTextProps {
+  accent: string
+}
+
+export const Text = styled.div<StyledTextProps>`
   position: absolute;
   left: 10px;
   height: 100%;
@@ -51,7 +55,7 @@ export const Text = styled.div`
   align-items: center;
 
   > p {
-    color: ${theme.pallet.BLUE};
+    color: ${(props: StyledTextProps) => props.accent};
     text-transform: uppercase;
     font-weight: 900;
     font-size: 2rem;

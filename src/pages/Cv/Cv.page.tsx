@@ -1,15 +1,18 @@
-import * as React from "react";
+import React, { useState, useEffect } from "react";
 
 import { theme, apiKeys } from "config";
 import { googleDrive } from "services";
 
-import { Page, Section, Text, Button, CardGrid, Card } from "components";
+import { Page, Section, Text, Button, CardGrid, Card, Loading } from "components";
 
 const CvsPage: React.FC = () => {
-  const [cvs, setCvs] = React.useState([]);
-  const [cvsLoading, setCvsLoading] = React.useState(true);
+  const [cvs, setCvs] = useState([]);
+  const [cvsLoading, setCvsLoading] = useState(true);
+  const [loaderActive, setLoaderActive] = useState<boolean>(true);
 
-  React.useEffect(() => {
+  useEffect(() => {
+    setTimeout(() => setLoaderActive(false), 750);
+    
     googleDrive.asyncLsFolder(apiKeys.GOOGLE_FOLDER_ID).then(data => {
       setCvs(data.files);
       setCvsLoading(false);
@@ -36,8 +39,8 @@ const CvsPage: React.FC = () => {
         subtitle="My Specialised CVs"
         accent={theme.pallet.BLACK}
       >
-        {cvsLoading ? (
-          <Text.Body inverted>Loading ...</Text.Body>
+        {(cvsLoading || loaderActive) ? (
+          <Loading accent={theme.pallet.BLACK} />
         ) : (
           <CardGrid>
             {cvs.map((cv: any) => {

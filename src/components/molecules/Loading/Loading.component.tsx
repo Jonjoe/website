@@ -3,11 +3,17 @@ import * as Styled from "./Loading.styles";
 
 import { Text } from "components";
 
-function Loading(): JSX.Element {
+interface LoadingProps {
+  accent: string;
+}
+
+function Loading(props: LoadingProps): JSX.Element {
+  const { accent } = props
+
   return (
     <Styled.Container>
       <Styled.Loadingbar>
-        <Styled.Text>
+        <Styled.Text accent={accent}>
           <Text.Body>Loading</Text.Body>
         </Styled.Text>
         <Styled.Bar />
@@ -16,4 +22,4 @@ function Loading(): JSX.Element {
   );
 }
 
-export default Loading as React.FC;
+export default Loading as React.FC<LoadingProps>;
