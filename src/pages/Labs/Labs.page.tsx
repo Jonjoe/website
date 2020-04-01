@@ -53,7 +53,7 @@ function ProjectsPage() {
         accent={theme.pallet.GREEN}
       >
         {reposLoading || loaderActive ? (
-          <Loading />
+          <Loading accent={theme.pallet.GREEN} />
         ) : (
           <CardGrid animated>
             {selectTagFromRepos(repos, "lab").map(repo => (
@@ -71,6 +71,6 @@ function ProjectsPage() {
       </Section>
     </Page>
   );
-};
+}
 
 export default ProjectsPage as React.FC;
