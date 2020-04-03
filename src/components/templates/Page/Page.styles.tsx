@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { theme } from "config";
-import { breakpoints } from "app-constants";
+
+import { theme, constants } from "config";
 
 export const OuterContainer = styled.div`
   min-height: 100vh;
@@ -13,16 +13,16 @@ export const OuterContainer = styled.div`
   align-items: center;
   flex-direction: column;
 
-  @media only screen and (max-width: ${breakpoints.LARGE}) {
+  @media only screen and (max-width: ${constants.breakpoints.LARGE}) {
     padding: 50px 100px;
     margin: 0;
   }
 
-  @media only screen and (max-width: ${breakpoints.MEDIUM}) {
+  @media only screen and (max-width: ${constants.breakpoints.MEDIUM}) {
     padding: 50px;
   }
-  
-  @media only screen and (max-width: ${breakpoints.SMALL}) {
+
+  @media only screen and (max-width: ${constants.breakpoints.SMALL}) {
     padding: 0px;
   }
 `;
@@ -39,17 +39,17 @@ export const InnerContainer = styled.div`
   position: relative;
   margin-bottom: 50px;
 
-  @media only screen and (max-width: ${breakpoints.LARGE}) {
+  @media only screen and (max-width: ${constants.breakpoints.LARGE}) {
     padding: 50px;
     margin: 0 0 50px 0;
   }
-  
-  @media only screen and (max-width: ${breakpoints.MEDIUM}) {
+
+  @media only screen and (max-width: ${constants.breakpoints.MEDIUM}) {
     padding-bottom: 0px;
     margin: 0 0 50px 0;
   }
 
-  @media only screen and (max-width: ${breakpoints.SMALL}) {
+  @media only screen and (max-width: ${constants.breakpoints.SMALL}) {
     padding: 10px;
     padding-top: 100px;
     margin: 0 0 50px 0;

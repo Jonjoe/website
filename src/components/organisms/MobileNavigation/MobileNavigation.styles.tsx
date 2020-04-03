@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { breakpoints } from "app-constants";
-import { theme } from "config";
+
+import { theme, constants } from "config";
 
 export const MenuButton = styled.div``;
 
@@ -19,7 +19,7 @@ export const MobileTopbar = styled.header`
   width: 100%;
   display: none;
 
-  @media only screen and (max-width: ${breakpoints.SMALL}) {
+  @media only screen and (max-width: ${constants.breakpoints.SMALL}) {
     display: block;
   }
 `;
@@ -40,7 +40,7 @@ export const Pane = styled.nav<StyledPaneProps>`
   justify-content: space-between;
   flex-direction: column;
 
-  @media only screen and (max-width: ${breakpoints.SMALL}) {
+  @media only screen and (max-width: ${constants.breakpoints.SMALL}) {
     display: flex;
   }
 `;

@@ -2,8 +2,7 @@ import * as React from "react";
 import * as Styled from "./MobileNavigation.styles";
 import { Link as RouterLink } from "react-router-dom";
 
-import { social } from "app-constants";
-import { ROUTES } from "config/routes";
+import { constants } from "config";
 
 import { Icon, Text, SocialLinks } from "components";
 
@@ -43,11 +42,11 @@ const MobileNavigation: React.FC = () => {
         </Styled.Header>
 
         <Styled.Links>
-          <Link to={ROUTES.HOME} label="Home" />
-          <Link to={ROUTES.PROJECTS} label="Projects" />
-          <Link to={ROUTES.LABS} label="Labs" />
-          <Link to={ROUTES.WORK_HISTORY} label="Work History" />
-          <Link to={ROUTES.CV} label="CV" />
+          <Link to={constants.routes.HOME} label="Home" />
+          <Link to={constants.routes.PROJECTS} label="Projects" />
+          <Link to={constants.routes.LABS} label="Labs" />
+          <Link to={constants.routes.WORK_HISTORY} label="Work History" />
+          <Link to={constants.routes.CV} label="CV" />
         </Styled.Links>
 
         <Styled.Footer>
@@ -55,8 +54,8 @@ const MobileNavigation: React.FC = () => {
             <SocialLinks />
           </Styled.SocialLinks>
 
-          <Styled.Email href={`mailto:${social.EMAIL}`}>
-            <Text.Body align="center">{social.EMAIL}</Text.Body>
+          <Styled.Email href={`mailto:${constants.socialLinks.EMAIL}`}>
+            <Text.Body align="center">{constants.socialLinks.EMAIL}</Text.Body>
           </Styled.Email>
         </Styled.Footer>
       </Styled.Pane>

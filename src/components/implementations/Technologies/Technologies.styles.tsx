@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
-import { breakpoints } from "app-constants";
-import { theme } from "config";
+import { theme, constants} from "config";
 
 export const Container = styled.div`
   display: flex;
@@ -10,7 +9,7 @@ export const Container = styled.div`
   margin-top: -10px;
   margin-bottom: -20px;
 
-  @media only screen and (max-width: ${breakpoints.SMALL}) {
+  @media only screen and (max-width: ${constants.breakpoints.SMALL}) {
     justify-content: space-between;
   }
 `;
@@ -51,11 +50,11 @@ export const ItemContainer = styled.div`
     transition: all 0.318s;
   }
 
-  @media only screen and (max-width: ${breakpoints.MEDIUM}) {
+  @media only screen and (max-width: ${constants.breakpoints.MEDIUM}) {
     width: calc(50% - 20px);  
   }
 
-  @media only screen and (max-width: ${breakpoints.SMALL}) {
+  @media only screen and (max-width: ${constants.breakpoints.SMALL}) {
     height: 150px;
   }
 `;

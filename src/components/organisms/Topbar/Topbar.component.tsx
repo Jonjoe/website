@@ -5,8 +5,7 @@ import { Link } from "react-router-dom";
 
 import { Icon, Text } from "components";
 
-import { social } from 'app-constants'
-import { ROUTES } from 'config/routes'
+import { constants } from "config";
 
 interface TopbarLinkProps {
   label: string;
@@ -26,9 +25,9 @@ const Topbar: React.FC = () => {
     <Styled.OuterContainer>
       <Styled.InnerContainer>
         <Styled.LeftLinks>
-          <TopbarLink to={ROUTES.HOME}label="Home" />
-          <TopbarLink to={ROUTES.PROJECTS}label="Projects" />
-          <TopbarLink to={ROUTES.LABS} label="Labs" />
+          <TopbarLink to={constants.routes.HOME} label="Home" />
+          <TopbarLink to={constants.routes.PROJECTS} label="Projects" />
+          <TopbarLink to={constants.routes.LABS} label="Labs" />
         </Styled.LeftLinks>
 
         <Styled.CenterPiece>
@@ -36,10 +35,12 @@ const Topbar: React.FC = () => {
         </Styled.CenterPiece>
 
         <Styled.RightLinks>
-          <TopbarLink to={ROUTES.CV} label="CV" />
-          <TopbarLink to={ROUTES.WORK_HISTORY} label="History" />
+          <TopbarLink to={constants.routes.CV} label="CV" />
+          <TopbarLink to={constants.routes.WORK_HISTORY} label="History" />
           <Styled.Link>
-            <a target="blank" href={social.LINKEDIN}><Text.Body>Contact</Text.Body></a>
+            <a target="blank" href={constants.socialLinks.LINKEDIN}>
+              <Text.Body>Contact</Text.Body>
+            </a>
           </Styled.Link>
         </Styled.RightLinks>
       </Styled.InnerContainer>

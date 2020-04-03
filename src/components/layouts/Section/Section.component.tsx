@@ -4,7 +4,7 @@ import * as Styled from "./Section.styles";
 import { Text, Struct, Divider } from "components";
 
 interface SectionProps {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   subtitle?: string;
   title?: string;
   accent?: string;
@@ -44,7 +44,7 @@ function Section(props: SectionProps) {
 
       <Struct column>
         {renderSubheader(subtitle)}
-        {children}
+        {children && children}
       </Struct>
     </Styled.Container>
   );

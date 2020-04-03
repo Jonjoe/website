@@ -2,21 +2,13 @@ import React, { useState } from "react";
 import { capitalize } from "lodash";
 
 import { github } from "services";
-import { theme } from "config";
+import { theme, constants } from "config";
 
 import { selectTagFromRepos } from "selectors";
 
-import {
-  Page,
-  Button,
-  Text,
-  Section,
-  CardGrid,
-  Card,
-  Loading
-} from "components";
+import { Page, Button, Section, CardGrid, Card, Loading } from "components";
 
-const ProjectsPage: React.FC = () => {
+function ProjectsIndexPage(): JSX.Element {
   const [repos, setRepos] = useState<any[]>([]);
   const [reposLoading, setReposLoading] = useState<boolean>(true);
   const [loaderActive, setLoaderActive] = useState<boolean>(true);
@@ -37,10 +29,11 @@ const ProjectsPage: React.FC = () => {
       .join(" ");
   }
 
-  function renderActions(websiteUrl: string): JSX.Element {
+  function renderActions(projectId: string): JSX.Element {
+    const route = `${constants.routes.PROJECTS}/${projectId}`;
     return (
       <React.Fragment>
-        <Button href={websiteUrl}>View Demo</Button>
+        <Button to={route}>View Project</Button>
       </React.Fragment>
     );
   }
@@ -62,8 +55,7 @@ const ProjectsPage: React.FC = () => {
                 title={decorateTitle(repo.name)}
                 body={repo.description}
                 icon={"rocket"}
-                externalLink={repo.html_url}
-                actions={renderActions(repo.website)}
+                actions={renderActions(repo.id)}
               />
             ))}
           </CardGrid>
@@ -71,6 +63,6 @@ const ProjectsPage: React.FC = () => {
       </Section>
     </Page>
   );
-};
+}
 
-export default ProjectsPage;
+export default ProjectsIndexPage as React.FC;

@@ -1,8 +1,7 @@
 import * as React from "react";
 import parse from "html-react-parser";
 
-import { ROUTES } from "config/routes";
-import { social, strings } from "app-constants";
+import { constants, strings } from "config";
 import { theme } from "config";
 
 import { Waypoint } from "react-waypoint";
@@ -41,11 +40,11 @@ const HomePage: React.FC = () => {
         </Text.Heading3>
 
         <ButtonRow>
-          <Button hero width="300px" to={ROUTES.CV}>
+          <Button hero width="300px" to={constants.routes.CV}>
             My CV
           </Button>
 
-          <Button hero width="300px" href={social.LINKEDIN}>
+          <Button hero width="300px" href={constants.socialLinks.LINKEDIN}>
             Contact Me
           </Button>
         </ButtonRow>

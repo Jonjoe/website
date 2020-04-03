@@ -66,5 +66,5 @@ export const Text = styled.div<StyledTextProps>`
 export const Bar = styled.div`
   height: 50px;
   background: ${theme.pallet.WHITE};
-  animation: ${loading} 1s infinite;
+  animation: ${loading} 1.5s infinite;
 `;

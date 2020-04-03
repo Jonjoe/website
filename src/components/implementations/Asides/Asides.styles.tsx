@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { breakpoints } from "app-constants";
+import { constants } from "config";
 
 const baseAsideStyles = `
   position: relative;
@@ -76,7 +76,7 @@ export const LeftAside = styled.aside<StyledAsideProps>`
     }
   }
 
-  @media only screen and (max-width: ${breakpoints.SMALL}) {
+  @media only screen and (max-width: ${constants.breakpoints.SMALL}) {
     display: none;
   }
 `;
@@ -127,7 +127,7 @@ export const RightAside = styled.aside<StyledAsideProps>`
       `}
     }
   }
-  @media only screen and (max-width: ${breakpoints.SMALL}) {
+  @media only screen and (max-width: ${constants.breakpoints.SMALL}) {
     display: none;
   }
 `;

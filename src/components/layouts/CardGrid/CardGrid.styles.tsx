@@ -1,5 +1,5 @@
 import styled, { keyframes, css } from "styled-components";
-import { breakpoints } from "app-constants";
+import { constants } from "config";
 
 const fadeIn = keyframes`
   0% { 
@@ -25,12 +25,12 @@ interface StyledContainerProps {
 export const Container = styled.div<StyledContainerProps>`
   position: relative;
   display: grid;
-  gap: 5px;
+  gap: 20px;
   grid-template-columns: 1fr 1fr;
   
   ${props => props.animated && fadeInAnimation}
 
-  @media only screen and (max-width: ${breakpoints.MEDIUM}) {
+  @media only screen and (max-width: ${constants.breakpoints.MEDIUM}) {
     grid-template-columns: 1fr;
   }
 `;

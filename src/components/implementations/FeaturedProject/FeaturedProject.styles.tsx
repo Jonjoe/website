@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
-import { breakpoints } from "app-constants";
-import { theme } from "config";
+import { theme, constants } from "config";
 
 interface StyledImageProps {
   image: string;
@@ -124,7 +123,7 @@ export const Container = styled.div`
   width: 100%;
   height: 400px;
 
-  @media only screen and (min-width: ${breakpoints.MEDIUM}) {
+  @media only screen and (min-width: ${constants.breakpoints.MEDIUM}) {
     &:hover {
       ${Header} {
         top: 100%;
@@ -150,7 +149,7 @@ export const Container = styled.div`
     }
   }
 
-  @media only screen and (max-width: ${breakpoints.MEDIUM}) {
+  @media only screen and (max-width: ${constants.breakpoints.MEDIUM}) {
     margin: 0;
     height: auto;
     
