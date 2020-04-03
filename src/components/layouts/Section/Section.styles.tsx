@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { breakpoints } from "app-constants"
+import { constants } from "config"
 
 interface ContainerProps {
   accent?: string;
@@ -43,12 +43,12 @@ export const Container = styled.section<ContainerProps>`
     left: -10px;
   }
 
-  @media only screen and (max-width: ${breakpoints.LARGE}) {
+  @media only screen and (max-width: ${constants.breakpoints.LARGE}) {
     padding: 50px 30px;
     margin: 70px 0;
   }
 
-  @media only screen and (max-width: ${breakpoints.SMALL}) {
+  @media only screen and (max-width: ${constants.breakpoints.SMALL}) {
     margin: 50px 0;
     padding: 40px 10px;
   }
@@ -58,12 +58,12 @@ export const Header = styled.header`
   position: absolute;
   top: -80px;
 
-  @media only screen and (max-width: ${breakpoints.LARGE}) {
+  @media only screen and (max-width: ${constants.breakpoints.LARGE}) {
     left: 0;
     top: -60px;
   }
   
-  @media only screen and (max-width: ${breakpoints.MEDIUM}) {
+  @media only screen and (max-width: ${constants.breakpoints.MEDIUM}) {
     left: 0;
     top: -50px;
   }

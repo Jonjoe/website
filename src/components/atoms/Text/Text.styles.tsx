@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
-import { breakpoints } from "app-constants";
-import { theme } from "config";
+import { theme, constants } from "config";
 
 import { DynamicTypeProps } from "./Text.component";
 
@@ -31,7 +30,7 @@ export const Heading1 = styled.h1<DynamicTypeProps>`
   max-width: 100%;
   margin-bottom: 20px;
 
-  @media only screen and (max-width: ${breakpoints.MEDIUM}) {
+  @media only screen and (max-width: ${constants.breakpoints.MEDIUM}) {
     font-size: 4rem;
   }
 `;
@@ -47,7 +46,7 @@ export const Heading2 = styled.h2<DynamicTypeProps>`
     display: "block";
   }
 
-  @media only screen and (max-width: ${breakpoints.LARGE}) {
+  @media only screen and (max-width: ${constants.breakpoints.LARGE}) {
     font-size: 3rem;
   }
 `;
@@ -58,11 +57,11 @@ export const Heading3 = styled.h3<DynamicTypeProps>`
   max-width: 100%;
   text-transform: uppercase;
 
-  @media only screen and (max-width: ${breakpoints.MEDIUM}) {
+  @media only screen and (max-width: ${constants.breakpoints.MEDIUM}) {
     font-size: 1.6rem;
   }
 
-  @media only screen and (max-width: ${breakpoints.SMALL}) {
+  @media only screen and (max-width: ${constants.breakpoints.SMALL}) {
     font-size: 1.2rem;
     margin-bottom: 20px;
   }

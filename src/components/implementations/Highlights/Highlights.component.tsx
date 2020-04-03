@@ -1,8 +1,7 @@
 import * as React from "react";
 import * as Styled from "./Highlights.styles";
 
-import { techLabels } from "app-constants";
-
+import { constants } from "config"
 import { Text, Divider, Filter, Tag } from "components";
 
 import highlights, { Job, JobTag } from "data/work.data";
@@ -31,7 +30,7 @@ const Highlights: React.FC<HighlightsProps> = () => {
   return (
     <Styled.Container>
       <Filter
-        tags={Object.values(techLabels)}
+        tags={Object.values(constants.techLabels)}
         activeTag={selectedTag}
         setActiveTag={setSelectedTag}
       />

@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
-import { theme } from "config";
-import { breakpoints } from "app-constants";
+import { theme, constants } from "config";
 
 export const OuterContainer = styled.nav`
   width: 100%;
@@ -12,7 +11,7 @@ export const OuterContainer = styled.nav`
   overflow: hidden;
   z-index: 999;
 
-  @media only screen and (max-width: ${breakpoints.MEDIUM}) {
+  @media only screen and (max-width: ${constants.breakpoints.MEDIUM}) {
     position: fixed;
     top: 0;
     left: 0;
@@ -23,7 +22,7 @@ export const OuterContainer = styled.nav`
     padding-bottom: 25px;
   }
 
-  @media only screen and (max-width: ${breakpoints.SMALL}) {
+  @media only screen and (max-width: ${constants.breakpoints.SMALL}) {
     display: none;  }
 `;
 
@@ -63,7 +62,7 @@ export const LeftLinks = styled.div`
   ${linkBlockStyles}
   right: 80px;
 
-  @media only screen and (max-width: ${breakpoints.MEDIUM}) {
+  @media only screen and (max-width: ${constants.breakpoints.MEDIUM}) {
     position: relative;
     right: 0;
   }
@@ -73,7 +72,7 @@ export const RightLinks = styled.div`
   ${linkBlockStyles}
   left: 80px;
 
-  @media only screen and (max-width: ${breakpoints.MEDIUM}) {
+  @media only screen and (max-width: ${constants.breakpoints.MEDIUM}) {
     position: relative;
     left: 0;
   }

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { breakpoints } from "app-constants";
+import { constants } from "config";
 
 export const Container = styled.div`
   position: relative;
@@ -64,7 +64,7 @@ export const Header = styled.header`
     font-weight: 900;
   }
 
-  @media only screen and (max-width: ${breakpoints.SMALL}) {
+  @media only screen and (max-width: ${constants.breakpoints.SMALL}) {
     align-items: flex-start;
 
     > p {

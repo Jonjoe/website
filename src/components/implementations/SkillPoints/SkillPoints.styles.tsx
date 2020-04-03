@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { breakpoints } from "app-constants";
+import { constants } from "config";
 
 export const Container = styled.div`
   display: flex;
@@ -20,7 +20,7 @@ export const Point = styled.div`
     margin-top: 25px;
   }
 
-  @media only screen and (max-width: ${breakpoints.MEDIUM}) {
+  @media only screen and (max-width: ${constants.breakpoints.MEDIUM}) {
     margin: 20px;
 
     svg {
@@ -28,7 +28,7 @@ export const Point = styled.div`
     }
   }
   
-  @media only screen and (max-width: ${breakpoints.SMALL}) {
+  @media only screen and (max-width: ${constants.breakpoints.SMALL}) {
     width: 100%;
 
     svg {

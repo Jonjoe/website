@@ -9,7 +9,6 @@ import { selectTagFromRepos } from "selectors";
 import {
   Page,
   Button,
-  Text,
   Section,
   CardGrid,
   Card,

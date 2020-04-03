@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import { theme, apiKeys } from "config";
 import { googleDrive } from "services";
 
-import { Page, Section, Text, Button, CardGrid, Card, Loading } from "components";
+import { Page, Section, Button, CardGrid, Card, Loading } from "components";
 
 const CvsPage: React.FC = () => {
   const [cvs, setCvs] = useState([]);

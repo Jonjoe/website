@@ -1,40 +1,34 @@
 import * as Pages from "pages";
-
-interface Routes {
-  [handle: string]: string;
-}
-
-export const ROUTES: Routes = {
-  HOME: "/",
-  PROJECTS: "/projects",
-  LABS: "/labs",
-  CV: "/cv",
-  WORK_HISTORY: "/work-history"
-};
+import constants from "./constants"
 
 const routes = [
   {
-    path: ROUTES.HOME,
+    path: constants.routes.HOME,
     exact: true,
     component: Pages.Home
   },
   {
-    path: ROUTES.PROJECTS,
+    path: constants.routes.PROJECTS_INDEX,
     exact: true,
-    component: Pages.Projects
+    component: Pages.ProjectsIndex
   },
   {
-    path: ROUTES.LABS,
+    path: constants.routes.PROJECTS_SINGLE,
+    exact: true,
+    component: Pages.ProjectsSingle
+  },
+  {
+    path: constants.routes.LABS,
     exact: true,
     component: Pages.Labs
   },
   {
-    path: ROUTES.WORK_HISTORY,
+    path: constants.routes.WORK_HISTORY,
     exact: true,
     component: Pages.WorkHistory
   },
   {
-    path: ROUTES.CV,
+    path: constants.routes.CV,
     exact: true,
     component: Pages.Cv
   }

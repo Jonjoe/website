@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
-import { breakpoints } from "app-constants";
-import { theme } from "config";
+import { theme, constants } from "config";
 
 interface StyledButtonProps {
   width?: string;
@@ -35,7 +34,7 @@ export const Button = styled.button<StyledButtonProps>`
     background: transparant;
   }
 
-  @media only screen and (max-width: ${breakpoints.SMALL}) {
+  @media only screen and (max-width: ${constants.breakpoints.SMALL}) {
     width: 100%;
   }
 `;
