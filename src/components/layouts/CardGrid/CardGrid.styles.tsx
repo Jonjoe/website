@@ -25,7 +25,7 @@ interface StyledContainerProps {
 export const Container = styled.div<StyledContainerProps>`
   position: relative;
   display: grid;
-  gap: 5px;
+  gap: 20px;
   grid-template-columns: 1fr 1fr;
   
   ${props => props.animated && fadeInAnimation}
