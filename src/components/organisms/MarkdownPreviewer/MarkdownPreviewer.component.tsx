@@ -1,9 +1,13 @@
-import React from "react"
+import React from "react";
+import ReactMarkdown from "react-markdown";
 
-function MarkdownPreviewer(): JSX.Element {
-  return (
-    <p>MarkdownPreviewer</p>
-  )
+interface MarkdownPreviewerProps {
+  content: any;
 }
 
-export default MarkdownPreviewer as React.FC
+function MarkdownPreviewer(props: MarkdownPreviewerProps): JSX.Element {
+  const { content } = props;
+  return <ReactMarkdown source={content} />;
+}
+
+export default MarkdownPreviewer as React.FC<MarkdownPreviewerProps>;
