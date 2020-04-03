@@ -4,7 +4,7 @@ import { useParams, Redirect } from "react-router-dom";
 import { github } from "services";
 import { theme, constants } from "config";
 
-import { Page, Section, Text, Loading } from "components";
+import { Page, Section, Text, MarkdownPreviewer, Loading } from "components";
 
 const ProjectsPage: React.FC = () => {
   const params = useParams<{ id: string }>();
@@ -37,7 +37,7 @@ const ProjectsPage: React.FC = () => {
     return <Redirect to={constants.routes.PROJECTS} />;
   }
 
-  console.log(repo)
+  console.log(repo);
 
   return (
     <Page accent={theme.pallet.BLUE}>
@@ -46,9 +46,11 @@ const ProjectsPage: React.FC = () => {
           <Loading accent={theme.pallet.BLUE} />
         </Section>
       ) : (
-        <Section
-          title={repo.name}
-          />
+        <React.Fragment>
+          <Section title={repo.name}>
+            <MarkdownPreviewer />
+          </Section>
+        </React.Fragment>
       )}
     </Page>
   );
