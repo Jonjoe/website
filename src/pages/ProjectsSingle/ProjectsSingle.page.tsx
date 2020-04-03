@@ -5,7 +5,15 @@ import { capitalize } from "lodash";
 import { github } from "services";
 import { theme, constants } from "config";
 
-import { Page, Section, Text, MarkdownPreviewer, Loading } from "components";
+import {
+  Page,
+  Section,
+  Button,
+  ButtonRow,
+  Text,
+  MarkdownPreviewer,
+  Loading
+} from "components";
 
 const ProjectsPage: React.FC = () => {
   const params = useParams<{ id: string }>();
@@ -50,11 +58,24 @@ const ProjectsPage: React.FC = () => {
     return repos.filter(repo => Number(repo.id) === Number(id));
   }
 
-function decorateTitle(title: string): string {
+  function decorateTitle(title: string): string {
     return title
       .split("-")
       .map(word => capitalize(word))
       .join(" ");
+  }
+
+  function renderButtonRow(repo: any) {
+    return (
+      <ButtonRow>
+        <Button hero width="300px" href={repo.html_url}>
+          View Demo
+        </Button>
+        <Button hero width="300px" href={repo.html_url}>
+          View On Github
+        </Button>
+      </ButtonRow>
+    );
   }
 
   if (repoError) {
@@ -70,10 +91,10 @@ function decorateTitle(title: string): string {
       ) : (
         <React.Fragment>
           <Section>
-            <Text.Heading1>
-              {decorateTitle(repo.name)}
-            </Text.Heading1>
+            <Text.Heading1>{decorateTitle(repo.name)}</Text.Heading1>
+            {renderButtonRow(repo)}
             <MarkdownPreviewer content={readme} />
+            {renderButtonRow(repo)}
           </Section>
         </React.Fragment>
       )}
