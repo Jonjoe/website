@@ -2,18 +2,11 @@ import React, { useState } from "react";
 import { capitalize } from "lodash";
 
 import { github } from "services";
-import { theme } from "config";
+import { theme, constants } from "config";
 
 import { selectTagFromRepos } from "selectors";
 
-import {
-  Page,
-  Button,
-  Section,
-  CardGrid,
-  Card,
-  Loading
-} from "components";
+import { Page, Button, Section, CardGrid, Card, Loading } from "components";
 
 function ProjectsIndexPage(): JSX.Element {
   const [repos, setRepos] = useState<any[]>([]);
@@ -36,10 +29,11 @@ function ProjectsIndexPage(): JSX.Element {
       .join(" ");
   }
 
-  function renderActions(websiteUrl: string): JSX.Element {
+  function renderActions(projectId: string): JSX.Element {
+    const route = `${constants.routes.PROJECTS}/${projectId}`;
     return (
       <React.Fragment>
-        <Button href={websiteUrl}>View Demo</Button>
+        <Button to={route}>View Project</Button>
       </React.Fragment>
     );
   }
@@ -61,8 +55,7 @@ function ProjectsIndexPage(): JSX.Element {
                 title={decorateTitle(repo.name)}
                 body={repo.description}
                 icon={"rocket"}
-                externalLink={repo.html_url}
-                actions={renderActions(repo.website)}
+                actions={renderActions(repo.id)}
               />
             ))}
           </CardGrid>
@@ -70,6 +63,6 @@ function ProjectsIndexPage(): JSX.Element {
       </Section>
     </Page>
   );
-};
+}
 
 export default ProjectsIndexPage as React.FC;

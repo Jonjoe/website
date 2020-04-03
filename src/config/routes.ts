@@ -8,12 +8,12 @@ const routes = [
     component: Pages.Home
   },
   {
-    path: constants.routes.PROJECTS_INDEX,
+    path: constants.routes.PROJECTS,
     exact: true,
     component: Pages.ProjectsIndex
   },
   {
-    path: constants.routes.PROJECTS_SINGLE,
+    path: constants.routes.PROJECTS + "/:id",
     exact: true,
     component: Pages.ProjectsSingle
   },

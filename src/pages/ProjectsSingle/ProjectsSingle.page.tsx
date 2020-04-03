@@ -1,73 +1,55 @@
 import React, { useState } from "react";
-import { capitalize } from "lodash";
+import { useParams, Redirect } from "react-router-dom";
 
 import { github } from "services";
-import { theme } from "config";
+import { theme, constants } from "config";
 
-import { selectTagFromRepos } from "selectors";
-
-import {
-  Page,
-  Button,
-  Section,
-  CardGrid,
-  Card,
-  Loading
-} from "components";
+import { Page, Section, Text, Loading } from "components";
 
 const ProjectsPage: React.FC = () => {
-  const [repos, setRepos] = useState<any[]>([]);
-  const [reposLoading, setReposLoading] = useState<boolean>(true);
+  const params = useParams<{ id: string }>();
+
+  const [repo, setRepo] = useState();
+  const [repoLoading, setRepoLoading] = useState<boolean>(true);
+  const [repoError, setRepoError] = useState<boolean>(false);
   const [loaderActive, setLoaderActive] = useState<boolean>(true);
 
   React.useEffect(() => {
     setTimeout(() => setLoaderActive(false), 750);
 
     github.asyncGetRepos().then(data => {
-      setRepos(data);
-      setReposLoading(false);
+      const repo = findRepoById(data, params.id)[0];
+
+      if (repo) {
+        setRepo(repo);
+        setRepoLoading(false);
+      } else {
+        setRepoError(true);
+      }
     });
   }, []);
 
-  function decorateTitle(title: string): string {
-    return title
-      .split("-")
-      .map(word => capitalize(word))
-      .join(" ");
+  function findRepoById(repos: any[], id: string): any[] {
+    return repos.filter(repo => Number(repo.id) === Number(id));
   }
 
-  function renderActions(websiteUrl: string): JSX.Element {
-    return (
-      <React.Fragment>
-        <Button href={websiteUrl}>View Demo</Button>
-      </React.Fragment>
-    );
+  if (repoError) {
+    return <Redirect to={constants.routes.PROJECTS} />;
   }
+
+  console.log(repo)
 
   return (
     <Page accent={theme.pallet.BLUE}>
-      <Section
-        title="Projects"
-        subtitle="Things that I am working on or have worked on in the past."
-        accent={theme.pallet.BLUE}
-      >
-        {reposLoading || loaderActive ? (
+      {repoLoading || loaderActive ? (
+        <Section accent={theme.pallet.BLUE}>
           <Loading accent={theme.pallet.BLUE} />
-        ) : (
-          <CardGrid animated>
-            {selectTagFromRepos(repos, "project").map(repo => (
-              <Card
-                key={repo.id}
-                title={decorateTitle(repo.name)}
-                body={repo.description}
-                icon={"rocket"}
-                externalLink={repo.html_url}
-                actions={renderActions(repo.website)}
-              />
-            ))}
-          </CardGrid>
-        )}
-      </Section>
+        </Section>
+      ) : (
+        <Section
+          title={repo.name}
+          />
+      )}
     </Page>
   );
 };
