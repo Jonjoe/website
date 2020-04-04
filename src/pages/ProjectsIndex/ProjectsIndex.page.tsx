@@ -60,6 +60,7 @@ function ProjectsIndexPage(): JSX.Element {
                 title={decorateTitle(repo.name)}
                 body={repo.description}
                 icon={"rocket"}
+                labels={repo.topics}
                 actions={renderActions(repo.id)}
               />
             ))}

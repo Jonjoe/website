@@ -8,12 +8,13 @@ interface CardProps {
   title: string;
   body: string;
   icon?: IconName;
+  labels?: string[];
   externalLink?: string;
   actions?: React.ReactNode;
 }
 
 function Card(props: CardProps) {
-  const { title, body, icon, actions, externalLink } = props;
+  const { title, body, icon, labels, actions, externalLink } = props;
 
   function renderIcon(icon?: IconName) {
     if (!icon) {
@@ -27,12 +28,6 @@ function Card(props: CardProps) {
     );
   }
 
-  function renderActions(actions: any) {
-    if (!actions) return null;
-
-    return <Styled.Footer>{actions}</Styled.Footer>
-  }
-
   function renderExternalLink(linkUrl?: string) {
     if (!linkUrl) return null;
 
@@ -40,6 +35,18 @@ function Card(props: CardProps) {
       <Styled.ExternalLinkIcon onClick={() => window.open(linkUrl)}>
         <Icon name="github" />
       </Styled.ExternalLinkIcon>
+    );
+  }
+
+  function renderLabels(labels: string[]): JSX.Element {
+    return (
+      <Styled.Labels>
+        {labels.map((label: string, index: number) => (
+          <Text.Body key={index} align="center">
+            {label}
+          </Text.Body>
+        ))}
+      </Styled.Labels>
     );
   }
 
@@ -57,7 +64,10 @@ function Card(props: CardProps) {
         </Text.Body>
       </Styled.Content>
 
-      {renderActions(actions)}
+      <Styled.Footer>
+        {labels && renderLabels(labels)}
+        {actions && actions}
+      </Styled.Footer>
     </Styled.Container>
   );
 }
