@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { theme, constants } from "config";
+import { theme } from "config";
 
 export const Container = styled.article`
   width: 100%;
@@ -55,7 +55,10 @@ export const Container = styled.article`
   }
 
   table {
-    width: 100%;
+    overflow-y: scroll;
+    td, th {
+      padding: 5px;
+    }
   }
 
   p {

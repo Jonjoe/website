@@ -30,7 +30,7 @@ export const Container = styled.div<StyledContainerProps>`
   
   ${props => props.animated && fadeInAnimation}
 
-  @media only screen and (max-width: ${constants.breakpoints.MEDIUM}) {
+  @media only screen and (max-width: ${constants.breakpoints.LARGE}) {
     grid-template-columns: 1fr;
   }
 `;

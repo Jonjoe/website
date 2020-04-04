@@ -1,5 +1,5 @@
 import * as Pages from "pages";
-import constants from "./constants"
+import constants from "./constants";
 
 const routes = [
   {
@@ -16,11 +16,6 @@ const routes = [
     path: constants.routes.PROJECTS + "/:id",
     exact: true,
     component: Pages.ProjectsSingle
-  },
-  {
-    path: constants.routes.LABS,
-    exact: true,
-    component: Pages.Labs
   },
   {
     path: constants.routes.WORK_HISTORY,

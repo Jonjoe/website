@@ -10,10 +10,11 @@ export const Container = styled.article`
   padding: 30px 20px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   margin-left: 40px;
   margin-bottom: 30px;
   position: relative;
+  height: 300px;
 
   ${(props: StyledContainerProps) =>
     props.hasTags ? "margin-left: 40px;" : "margin-left: 0"}
@@ -42,6 +43,19 @@ export const Footer = styled.footer`
     &:last-child {
       margin-bottom: 0;
     }
+  }
+`;
+
+export const Labels = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+  > p {
+    font-weight: 900;
+    padding: 2px 5px;
+    margin: 5px;
+    background: rgba(255,255,255,0.5);
+    border-radius: 5px;
   }
 `;
 
