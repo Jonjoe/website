@@ -10,10 +10,11 @@ export const Container = styled.article`
   padding: 30px 20px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   margin-left: 40px;
   margin-bottom: 30px;
   position: relative;
+  height: 300px;
 
   ${(props: StyledContainerProps) =>
     props.hasTags ? "margin-left: 40px;" : "margin-left: 0"}
