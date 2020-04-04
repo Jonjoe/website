@@ -27,7 +27,6 @@ const Topbar: React.FC = () => {
         <Styled.LeftLinks>
           <TopbarLink to={constants.routes.HOME} label="Home" />
           <TopbarLink to={constants.routes.PROJECTS} label="Projects" />
-          <TopbarLink to={constants.routes.LABS} label="Labs" />
         </Styled.LeftLinks>
 
         <Styled.CenterPiece>
@@ -37,11 +36,6 @@ const Topbar: React.FC = () => {
         <Styled.RightLinks>
           <TopbarLink to={constants.routes.CV} label="CV" />
           <TopbarLink to={constants.routes.WORK_HISTORY} label="History" />
-          <Styled.Link>
-            <a target="blank" href={constants.socialLinks.LINKEDIN}>
-              <Text.Body>Contact</Text.Body>
-            </a>
-          </Styled.Link>
         </Styled.RightLinks>
       </Styled.InnerContainer>
     </Styled.OuterContainer>

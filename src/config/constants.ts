@@ -34,7 +34,6 @@ const breakpoints: Constants = {
 const routes: Constants = {
   HOME: "/",
   PROJECTS: "/projects",
-  LABS: "/labs",
   CV: "/cv",
   WORK_HISTORY: "/work-history"
 };
