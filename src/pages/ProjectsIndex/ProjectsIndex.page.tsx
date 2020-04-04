@@ -4,8 +4,6 @@ import { capitalize } from "lodash";
 import { github } from "services";
 import { theme, constants } from "config";
 
-import { selectTagFromRepos } from "selectors";
-
 import { Page, Button, Section, CardGrid, Card, Loading } from "components";
 
 function ProjectsIndexPage(): JSX.Element {
@@ -21,6 +19,13 @@ function ProjectsIndexPage(): JSX.Element {
       setReposLoading(false);
     });
   }, []);
+
+  function filterReposByTags(repos: any[]): any[] {
+    return repos.filter(repo => {
+      const { topics } = repo;
+      return topics.includes("project") || topics.includes("lab");
+    });
+  }
 
   function decorateTitle(title: string): string {
     return title
@@ -49,7 +54,7 @@ function ProjectsIndexPage(): JSX.Element {
           <Loading accent={theme.pallet.BLUE} />
         ) : (
           <CardGrid animated>
-            {selectTagFromRepos(repos, "project").map(repo => (
+            {filterReposByTags(repos).map(repo => (
               <Card
                 key={repo.id}
                 title={decorateTitle(repo.name)}
