@@ -26,7 +26,7 @@ const HomePage: React.FC = () => {
   const [accent, setAccent] = React.useState<string>(theme.pallet.BLACK);
 
   return (
-    <Page accent={accent}>
+    <Page accent={accent} padded>
       <Section>
         <Waypoint
           onEnter={() => setAccent(theme.pallet.BLACK)}

@@ -13,8 +13,10 @@ interface StructProps {
   vPadded?: boolean;
 }
 
-const Struct: React.FC<StructProps> = (props): JSX.Element => (
-  <Styled.StructWrapper {...props}>{props.children}</Styled.StructWrapper>
-);
+function Struct(props: StructProps): JSX.Element {
+  return (
+    <Styled.StructWrapper {...props}>{props.children}</Styled.StructWrapper>
+  );
+}
 
-export default Struct;
+export default Struct as React.FC<StructProps>;

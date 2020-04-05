@@ -5,6 +5,8 @@ export const Container = styled.article`
   width: 100%;
   background: white;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
 
   h1,
   h2,

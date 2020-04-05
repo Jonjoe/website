@@ -13,11 +13,20 @@ interface StructWrapperProps {
 
 export const StructWrapper = styled.div`
   display: flex;
-  padding: ${(props: StructWrapperProps) => (props.padded ? "10px" : "0")};
-  flex: ${(props: StructWrapperProps) => (props.size ? props.size : 1)};
+  flex-direction: row;
+  flex:1;
+  padding: 0;
+  
+  ${(props: StructWrapperProps) => props.padded && `padding: 10px;`};
+  ${(props: StructWrapperProps) => props.size && `flex: 1;`};
 
-  flex-direction: ${(props: StructWrapperProps) =>
-    props.column ? "column" : "row"};
+  ${(props: StructWrapperProps) =>
+    props.column &&
+    `
+      flex-direction: column;
+      width: 100%;
+      max-width: 100%;
+    `};
 
   ${(props: StructWrapperProps) =>
     props.vPadded &&
