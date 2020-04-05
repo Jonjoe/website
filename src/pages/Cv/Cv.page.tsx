@@ -27,7 +27,7 @@ const CvsPage: React.FC = () => {
   function renderActions(downloadPdf: string) {
     return (
       <React.Fragment>
-        <Button href={downloadPdf}>Download PDF</Button>
+        <Button href={downloadPdf}>View Document</Button>
       </React.Fragment>
     );
   }
