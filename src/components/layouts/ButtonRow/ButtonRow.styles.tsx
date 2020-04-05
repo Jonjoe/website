@@ -8,9 +8,5 @@ export const Container = styled.div`
   margin: 50px 0;
   > * {
     margin: 0px 10px 5px 10px;
-
-    &:last-child {
-      margin-bottom: 0;
-    }
   }
 `;
