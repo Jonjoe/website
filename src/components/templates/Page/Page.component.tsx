@@ -9,7 +9,7 @@ interface PageProps {
   padded?: boolean;
 }
 
-const Page: React.FC<PageProps> = props => {
+function Page(props: PageProps){
   const { children, accent, padded } = props;
 
   return (
@@ -23,4 +23,4 @@ const Page: React.FC<PageProps> = props => {
   );
 };
 
-export default Page;
+export default Page as React.FC<PageProps> 
