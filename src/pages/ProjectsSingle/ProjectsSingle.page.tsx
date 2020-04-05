@@ -9,6 +9,7 @@ import {
   Page,
   Section,
   Button,
+  HeroImage,
   ButtonRow,
   Text,
   MarkdownPreviewer,
@@ -78,6 +79,18 @@ const ProjectsPage: React.FC = () => {
     );
   }
 
+  function renderHeroImage(id: string): JSX.Element {
+    let path;
+
+    try {
+      path = require(`assets/project-images/${id}.jpg`);
+    } catch {
+      path = require(`assets/project-images/default.jpg`);
+    }
+
+    return <HeroImage src={path} alt="Project example image" />;
+  }
+
   if (repoError) {
     return <Redirect to={constants.routes.PROJECTS} />;
   }
@@ -93,6 +106,7 @@ const ProjectsPage: React.FC = () => {
           <Section>
             <Text.Heading1>{decorateTitle(repo.name)}</Text.Heading1>
             {renderButtonRow(repo)}
+            {renderHeroImage(repo.id)}
             <MarkdownPreviewer content={readme} />
             {renderButtonRow(repo)}
           </Section>
