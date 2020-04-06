@@ -19,6 +19,31 @@ export interface Job {
 
 const workHistory: Job[] = [
   {
+    name: "Contract - Faxi",
+    role: "Solution Architect / Mentor",
+    duration: "Current Role",
+    description:
+      "Working with the Web team to migrate their web platform to React and Node. Architecture and education is the aim of the game here. Helping their talented engineers adopt a new technology stack. ",
+    logo: "faxi.png",
+    tags: [
+      {
+        id: constants.techLabels.JAVASCRIPT,
+        label: "Javascript",
+        icon: "javascript"
+      },
+      {
+        id: constants.techLabels.REACT,
+        label: "React",
+        icon: "react"
+      },
+      {
+        id: constants.techLabels.TYPESCRIPT,
+        label: "Typescript",
+        icon: "typescript"
+      }
+    ]
+  },
+  {
     name: "Contract - The Guardian",
     role: "Snr Mobile Engineer",
     description:
