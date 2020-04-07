@@ -69,9 +69,11 @@ const ProjectsPage: React.FC = () => {
   function renderButtonRow(repo: any) {
     return (
       <ButtonRow>
-        <Button hero width="300px" href={repo.homepage}>
-          View Demo
-        </Button>
+        {repo.homepage && (
+          <Button hero width="300px" href={repo.homepage}>
+            View Demo
+          </Button>
+        )}
         <Button hero width="300px" href={repo.html_url}>
           View On Github
         </Button>
