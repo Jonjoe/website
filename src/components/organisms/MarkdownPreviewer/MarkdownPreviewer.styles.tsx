@@ -72,4 +72,11 @@ export const Container = styled.article`
       color: ${theme.pallet.BLUE};
     }
   }
+
+  pre {
+    overflow-x: scroll;
+    background: rgba(45,45,45);
+    padding: 10px;
+    color: white;
+  }
 `;
