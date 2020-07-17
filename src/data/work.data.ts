@@ -20,7 +20,7 @@ export interface Job {
 const workHistory: Job[] = [
   {
     name: "Contract - Faxi",
-    role: "Solution Architect / Mentor",
+    role: "Principle Web Architect",
     duration: "Current Role",
     description:
       "Working with the Web team to migrate their web platform to React and Node. Architecture and education is the aim of the game here. Helping their talented engineers adopt a new technology stack. ",
@@ -70,7 +70,7 @@ const workHistory: Job[] = [
   },
   {
     name: "Contract - Edge Esports",
-    role: "Lead Engineer",
+    role: "Principle Web Architect",
     description:
       "Small start up, big ideas. My role was to build a technical team and build the first iterations of the initial product offerings. I built some of the most beautiful and well crafted solutions of my career during this role and faced some of the biggest technical challenges of my career as well.",
     duration: "6 Months",
